@@ -16,7 +16,7 @@ function trimTrailingSlash(value) {
 function getHookPayload() {
   const raw = process.env.INCOMING_HOOK_BODY;
   if (!raw) {
-    return null;
+    return { raw: "" };
   }
 
   try {
@@ -24,6 +24,22 @@ function getHookPayload() {
   } catch {
     return { raw };
   }
+}
+
+function shouldGenerateFromHook(hookPayload) {
+  const hookUrl = process.env.INCOMING_HOOK_URL || "";
+  const hookTitle = process.env.INCOMING_HOOK_TITLE || "";
+  const rawBody = typeof hookPayload?.raw === "string" ? hookPayload.raw : "";
+
+  if (hookPayload?.reason === "scheduled-blog-post") {
+    return true;
+  }
+
+  if (rawBody.includes("scheduled-blog-post")) {
+    return true;
+  }
+
+  return Boolean(hookUrl || hookTitle);
 }
 
 async function loadPublishedPosts(config) {
@@ -45,7 +61,7 @@ async function main() {
   const publishedPosts = await loadPublishedPosts(config);
   const existingPosts = publishedPosts || await loadJson(defaultPostsPath);
   const hookPayload = getHookPayload();
-  const shouldGeneratePost = hookPayload?.reason === "scheduled-blog-post";
+  const shouldGeneratePost = shouldGenerateFromHook(hookPayload);
 
   await saveJson(defaultPostsPath, existingPosts);
 
