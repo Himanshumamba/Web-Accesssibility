@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://web-accessibility-fixes-audit.netlify.app/sitemap.xml

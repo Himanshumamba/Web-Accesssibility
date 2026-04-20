@@ -1,0 +1,5 @@
+.env
+blog-automation.log
+.netlify
+node_modules
+.vscode

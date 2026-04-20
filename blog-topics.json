@@ -1,0 +1,19 @@
+{
+  "siteName": "Himanshu | Accessibility Expert",
+  "siteUrl": "https://web-accessibility-fixes-audit.netlify.app/",
+  "author": "Himanshu Pandey",
+  "tone": "Clear, practical, trustworthy, developer-friendly, and written for US-facing businesses.",
+  "cta": "If you need a website accessibility audit, WCAG remediation help, or PDF accessibility support, contact Himanshu Pandey through the website contact page.",
+  "topics": [
+    "How small businesses can prepare for a WCAG accessibility audit",
+    "The most common ADA website accessibility issues on service business sites",
+    "How to explain accessibility fixes to developers without slowing delivery",
+    "What makes a PDF inaccessible and how remediation improves usability",
+    "Why visible focus indicators matter for keyboard users",
+    "How to prioritize accessibility issues after an audit",
+    "What website owners should know about screen reader testing",
+    "How accessible forms improve conversions and usability",
+    "How to spot accessibility issues on a homepage in ten minutes",
+    "The difference between automated scans and manual accessibility audits"
+  ]
+}

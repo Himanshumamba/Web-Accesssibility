@@ -1,0 +1,44 @@
+[
+  {
+    "id": "audit-benefits-2026-04-20",
+    "slug": "why-accessibility-audits-save-time",
+    "title": "Why Accessibility Audits Save Teams Time Before They Start Fixing",
+    "date": "2026-04-20",
+    "excerpt": "A good accessibility audit does more than list problems. It helps teams prioritize, reduce rework, and move into remediation with clarity.",
+    "readTime": "4 min read",
+    "tags": ["WCAG Audit", "Remediation", "Accessibility Strategy"],
+    "body": [
+      "Many accessibility projects slow down because teams jump into fixes before they understand the full pattern of issues across the site. A structured audit reduces that confusion and turns scattered bugs into a prioritized plan.",
+      "The most useful audits show severity, affected user groups, and examples that developers can actually act on. That makes engineering handoff easier and keeps accessibility work from being pushed aside as vague cleanup.",
+      "When businesses treat accessibility as a practical quality issue instead of a last-minute compliance task, they usually fix more meaningful barriers in less time."
+    ]
+  },
+  {
+    "id": "keyboard-testing-2026-04-18",
+    "slug": "simple-keyboard-checks-for-business-sites",
+    "title": "Simple Keyboard Checks Every Business Website Should Pass",
+    "date": "2026-04-18",
+    "excerpt": "Keyboard testing is one of the fastest ways to find serious usability problems on forms, menus, dialogs, and calls to action.",
+    "readTime": "3 min read",
+    "tags": ["Keyboard Access", "Usability", "WCAG 2.2"],
+    "body": [
+      "If a user cannot move through your navigation, buttons, forms, and popups using only the keyboard, the site already has real accessibility barriers. This affects users who cannot use a mouse as well as many screen reader users.",
+      "A quick first check is to press Tab from the top of the page and confirm that focus stays visible, the order makes sense, and every important action can be reached. If the keyboard gets trapped or disappears, that needs attention quickly.",
+      "Even small businesses can improve a lot by checking focus states, skip links, menu behavior, modal dialogs, and form validation with the keyboard before launch."
+    ]
+  },
+  {
+    "id": "alt-text-2026-04-15",
+    "slug": "better-alt-text-for-service-websites",
+    "title": "How to Write Better Alt Text for Service Websites",
+    "date": "2026-04-15",
+    "excerpt": "Alt text should support the purpose of the page. It does not need to describe everything, but it should never leave meaningful images unexplained.",
+    "readTime": "4 min read",
+    "tags": ["Alt Text", "Content Accessibility", "Screen Readers"],
+    "body": [
+      "Alt text works best when it reflects why the image is there. A team photo on an about page may need short identification, while a process graphic may need a more functional description that explains the information being communicated.",
+      "One common mistake is writing very generic alt text like image, banner, or team photo. Another is stuffing too many keywords into the description. Both approaches make the experience worse for screen reader users.",
+      "Service businesses should review homepage visuals, trust badges, before-and-after images, and process diagrams to make sure the text alternative matches what a user needs to understand."
+    ]
+  }
+]
