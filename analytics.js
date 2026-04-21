@@ -3,7 +3,7 @@ window.GA_MEASUREMENT_ID = "G-ZW63XDF22R";
 (function () {
   var id = window.GA_MEASUREMENT_ID;
 
-  if (!id || id === "G-ZW63XDF22R") {
+  if (!id || id === "YOUR_GA_MEASUREMENT_ID") {
     return;
   }
 
