@@ -122,6 +122,23 @@ Send me your website URL and I’ll identify accessibility issues affecting usab
   <p>Scan your website and get a detailed accessibility report within 24 hours.</p>
   <a href="pricing.html" class="btn">Get Started</a>
 </section>
+
+<section class="section scan-tool">
+  <h2>Free Automated Accessibility Scan</h2>
+  <p>Enter your website URL and email address to initiate a scan. You will receive the report when the analysis is finished.</p>
+  <form id="scanForm" class="scan-form">
+    <div class="form-group">
+      <label for="scanUrl">Website URL</label>
+      <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://example.com" aria-label="Website URL">
+    </div>
+    <div class="form-group">
+      <label for="scanEmail">Email Address</label>
+      <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com" aria-label="Email Address">
+    </div>
+    <button type="submit" class="btn">Start Scan</button>
+  </form>
+  <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+</section>
 <section class="section">
   <h2>Sample Accessibility Audit (Before & After Fixes)</h2>
 <p>Real example of accessibility issues identified and fixed to improve WCAG compliance and usability.</p>
@@ -221,5 +238,62 @@ Send your website and I’ll show you exactly what accessibility issues need to 
   <p>&copy; Himanshu | Accessibility Expert</p>
 </footer>
 <script defer src="blog.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scanForm = document.getElementById('scanForm');
+    const scanMessage = document.getElementById('scanMessage');
+
+    if (scanForm) {
+      scanForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = scanForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Send data directly to your email without backend via formsubmit.co
+        fetch("https://formsubmit.co/ajax/hphimeshpandey@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: "New Accessibility Scan Request",
+                URL_to_Scan: document.getElementById('scanUrl').value,
+                User_Email: document.getElementById('scanEmail').value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Show success message
+            scanMessage.textContent = "Thank you! You will get the report when the analysis is finished.";
+            scanMessage.style.color = "#174642";
+            scanMessage.style.background = "#eef7f4";
+            scanMessage.removeAttribute('hidden');
+            scanForm.reset();
+        })
+        .catch(error => {
+            // Show error message
+            scanMessage.textContent = "Oops! Something went wrong. Please try again.";
+            scanMessage.style.color = "#721c24";
+            scanMessage.style.background = "#f8d7da";
+            scanMessage.removeAttribute('hidden');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            
+            // Hide message after a few seconds
+            setTimeout(() => {
+              scanMessage.setAttribute('hidden', '');
+            }, 8000);
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>

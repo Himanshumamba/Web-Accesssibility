@@ -67,3 +67,36 @@ p {max-width:70ch;}
   .audit-includes {padding:2.25em 1.25em;}
   .blog-post {padding:1.35em;}
 }
+
+/* Scan Tool Styles */
+.scan-tool {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 3em auto;
+  border: 1px solid #e0e0e0;
+}
+.scan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+  text-align: left;
+}
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  display: block;
+}
+.scan-message {
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  background: #eef7f4;
+  color: #174642;
+  font-weight: bold;
+  border: 1px solid #c7e8dd;
+}
+.scan-message[hidden] {
+  display: none;
+}
