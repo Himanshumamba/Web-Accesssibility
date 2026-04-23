@@ -70,6 +70,11 @@ async function main() {
     return;
   }
 
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn("Skipping blog generation: OPENAI_API_KEY is not defined in the environment.");
+    return;
+  }
+
   const newPost = await appendNextPost({
     initialPosts: existingPosts
   });
