@@ -34,6 +34,13 @@ async function generateBlogPost() {
     });
 
     const data = await response.json();
+
+    if (!data.candidates || data.candidates.length === 0) {
+      console.error("API failed to generate content. Full response:");
+      console.error(JSON.stringify(data, null, 2));
+      process.exit(1);
+    }
+
     const contentText = data.candidates[0].content.parts[0].text;
     const newPostData = JSON.parse(contentText);
 
