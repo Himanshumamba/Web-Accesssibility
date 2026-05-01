@@ -1,5 +1,25 @@
 [
   {
+    "id": "navigating-the-web-with-just-a-keyboard-why-it-s-essential-for-everyone-2026-05-01",
+    "slug": "navigating-the-web-with-just-a-keyboard-why-it-s-essential-for-everyone",
+    "title": "Navigating the Web with Just a Keyboard: Why It's Essential for Everyone",
+    "date": "2026-05-01",
+    "excerpt": "For many users, a mouse is not an option for interacting with websites; keyboard-only navigation ensures they can access all content and functionality. Prioritizing keyboard accessibility not only meets WCAG standards but significantly enhances the user experience for a broad audience.",
+    "readTime": "3 min read",
+    "tags": [
+      "Keyboard Accessibility",
+      "WCAG",
+      "Web Design",
+      "Inclusive Design",
+      "Accessibility Testing"
+    ],
+    "body": [
+      "When we design websites, it's easy to overlook the diverse ways users interact with them. While most people might instinctively reach for a mouse or trackpad, a significant portion of the population relies solely on a keyboard for navigation. This includes individuals with motor impairments, those using screen readers, and even power users who prefer keyboard shortcuts for efficiency. Ensuring your website is fully navigable via a keyboard is not just a best practice; it's a fundamental requirement for inclusive design.",
+      "Achieving robust keyboard accessibility involves a few key considerations. First, a logical tab-order is paramount, guiding users intuitively through interactive elements. Second, clear focus indicators are essential – these visual cues (often an outline or highlight) show users exactly where they are on the page. Every interactive element, from buttons and links to form fields and custom widgets, must be reachable and operable using only the keyboard (e.g., Tab, Shift+Tab, Enter, Spacebar). This aligns directly with WCAG success criteria 2.1.1 Keyboard and 2.4.7 Focus Visible.",
+      "The good news is that implementing strong keyboard navigation often improves the user experience for *all* users, not just those with disabilities. It creates a more structured and predictable interface. To truly test your site's keyboard accessibility, try navigating through all your pages and functionalities yourself using only the Tab, Shift+Tab, Enter, and Spacebar keys. If you encounter any barriers, it's a sign that your site needs attention. Our team specializes in comprehensive accessibility audits and can help you identify and remediate any keyboard accessibility issues, ensuring your digital presence is open to everyone."
+    ]
+  },
+  {
     "id": "clear-communication-the-essential-role-of-accessible-form-labels-2026-05-01",
     "slug": "clear-communication-the-essential-role-of-accessible-form-labels",
     "title": "Clear Communication: The Essential Role of Accessible Form Labels",
