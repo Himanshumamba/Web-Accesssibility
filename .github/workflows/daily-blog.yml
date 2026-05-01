@@ -1,0 +1,36 @@
+name: Daily Auto Blog Post
+
+on:
+  schedule:
+    # Runs at 12:00 PM (Noon) UTC every day
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Allows you to run it manually by clicking a button in GitHub
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Generate Blog Post
+        env:
+          # This securely gets the API key from your GitHub secrets
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node generate-blog.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add blog-posts.json
+          git commit -m "Auto-generated daily blog post" || echo "No changes to commit"
+          git push
