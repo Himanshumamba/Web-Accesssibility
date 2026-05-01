@@ -34,3 +34,6 @@ jobs:
           git add blog-posts.json
           git commit -m "Auto-generated daily blog post" || echo "No changes to commit"
           git push
+
+      - name: Trigger Netlify Deploy
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/69e5ed96aa93684f134d2b1b
