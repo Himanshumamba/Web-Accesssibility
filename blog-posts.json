@@ -1,5 +1,27 @@
 [
   {
+    "id": "accessible-images-why-alt-text-matters-and-how-to-write-it-well-2026-05-09",
+    "slug": "accessible-images-why-alt-text-matters-and-how-to-write-it-well",
+    "title": "Accessible Images: Why Alt Text Matters and How to Write It Well",
+    "date": "2026-05-09",
+    "excerpt": "Alt text is crucial for making images understandable to everyone, especially users of screen readers. Learn how to write descriptive and concise alternative text to enhance your website's accessibility.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Alt Text",
+      "Images",
+      "Screen Readers",
+      "Digital Inclusion",
+      "Accessibility Tips"
+    ],
+    "body": [
+      "Images are powerful tools for engaging users and conveying information on the web. However, for millions of users who rely on screen readers or have slow internet connections, these visual elements can become barriers if not properly described. This is where 'alt text' (alternative text) comes in – a fundamental aspect of WCAG compliance and a cornerstone of truly inclusive web design. It ensures that the visual content on your site is accessible and meaningful to everyone, regardless of how they access your content.",
+      "Crafting effective alt text isn't just about adding a few words; it's about conveying the *purpose* and *content* of the image concisely. For purely decorative images, an empty alt attribute (`alt=\"\"`) is appropriate. For informational images, describe the image's key information as if you were explaining it to someone over the phone, keeping it brief yet descriptive. Avoid redundant phrases like 'image of...' or 'picture of...' and focus on the message. For complex graphics like charts, provide a brief summary in the alt text and a more detailed description nearby.",
+      "Prioritizing proper alt text is a straightforward yet impactful step towards building a more accessible web. It demonstrates a commitment to digital inclusion and significantly improves the user experience for individuals with visual impairments. By implementing these best practices, you not only meet WCAG standards but also broaden your audience and enhance your site's overall usability. Need help auditing your site's image accessibility or training your team? Our experts are here to guide you."
+    ]
+  },
+  {
     "id": "beyond-click-here-crafting-truly-accessible-link-text-2026-05-08",
     "slug": "beyond-click-here-crafting-truly-accessible-link-text",
     "title": "Beyond \"Click Here\": Crafting Truly Accessible Link Text",
