@@ -1,5 +1,26 @@
 [
   {
+    "id": "the-power-of-alt-text-enhancing-web-accessibility-one-image-at-a-time-2026-05-10",
+    "slug": "the-power-of-alt-text-enhancing-web-accessibility-one-image-at-a-time",
+    "title": "The Power of Alt Text: Enhancing Web Accessibility, One Image at a Time",
+    "date": "2026-05-10",
+    "excerpt": "Alternative text (alt text) for images is a foundational element of web accessibility, crucial for users who rely on screen readers. This post dives into why thoughtful alt text is indispensable for creating a truly inclusive online experience.",
+    "readTime": "3 min read",
+    "tags": [
+      "Alt Text",
+      "WCAG",
+      "Web Accessibility",
+      "Screen Readers",
+      "Inclusive Design",
+      "Digital Inclusion"
+    ],
+    "body": [
+      "Alternative text, or alt text, serves as a textual equivalent for non-text content, primarily images, on a webpage. For individuals who are blind or have low vision, alt text is the primary way they perceive the information or context conveyed by an image, as their screen readers vocalize this description. Without proper alt text, a beautiful infographic, an important product photo, or a critical navigational icon becomes an invisible barrier, rendering parts of your website inaccessible and frustrating for a significant portion of your audience.",
+      "Crafting effective alt text requires more than just a literal description; it demands an understanding of the image's purpose within its context. If an image is purely decorative and conveys no essential information, it should have an empty `alt=\"\"` attribute so screen readers correctly ignore it. For informative images, focus on describing the content and function concisely, avoiding phrases like \"image of.\" Think about what information a user would miss if the image didn't load, and encapsulate that in your alt text. This targeted approach ensures that every user receives the complete message.",
+      "Implementing well-written alt text is a small effort with immense benefits. It not only ensures compliance with WCAG guidelines (Success Criterion 1.1.1 Non-text Content) but also improves search engine optimization (SEO) and enhances the user experience when images fail to load. By committing to meaningful alt text, you demonstrate a dedication to digital inclusion, making your website usable, valuable, and welcoming for everyone. Let's make every image count towards a more accessible web."
+    ]
+  },
+  {
     "id": "accessible-images-why-alt-text-matters-and-how-to-write-it-well-2026-05-09",
     "slug": "accessible-images-why-alt-text-matters-and-how-to-write-it-well",
     "title": "Accessible Images: Why Alt Text Matters and How to Write It Well",
