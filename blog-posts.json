@@ -1,5 +1,25 @@
 [
   {
+    "id": "beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility-2026-05-15",
+    "slug": "beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility",
+    "title": "Beyond Decoration: Crafting Effective Alt Text for True Image Accessibility",
+    "date": "2026-05-15",
+    "excerpt": "Alt text is more than just a technical requirement; it's a critical bridge for screen reader users to understand visual content. Discover how intentional alt text improves your site's accessibility, user experience, and even SEO.",
+    "readTime": "3 min read",
+    "tags": [
+      "Alt Text",
+      "Image Accessibility",
+      "WCAG",
+      "Screen Readers",
+      "Web Accessibility Tips"
+    ],
+    "body": [
+      "Images are a cornerstone of modern web design, conveying information, emotion, and branding. However, without proper context, they become invisible barriers for users relying on screen readers or those with slow internet connections. This is where \"alt text\" (alternative text) comes into play. WCAG 2.1 Success Criterion 1.1.1 (Non-text Content) mandates that all non-text content, like images, has a text alternative that serves the equivalent purpose, ensuring everyone can access the full breadth of your content.",
+      "Crafting effective alt text isn't just about describing what's in the picture; it's about conveying its *purpose* and *context*. Ask yourself: \"If this image were removed, what information would the user miss?\" Be concise yet descriptive, focusing on relevant details. Avoid redundant phrases like \"image of\" or \"picture of.\" For complex images like charts or infographics, a brief alt text should describe the image's main point, with a longer description provided elsewhere (e.g., in adjacent text or a linked resource). Decorative images, which add no information, should have empty alt attributes (`alt=\"\"`) to be ignored by screen readers.",
+      "Implementing thoughtful alt text goes beyond mere compliance; it significantly enhances the user experience for everyone. Users navigating with assistive technologies gain a complete understanding of your page, fostering inclusivity and trust. Furthermore, search engines also utilize alt text to understand image content, contributing positively to your website's Search Engine Optimization (SEO). Prioritizing high-quality alt text is a simple yet powerful step towards a more accessible, user-friendly, and discoverable web."
+    ]
+  },
+  {
     "id": "the-power-of-words-mastering-alt-text-for-true-web-inclusion-2026-05-14",
     "slug": "the-power-of-words-mastering-alt-text-for-true-web-inclusion",
     "title": "The Power of Words: Mastering Alt Text for True Web Inclusion",
