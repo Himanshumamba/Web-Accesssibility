@@ -1,5 +1,26 @@
 [
   {
+    "id": "making-images-accessible-your-guide-to-impactful-alt-text-2026-05-16",
+    "slug": "making-images-accessible-your-guide-to-impactful-alt-text",
+    "title": "Making Images Accessible: Your Guide to Impactful Alt Text",
+    "date": "2026-05-16",
+    "excerpt": "Effective alt text is more than just a description; it's a critical bridge that connects visual content to users with visual impairments. Learn how well-crafted alt text not only enhances accessibility but also boosts your site's overall discoverability.",
+    "readTime": "3 min read",
+    "tags": [
+      "Accessibility",
+      "WCAG",
+      "Alt Text",
+      "Images",
+      "Screen Readers",
+      "Web Development"
+    ],
+    "body": [
+      "In the visual-centric world of the internet, images play a pivotal role in conveying information and engaging users. However, for individuals who rely on screen readers or have visual impairments, these images can become inaccessible barriers without proper context. This is where 'alt text' (alternative text) comes into play. Alt text is a brief, descriptive textual substitute for an image, read aloud by screen readers, ensuring that all users can understand the content and purpose of every visual element on your site.",
+      "Crafting effective alt text is an art, not just a task. Prioritize conciseness while providing sufficient detail. Ask yourself: 'What information does this image convey to someone who *cannot* see it?' Avoid phrases like 'image of' or 'picture of' – screen readers already announce it's an image. Focus on the core message, function, or context. For example, instead of `alt=\"dog\"`, consider `alt=\"Golden Retriever puppy playing with a red ball in a grassy park\"` if the details are relevant to the surrounding content.",
+      "Implementing meaningful alt text isn't just about compliance; it's about inclusivity and enhancing user experience for everyone. Good alt text also offers SEO benefits by providing search engines with more context about your content. Take the time to review your existing images and integrate alt text considerations into your content creation workflow. Our team can help you audit your current assets and establish best practices to ensure your visual content is truly accessible to all."
+    ]
+  },
+  {
     "id": "beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility-2026-05-15",
     "slug": "beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility",
     "title": "Beyond Decoration: Crafting Effective Alt Text for True Image Accessibility",
