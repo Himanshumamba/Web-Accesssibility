@@ -1,5 +1,26 @@
 [
   {
+    "id": "make-every-click-count-the-power-of-descriptive-link-text-2026-05-17",
+    "slug": "make-every-click-count-the-power-of-descriptive-link-text",
+    "title": "Make Every Click Count: The Power of Descriptive Link Text",
+    "date": "2026-05-17",
+    "excerpt": "Vague link text like 'Click Here' creates significant barriers for users relying on screen readers. Learn why descriptive link text is crucial for navigability and how it enhances the user experience for everyone.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Link Text",
+      "Screen Readers",
+      "Usability",
+      "ADA Compliance"
+    ],
+    "body": [
+      "Many websites still feature generic link text such as 'Click Here' or 'Learn More.' While seemingly innocuous, these phrases pose significant challenges for users who rely on screen readers or other assistive technologies. Without clear context embedded directly within the link, these users struggle to understand the purpose of the link or where it will lead, turning simple navigation into a frustrating guessing game and violating WCAG 2.4.4 (Link Purpose (In-Context)).",
+      "The solution is straightforward: ensure your link text is descriptive and meaningful on its own. Instead of 'For more information, click here,' consider 'Read our full guide on accessible design principles.' This immediate clarity allows users to quickly scan content, understand destinations, and make informed decisions about navigating your site. Always aim to convey the link's purpose and destination directly within the text itself, avoiding repetition and vague phrasing.",
+      "Prioritizing descriptive link text is a simple yet powerful step towards a more inclusive web. It significantly improves user experience for everyone, enhances navigability for screen reader users, and helps your site meet essential accessibility standards. If you're looking to audit your site's links or implement comprehensive accessibility improvements, our expert team is ready to help you build a truly accessible online presence."
+    ]
+  },
+  {
     "id": "making-images-accessible-your-guide-to-impactful-alt-text-2026-05-16",
     "slug": "making-images-accessible-your-guide-to-impactful-alt-text",
     "title": "Making Images Accessible: Your Guide to Impactful Alt Text",
