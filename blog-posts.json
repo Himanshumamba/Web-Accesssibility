@@ -1,5 +1,25 @@
 [
   {
+    "id": "beyond-the-mouse-why-keyboard-accessibility-is-non-negotiable-2026-05-22",
+    "slug": "beyond-the-mouse-why-keyboard-accessibility-is-non-negotiable",
+    "title": "Beyond the Mouse: Why Keyboard Accessibility is Non-Negotiable",
+    "date": "2026-05-22",
+    "excerpt": "For countless users, navigating the web without a mouse isn't a preference—it's a necessity, empowering those with motor disabilities or reliance on assistive technologies. Prioritizing robust keyboard accessibility not only meets crucial WCAG requirements but fundamentally unlocks your digital content for a broader, more diverse audience.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Keyboard Navigation",
+      "Usability",
+      "Digital Inclusion"
+    ],
+    "body": [
+      "In our increasingly digital world, access to information and services should be universal. Yet, many websites inadvertently erect barriers for users who rely solely on keyboard navigation. This includes individuals with various motor disabilities, those using screen readers, or even temporary situations like a broken mouse. For these users, the ability to navigate through content, activate controls, and complete tasks using only the keyboard—primarily the Tab key, Enter, and Spacebar—is paramount to their online experience and often a gatekeeper to essential services. WCAG 2.1 guidelines unequivocally state that all functionality must be operable via keyboard.",
+      "Common keyboard accessibility pitfalls often revolve around two key areas: visible focus indicators and logical tab order. Without a clear visual indicator, users can't tell where they are on the page, leading to frustration and disorientation. Moreover, elements that aren't reachable by the Tab key, or 'keyboard traps' that prevent users from tabbing out of a component (like a modal window), render parts of your site completely unusable. To assess your site, try navigating through every interactive element using only your keyboard. Can you reach all links, buttons, and form fields? Is the focus clear? Does the order make sense?",
+      "The good news is that foundational keyboard accessibility is largely achievable with best practices in semantic HTML and thoughtful CSS. Ensure all interactive elements have a visible, sufficiently contrasting focus indicator (often managed by the `:focus` pseudo-class). Structure your content logically, allowing the natural tab order to follow the visual flow. For complex components, leverage ARIA attributes to enhance semantics where native HTML isn't sufficient. By embedding keyboard accessibility into your development process, you're not just checking a compliance box; you're actively building a more inclusive, intuitive, and ultimately more effective digital experience for everyone."
+    ]
+  },
+  {
     "id": "empower-your-users-the-art-of-accessible-link-text-2026-05-21",
     "slug": "empower-your-users-the-art-of-accessible-link-text",
     "title": "Empower Your Users: The Art of Accessible Link Text",
