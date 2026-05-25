@@ -1,5 +1,25 @@
 [
   {
+    "id": "beyond-aesthetics-crafting-meaningful-alt-text-for-a-more-inclusive-web-2026-05-25",
+    "slug": "beyond-aesthetics-crafting-meaningful-alt-text-for-a-more-inclusive-web",
+    "title": "Beyond Aesthetics: Crafting Meaningful Alt Text for a More Inclusive Web",
+    "date": "2026-05-25",
+    "excerpt": "Alt text is more than just a description; it's a crucial bridge for users who cannot see images, providing vital context and ensuring an equitable user experience. Learning to write effective alt text is a simple yet powerful step towards a more accessible website.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Alt Text",
+      "Screen Readers",
+      "Inclusive Design"
+    ],
+    "body": [
+      "In the world of web design, images are often seen as purely aesthetic elements. However, for millions of users, images on a webpage are invisible. This is where 'alt text' (alternative text) becomes indispensable. Alt text is a brief, descriptive phrase added to an image's HTML code, read aloud by screen readers, displayed when an image fails to load, and understood by search engines. Its primary purpose is to convey the visual information and function of an image to those who cannot see it, ensuring they don't miss out on critical content or context.",
+      "Crafting effective alt text is an art, not just a task. To make your images truly accessible, follow these actionable tips: Be concise and specific – describe what the image shows and its purpose within the content. Avoid redundant phrases like 'image of' or 'picture of,' as screen readers already identify it as an image. For functional images (like a submit button), describe its action ('Submit Application'). If an image is purely decorative and adds no information, an empty alt attribute (`alt=\"\"`) is appropriate, preventing screen readers from announcing it unnecessarily.",
+      "Prioritizing meaningful alt text is a clear demonstration of your commitment to web accessibility. It’s a small detail that yields significant impact, improving the user experience for individuals with visual impairments, enhancing SEO, and contributing to a more robust and resilient website. By integrating thoughtful alt text into your content creation workflow, you're not just complying with standards; you're building a more inclusive and welcoming digital space for everyone."
+    ]
+  },
+  {
     "id": "beyond-click-here-crafting-truly-accessible-link-text-2026-05-24",
     "slug": "beyond-click-here-crafting-truly-accessible-link-text",
     "title": "Beyond 'Click Here': Crafting Truly Accessible Link Text",
