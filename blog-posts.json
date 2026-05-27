@@ -1,5 +1,25 @@
 [
   {
+    "id": "beyond-decoration-crafting-effective-alt-text-for-web-accessibility-2026-05-27",
+    "slug": "beyond-decoration-crafting-effective-alt-text-for-web-accessibility",
+    "title": "Beyond Decoration: Crafting Effective Alt Text for Web Accessibility",
+    "date": "2026-05-27",
+    "excerpt": "Image alt text is more than just a descriptive label; it's a critical component of an accessible web experience. Learn how to write impactful alt text that empowers all users, especially those relying on screen readers, to understand your visual content.",
+    "readTime": "3 min read",
+    "tags": [
+      "Alt Text",
+      "Image Accessibility",
+      "WCAG",
+      "Screen Readers",
+      "Web Accessibility Tips"
+    ],
+    "body": [
+      "In the visual landscape of the modern web, images play a pivotal role in conveying information and enhancing user experience. However, for millions of users who rely on screen readers or face low-bandwidth connections, these images can become inaccessible barriers without proper implementation. This is where 'alt text' (alternative text) comes in: a brief, descriptive textual substitute that ensures everyone, regardless of their visual abilities, can understand the content and context of your visual media.",
+      "Crafting effective alt text isn't just about describing what's in the picture; it's about conveying the image's *purpose* or *information*. Focus on being concise, descriptive, and relevant to the surrounding content. For instance, instead of 'Image of a chart,' consider 'Bar chart showing a 20% increase in Q3 sales.' Remember to use empty alt text (`alt=\"\"`) for purely decorative images to prevent screen readers from announcing unnecessary visual clutter. Always ask: 'What information am I trying to convey with this image?'",
+      "Prioritizing well-written alt text is a simple yet powerful step towards a more inclusive web. It not only aligns your website with WCAG guidelines and ADA compliance but significantly improves the user experience for everyone. By taking the time to write thoughtful, informative alt descriptions, you ensure your visual content truly contributes to an accessible and equitable online environment for all your visitors."
+    ]
+  },
+  {
     "id": "beyond-click-here-crafting-truly-accessible-link-text-2026-05-26",
     "slug": "beyond-click-here-crafting-truly-accessible-link-text",
     "title": "Beyond 'Click Here': Crafting Truly Accessible Link Text",
