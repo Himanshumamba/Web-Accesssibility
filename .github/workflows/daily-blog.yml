@@ -1,9 +1,9 @@
-name: Daily Auto Blog Post
+name: Every 2 Days Auto Blog Post
 
 on:
   schedule:
-    # Runs at 12:00 PM (Noon) UTC every day
-    - cron: '0 12 * * *'
+    # Runs at 12:00 PM (Noon) UTC every 2 days (saves Netlify build credits)
+    - cron: '0 12 */2 * *'
   workflow_dispatch: # Allows you to run it manually by clicking a button in GitHub
 
 jobs:
@@ -36,5 +36,3 @@ jobs:
           git pull --rebase origin main
           git push
 
-      - name: Trigger Netlify Deploy
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/69e5ed96aa93684f134d2b1b
