@@ -1,5 +1,25 @@
 [
   {
+    "id": "navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it-2026-05-31",
+    "slug": "navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it",
+    "title": "Navigating the Web with Keys: Why Keyboard Accessibility Matters (and How to Ace It)",
+    "date": "2026-05-31",
+    "excerpt": "Keyboard navigation is fundamental for many users, including those with motor disabilities or who rely on screen readers. Ensuring your website is fully navigable via a keyboard isn't just a WCAG requirement; it's a pathway to true inclusivity.",
+    "readTime": "3 min read",
+    "tags": [
+      "Keyboard Accessibility",
+      "WCAG Compliance",
+      "Web Accessibility",
+      "User Experience",
+      "Assistive Technology"
+    ],
+    "body": [
+      "Imagine trying to use a website without a mouse or touchscreen. For millions of users with motor impairments, visual impairments using screen readers, or even just power users, keyboard navigation isn't a preference – it's a necessity. Websites that overlook robust keyboard support effectively shut out a significant portion of their potential audience, leading to frustrating user experiences and potential legal risks.",
+      "A common pitfall is neglecting visible focus indicators. When a user tabs through your site, they need to clearly see which element is currently active. Browsers provide default focus styles (often an outline), but designers sometimes remove them for aesthetic reasons without providing an accessible alternative. Additionally, an illogical tab order or inaccessible custom controls can completely derail the user experience, leaving keyboard users trapped or unable to reach critical content.",
+      "To ensure your site is keyboard-friendly, always test your entire user flow using only the 'Tab', 'Shift + Tab', 'Enter', and 'Spacebar' keys. Verify that all interactive elements (links, buttons, form fields, menus) are reachable and operable. Leverage semantic HTML elements as they come with built-in keyboard support. If using custom components, ensure they mimic native behaviors and implement `tabindex` judiciously. Never remove `outline: none;` without providing a clear, custom focus style. Prioritizing keyboard accessibility unlocks a more inclusive, functional, and compliant web experience for everyone."
+    ]
+  },
+  {
     "id": "beyond-aesthetics-crafting-effective-alt-text-for-a-truly-inclusive-web-2026-05-29",
     "slug": "beyond-aesthetics-crafting-effective-alt-text-for-a-truly-inclusive-web",
     "title": "Beyond Aesthetics: Crafting Effective Alt Text for a Truly Inclusive Web",
