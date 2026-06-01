@@ -23,10 +23,6 @@ export default async () => {
     return new Response("Build hook failed.", { status: 500 });
   }
 
-  console.log("Triggered Netlify build hook for daily blog generation.");
-  return new Response("Triggered daily blog build.", { status: 200 });
-};
-
-export const config = {
-  schedule: "30 3 * * *"
+  console.log("Triggered Netlify build hook for weekly blog generation.");
+  return new Response("Triggered weekly blog build.", { status: 200 });
 };

@@ -1,9 +1,6 @@
-name: Every 2 Days Auto Blog Post
+name: Manual Blog Post
 
 on:
-  schedule:
-    # Runs at 12:00 PM (Noon) UTC every 2 days (saves Netlify build credits)
-    - cron: '0 12 */2 * *'
   workflow_dispatch: # Allows you to run it manually by clicking a button in GitHub
 
 jobs:
@@ -32,7 +29,7 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add blog-posts.json
-          git commit -m "Auto-generated daily blog post" || echo "No changes to commit"
+          git commit -m "Manually generated blog post" || echo "No changes to commit"
           git pull --rebase origin main
           git push
 
