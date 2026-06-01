@@ -1,6 +1,9 @@
-name: Manual Blog Post
+name: Monthly Auto Blog Post
 
 on:
+  schedule:
+    # Runs automatically on the 1st day of every month at 12:00 PM UTC
+    - cron: '0 12 1 * *'
   workflow_dispatch: # Allows you to run it manually by clicking a button in GitHub
 
 jobs:
@@ -29,7 +32,7 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add blog-posts.json
-          git commit -m "Manually generated blog post" || echo "No changes to commit"
+          git commit -m "Auto-generated monthly blog post" || echo "No changes to commit"
           git pull --rebase origin main
           git push
 

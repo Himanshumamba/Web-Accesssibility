@@ -72,7 +72,7 @@ This is the best option if you keep the website files on your own computer and u
 
 Use this if the site will live in a Git-based deployment flow later.
 
-GitHub Actions is configured in `.github/workflows/daily-blog.yml` for manual runs only. It will not publish blog posts automatically while Netlify credits are low. When you run the workflow manually, it commits to `blog-posts.json`, and Netlify deploys the changed site from that push.
+GitHub Actions is configured in `.github/workflows/daily-blog.yml` to publish one blog post automatically on the 1st day of every month at `12:00 UTC`. It commits to `blog-posts.json`, and Netlify deploys the changed site from that monthly push.
 
 ### Option 3: Manual Netlify build hook
 
@@ -84,7 +84,7 @@ GitHub Actions is configured in `.github/workflows/daily-blog.yml` for manual ru
 Notes:
 
 - The Netlify function is no longer scheduled automatically, which avoids extra build-hook deploys.
-- The GitHub Actions blog workflow is no longer scheduled automatically, which avoids automatic blog deploys before the next billing reset.
+- The GitHub Actions blog workflow runs only once per month, which keeps automatic blog deploys very low.
 - The function can still be tested from the Netlify Functions UI with `Run now`.
 
 ## Important note
