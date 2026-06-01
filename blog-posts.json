@@ -1,5 +1,24 @@
 [
   {
+    "id": "unlocking-your-images-the-power-of-effective-alt-text-2026-06-01",
+    "slug": "unlocking-your-images-the-power-of-effective-alt-text",
+    "title": "Unlocking Your Images: The Power of Effective Alt Text",
+    "date": "2026-06-01",
+    "excerpt": "Alt text is a fundamental yet often overlooked aspect of web accessibility, providing critical context for users unable to see images. Learning to write effective alt text is a simple step that significantly enhances your site's inclusivity and user experience.",
+    "readTime": "3 min read",
+    "tags": [
+      "Alt Text",
+      "Image Accessibility",
+      "WCAG Compliance",
+      "Digital Inclusion"
+    ],
+    "body": [
+      "In today's visually-driven digital landscape, images are everywhere. While they can greatly enhance user engagement, they also present a critical accessibility challenge. For users who rely on screen readers or have slow internet connections, images are invisible barriers unless accompanied by descriptive 'alt text' (alternative text). This seemingly small detail is mandated by WCAG 1.1.1 Non-text Content and is essential for ensuring everyone can access the full information and context conveyed by your website's visuals.",
+      "Crafting meaningful alt text goes beyond a simple description. Instead, focus on the image's purpose and the information it conveys. Ask yourself: 'If the image disappeared, what text would I need to replace it so the user doesn't miss out?' Avoid phrases like 'image of' and keep it concise. For purely decorative images that convey no information, use an empty alt attribute (`alt=\"\"`). For complex images like charts or infographics, a short alt text can provide an overview, with a more detailed description provided elsewhere on the page.",
+      "Implementing thoughtful alt text across your website is a powerful step towards digital inclusion. It not only improves accessibility for users with visual impairments but also boosts your site's SEO by providing search engines with more context. Prioritizing effective alt text demonstrates a commitment to a user-friendly and inclusive web experience. If you need help auditing your website's image accessibility or developing comprehensive accessibility strategies, our team is ready to assist."
+    ]
+  },
+  {
     "id": "navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it-2026-05-31",
     "slug": "navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it",
     "title": "Navigating the Web with Keys: Why Keyboard Accessibility Matters (and How to Ace It)",
