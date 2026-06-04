@@ -1,5 +1,230 @@
 [
   {
+    "id": "how-to-check-if-your-website-is-wcag-compliant-2026-06-04",
+    "slug": "how-to-check-if-your-website-is-wcag-compliant",
+    "title": "How to Check If Your Website Is WCAG Compliant",
+    "date": "2026-06-04",
+    "excerpt": "A beginner-friendly guide to checking WCAG compliance with automated scans, keyboard testing, color contrast checks, forms review, and manual accessibility testing.",
+    "readTime": "6 min read",
+    "tags": ["WCAG Compliance", "Accessibility Audit", "Manual Testing"],
+    "body": [
+      "Start by checking the pages that matter most: homepage, contact page, checkout or booking flow, lead forms, pricing pages, and any page that gets organic traffic. WCAG compliance is not only about passing an automated score. You need to confirm that real users can navigate, understand, and complete tasks.",
+      "Run an automated scan with tools such as WAVE, axe DevTools, Lighthouse, or Accessibility Insights. Look for missing labels, empty buttons, poor color contrast, missing alt text, duplicate IDs, skipped headings, and ARIA errors. Treat this as a starting point, not proof of compliance.",
+      "Next, test the page with only the keyboard. Use Tab, Shift + Tab, Enter, Space, and Escape. Every link, button, menu, modal, and form field should be reachable and usable. The visible focus indicator should be easy to see.",
+      "Review headings, image alt text, link text, form labels, error messages, and color contrast. These are common issues on business websites and are often fast to fix. If you need a deeper review, request a <a href=\"wcag-accessibility-audit.html\">professional WCAG accessibility audit</a> or <a href=\"contact.html\">contact me for help</a>."
+    ]
+  },
+  {
+    "id": "wcag-2-2-checklist-for-small-business-websites-2026-06-04",
+    "slug": "wcag-2-2-checklist-for-small-business-websites",
+    "title": "WCAG 2.2 Checklist for Small Business Websites",
+    "date": "2026-06-04",
+    "excerpt": "A practical WCAG 2.2 checklist for small business websites covering keyboard access, alt text, headings, forms, color contrast, errors, and mobile usability.",
+    "readTime": "7 min read",
+    "tags": ["WCAG 2.2", "Small Business", "Checklist"],
+    "body": [
+      "Small business websites usually need a focused WCAG checklist, not a giant technical document. Start with the pages that drive leads and sales, then check the accessibility barriers most likely to stop users from contacting you.",
+      "Check that every image has useful alt text or an empty alt attribute when decorative. Confirm that headings follow a logical order, buttons have clear names, links make sense out of context, and important content is not communicated by color alone.",
+      "Test every form field for a visible label, helpful error messages, required field instructions, and keyboard access. Contact forms, checkout forms, appointment forms, and newsletter forms should be tested carefully because they directly affect conversions.",
+      "Use this checklist as a first pass, then connect it to a deeper <a href=\"wcag-accessibility-audit.html\">WCAG audit service</a>. For ongoing learning, read the <a href=\"blog.html#website-accessibility-audit-checklist-for-beginners\">website accessibility audit checklist</a>."
+    ]
+  },
+  {
+    "id": "ada-website-compliance-checklist-for-small-businesses-2026-06-04",
+    "slug": "ada-website-compliance-checklist-for-small-businesses",
+    "title": "ADA Website Compliance Checklist for Small Businesses",
+    "date": "2026-06-04",
+    "excerpt": "A plain-English ADA website compliance checklist for small businesses that want to identify common accessibility problems and plan practical fixes.",
+    "readTime": "6 min read",
+    "tags": ["ADA Compliance", "Small Business", "Checklist"],
+    "body": [
+      "For small businesses, ADA website accessibility usually begins with making sure people with disabilities can use key pages and complete important actions. Focus on practical barriers first: contact forms, booking tools, menus, ecommerce flows, and downloadable documents.",
+      "Check whether the website works without a mouse. Users should be able to tab through the page, see where focus is, open and close menus, submit forms, and access all important links and buttons.",
+      "Review text contrast, alt text, headings, form labels, error messages, video captions, and PDFs. These issues create real access barriers and often appear on small business websites built with templates or page builders.",
+      "If you want help prioritizing risk areas, visit my <a href=\"ada-website-compliance.html\">ADA website compliance support</a> page or <a href=\"contact.html\">request a website accessibility review</a>."
+    ]
+  },
+  {
+    "id": "how-to-fix-website-accessibility-issues-beginners-guide-2026-06-04",
+    "slug": "how-to-fix-website-accessibility-issues-beginners-guide",
+    "title": "How to Fix Website Accessibility Issues: Beginner's Guide",
+    "date": "2026-06-04",
+    "excerpt": "Learn how to prioritize and fix common website accessibility issues including labels, headings, contrast, keyboard traps, alt text, and vague links.",
+    "readTime": "6 min read",
+    "tags": ["Accessibility Fixes", "Remediation", "Beginner Guide"],
+    "body": [
+      "The best way to fix accessibility issues is to group them by user impact. Start with blockers that prevent people from using navigation, forms, checkout, account login, or contact flows.",
+      "Fix labels first. Every form input needs a programmatic label, and every button needs an accessible name. Replace vague links such as click here with descriptive link text that explains the destination or action.",
+      "Then fix keyboard access. Make sure interactive elements can be reached and operated with the keyboard, focus is visible, and users are not trapped in menus or dialogs.",
+      "Finally, improve content structure with proper headings, meaningful alt text, readable contrast, and clear error messages. For hands-on help, see my <a href=\"website-accessibility-remediation.html\">website accessibility remediation service</a>."
+    ]
+  },
+  {
+    "id": "common-wcag-failures-found-on-business-websites-2026-06-04",
+    "slug": "common-wcag-failures-found-on-business-websites",
+    "title": "12 Common WCAG Failures Found on Business Websites",
+    "date": "2026-06-04",
+    "excerpt": "Common WCAG failures on business websites include low contrast, missing labels, weak focus states, poor headings, inaccessible menus, and broken form errors.",
+    "readTime": "6 min read",
+    "tags": ["WCAG Failures", "Accessibility Audit", "Business Websites"],
+    "body": [
+      "The same WCAG problems appear again and again on business websites. The most common issues are low color contrast, missing alt text, missing form labels, vague link text, empty buttons, skipped headings, and poor keyboard focus.",
+      "Interactive components create another group of failures. Menus, sliders, accordions, popups, cookie banners, and booking widgets often look fine visually but fail for keyboard or screen reader users.",
+      "Forms are especially important because they affect leads. A form can fail accessibility when labels are missing, error messages are unclear, required fields depend on color alone, or the submit button cannot be reached with the keyboard.",
+      "If your scan shows many of these issues, start with a <a href=\"wcag-accessibility-audit.html\">WCAG accessibility audit</a> so the findings are prioritized instead of overwhelming."
+    ]
+  },
+  {
+    "id": "website-accessibility-audit-checklist-for-beginners-2026-06-04",
+    "slug": "website-accessibility-audit-checklist-for-beginners",
+    "title": "Website Accessibility Audit Checklist for Beginners",
+    "date": "2026-06-04",
+    "excerpt": "A beginner accessibility audit checklist for website owners who want to test pages, forms, navigation, images, headings, contrast, and screen reader basics.",
+    "readTime": "7 min read",
+    "tags": ["Accessibility Audit", "Checklist", "Beginner Guide"],
+    "body": [
+      "A beginner accessibility audit should cover the pages that users rely on most. Audit the homepage, service pages, blog templates, contact form, pricing page, checkout flow, and any embedded tools.",
+      "Use this order: automated scan, keyboard test, heading review, link review, image alt text review, form review, contrast check, mobile zoom check, and screen reader spot check.",
+      "Document each issue with the page URL, issue description, screenshot, WCAG category when known, user impact, severity, and suggested fix. This makes remediation easier for developers and business owners.",
+      "If you want a done-for-you version, I can provide a <a href=\"wcag-accessibility-audit.html\">manual accessibility audit</a> with prioritized findings and remediation guidance."
+    ]
+  },
+  {
+    "id": "wordpress-accessibility-issues-and-how-to-fix-them-2026-06-04",
+    "slug": "wordpress-accessibility-issues-and-how-to-fix-them",
+    "title": "WordPress Accessibility Issues and How to Fix Them",
+    "date": "2026-06-04",
+    "excerpt": "Learn the most common WordPress accessibility issues caused by themes, plugins, page builders, forms, menus, contrast, headings, and missing alt text.",
+    "readTime": "6 min read",
+    "tags": ["WordPress Accessibility", "WCAG Fixes", "Accessibility Remediation"],
+    "body": [
+      "WordPress accessibility issues often come from themes, plugins, page builders, and content editing habits. A site can look polished while still being hard to use with a keyboard or screen reader.",
+      "Start with the theme. Check headings, menu behavior, focus indicators, button names, contrast, and mobile navigation. Then test plugins such as forms, popups, sliders, appointment tools, and ecommerce add-ons.",
+      "Content matters too. Add meaningful alt text, avoid vague links, use headings in order, and make sure PDFs or downloads are accessible. Page builders can create layout-heavy pages that need careful review.",
+      "For help with theme, plugin, and content fixes, visit my <a href=\"wordpress-accessibility-fixes.html\">WordPress accessibility fixes</a> page."
+    ]
+  },
+  {
+    "id": "how-to-make-a-wordpress-website-ada-compliant-2026-06-04",
+    "slug": "how-to-make-a-wordpress-website-ada-compliant",
+    "title": "How to Make a WordPress Website ADA Compliant",
+    "date": "2026-06-04",
+    "excerpt": "A practical guide for making a WordPress website more ADA accessible with WCAG-focused fixes for themes, plugins, forms, images, and navigation.",
+    "readTime": "6 min read",
+    "tags": ["WordPress ADA Compliance", "ADA Compliance", "WordPress"],
+    "body": [
+      "To make a WordPress website more ADA accessible, start with WCAG-based testing. Automated plugins can help find issues, but they cannot fully verify real keyboard access, screen reader usability, or form behavior.",
+      "Choose an accessibility-ready theme when possible, then test the actual pages you publish. Many problems appear after adding page builder sections, sliders, popups, forms, and third-party embeds.",
+      "Fix the essentials first: labels, headings, alt text, color contrast, focus styles, descriptive links, accessible menus, and form errors. Then retest the key user journeys.",
+      "If your WordPress site needs hands-on help, see <a href=\"wordpress-accessibility-fixes.html\">WordPress accessibility fixes</a> or <a href=\"contact.html\">send your website for review</a>."
+    ]
+  },
+  {
+    "id": "best-accessibility-audit-tools-for-website-owners-2026-06-04",
+    "slug": "best-accessibility-audit-tools-for-website-owners",
+    "title": "Best Accessibility Audit Tools for Website Owners",
+    "date": "2026-06-04",
+    "excerpt": "A beginner guide to accessibility audit tools and how website owners should use WAVE, axe, Lighthouse, Accessibility Insights, and manual testing together.",
+    "readTime": "5 min read",
+    "tags": ["Accessibility Tools", "Audit Tools", "WCAG Testing"],
+    "body": [
+      "Accessibility audit tools are useful for finding obvious issues quickly. WAVE, axe DevTools, Lighthouse, and Accessibility Insights can identify problems such as missing labels, low contrast, empty buttons, and ARIA mistakes.",
+      "Do not rely on a single score. Automated tools only catch part of accessibility issues. They cannot fully judge whether alt text is meaningful, whether instructions are clear, or whether a user can complete a full task.",
+      "Use tools in this order: scan the page, fix clear technical errors, test keyboard navigation, review content manually, then retest. Keep a record of what was fixed and what still needs manual review.",
+      "For a complete review that combines tools with manual testing, request a <a href=\"wcag-accessibility-audit.html\">WCAG accessibility audit</a>."
+    ]
+  },
+  {
+    "id": "free-website-accessibility-testing-tools-checklist-2026-06-04",
+    "slug": "free-website-accessibility-testing-tools-checklist",
+    "title": "Free Website Accessibility Testing Tools Checklist",
+    "date": "2026-06-04",
+    "excerpt": "A checklist of free website accessibility testing tools and what each tool can help you check before requesting a full WCAG audit.",
+    "readTime": "5 min read",
+    "tags": ["Free Tools", "Accessibility Testing", "Checklist"],
+    "body": [
+      "Free accessibility tools are a good first step for website owners. Use WAVE for visual issue review, axe DevTools for code-level findings, Lighthouse for quick checks, and Accessibility Insights for guided testing.",
+      "For color contrast, use a contrast checker and test text, buttons, form errors, navigation links, and footer content. Low contrast often appears in secondary text, placeholder text, disabled states, and brand-colored buttons.",
+      "For keyboard testing, no tool is required. Use Tab, Shift + Tab, Enter, Space, and Escape. If you cannot reach or operate something with the keyboard, that issue needs attention.",
+      "After using free tools, review the <a href=\"blog.html#website-accessibility-audit-checklist-for-beginners\">beginner accessibility audit checklist</a> or request a <a href=\"contact.html\">manual accessibility review</a>."
+    ]
+  },
+  {
+    "id": "how-to-test-website-accessibility-manually-2026-06-04",
+    "slug": "how-to-test-website-accessibility-manually",
+    "title": "How to Test Website Accessibility Manually",
+    "date": "2026-06-04",
+    "excerpt": "Learn how to manually test website accessibility with keyboard navigation, headings, labels, alt text, contrast, screen reader checks, and user flow review.",
+    "readTime": "7 min read",
+    "tags": ["Manual Testing", "Accessibility Testing", "WCAG"],
+    "body": [
+      "Manual accessibility testing helps catch issues that automated scans miss. Start by choosing a real user path, such as opening the menu, reading a service page, filling out a form, and submitting a request.",
+      "Test the path with only the keyboard. Watch for missing focus indicators, skipped controls, menus that do not open, popups that trap focus, and buttons that cannot be activated.",
+      "Then review page structure. Check that headings describe the page, links are meaningful, images have appropriate alt text, forms have labels, and error messages explain how to fix problems.",
+      "Manual testing is a core part of my <a href=\"wcag-accessibility-audit.html\">WCAG accessibility audit service</a> because it reflects real usability better than automated scores alone."
+    ]
+  },
+  {
+    "id": "alt-text-accessibility-best-practices-for-wcag-2026-06-04",
+    "slug": "alt-text-accessibility-best-practices-for-wcag",
+    "title": "Alt Text Accessibility Best Practices for WCAG",
+    "date": "2026-06-04",
+    "excerpt": "A practical guide to writing accessible alt text for WCAG, including decorative images, informative images, linked images, charts, screenshots, and SEO mistakes.",
+    "readTime": "5 min read",
+    "tags": ["Alt Text", "WCAG", "Image Accessibility"],
+    "body": [
+      "Good alt text explains the purpose of an image in its current context. It should help a screen reader user understand the same important information a sighted user gets from the image.",
+      "Decorative images should usually use empty alt text so they are skipped. Informative images need concise descriptions. Linked images need alt text that describes the link destination or action, not only the visual appearance.",
+      "Avoid keyword stuffing. Alt text is not a place to force SEO phrases. It should be useful, accurate, and relevant to the surrounding content.",
+      "If your site has many images, include image review in your <a href=\"wcag-accessibility-audit.html\">WCAG accessibility audit</a> and pair it with the <a href=\"blog.html#free-website-accessibility-testing-tools-checklist\">free testing tools checklist</a>."
+    ]
+  },
+  {
+    "id": "keyboard-navigation-accessibility-checklist-2026-06-04",
+    "slug": "keyboard-navigation-accessibility-checklist",
+    "title": "Keyboard Navigation Accessibility Checklist",
+    "date": "2026-06-04",
+    "excerpt": "A keyboard navigation accessibility checklist for testing menus, links, buttons, forms, modals, focus order, focus indicators, and escape behavior.",
+    "readTime": "5 min read",
+    "tags": ["Keyboard Accessibility", "WCAG", "Checklist"],
+    "body": [
+      "Keyboard navigation is one of the fastest ways to find serious accessibility problems. If a user cannot complete a task without a mouse, the website may block people with motor disabilities and screen reader users.",
+      "Tab through the page from top to bottom. Every interactive element should receive focus in a logical order. The focus indicator should be visible, and the current location should never feel hidden.",
+      "Check menus, dropdowns, modals, cookie banners, forms, sliders, and checkout flows. Make sure users can open, operate, and close components with standard keyboard commands.",
+      "Keyboard testing is included in my <a href=\"wcag-accessibility-audit.html\">manual WCAG audits</a>. You can also read <a href=\"blog.html#how-to-test-website-accessibility-manually\">how to test website accessibility manually</a>."
+    ]
+  },
+  {
+    "id": "color-contrast-accessibility-checker-guide-2026-06-04",
+    "slug": "color-contrast-accessibility-checker-guide",
+    "title": "Color Contrast Accessibility Checker Guide",
+    "date": "2026-06-04",
+    "excerpt": "Learn how to use a color contrast accessibility checker to test text, buttons, links, form errors, navigation, and brand colors against WCAG expectations.",
+    "readTime": "5 min read",
+    "tags": ["Color Contrast", "WCAG", "Accessibility Testing"],
+    "body": [
+      "Color contrast problems are common because designs often use light gray text, low-contrast buttons, subtle links, or brand colors that look good but are difficult to read.",
+      "Use a contrast checker on body text, headings, navigation links, buttons, form labels, error messages, footer links, and text over images. Do not test only the homepage headline.",
+      "Watch for placeholder text, disabled-looking buttons that are still clickable, and hover states that reduce readability. Mobile screens and sunlight can make weak contrast even harder to read.",
+      "Contrast fixes are often quick wins during <a href=\"website-accessibility-remediation.html\">website accessibility remediation</a> and should be checked before and after design changes."
+    ]
+  },
+  {
+    "id": "form-accessibility-checklist-for-wcag-compliance-2026-06-04",
+    "slug": "form-accessibility-checklist-for-wcag-compliance",
+    "title": "Form Accessibility Checklist for WCAG Compliance",
+    "date": "2026-06-04",
+    "excerpt": "A WCAG form accessibility checklist for labels, required fields, instructions, validation, errors, keyboard access, focus management, and successful submission.",
+    "readTime": "6 min read",
+    "tags": ["Form Accessibility", "WCAG Compliance", "Checklist"],
+    "body": [
+      "Forms are one of the most important accessibility areas because they control leads, purchases, appointments, and support requests. A form that is hard to use can directly reduce conversions.",
+      "Every field needs a clear visible label and a programmatic label. Required fields should be identified in text, not only by color. Instructions should appear before users make mistakes.",
+      "Error messages should explain what went wrong and how to fix it. After submission, focus should move to a useful message or error summary so keyboard and screen reader users know what happened.",
+      "If your contact or checkout forms are important to revenue, include them in a <a href=\"wcag-accessibility-audit.html\">WCAG accessibility audit</a> or <a href=\"contact.html\">send me the form URL for review</a>."
+    ]
+  },
+  {
     "id": "unlocking-your-images-the-power-of-effective-alt-text-2026-06-01",
     "slug": "unlocking-your-images-the-power-of-effective-alt-text",
     "title": "Unlocking Your Images: The Power of Effective Alt Text",
