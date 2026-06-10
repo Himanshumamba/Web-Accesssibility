@@ -30,11 +30,29 @@
   </header>
 
   <main>
-    <section class="section">
+    <section class="section scan-tool" id="accessibility-scan">
       <h1>Contact Me</h1>
-      <p>Email me directly at <a href="mailto:hphimeshpandey@gmail.com">Contact me</a></p>
-      <p>If you need a website accessibility audit, PDF accessibility support, or help fixing WCAG issues, send your
-        website URL and a short summary of the problem.</p>
+      <h2>Get Your Free, Expert-Led Accessibility Audit</h2>
+      <p>
+        Enter your URL below. I’ll manually review your site and send you an actionable report within 24 hours—no automated junk, just real insights.
+      </p>
+      <form id="scanForm" class="scan-form">
+        <div class="form-group">
+          <label for="scanUrl">Website URL</label>
+          <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com"
+            aria-label="Website URL">
+        </div>
+        <div class="form-group">
+          <label for="scanEmail">Work Email Address</label>
+          <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com"
+            aria-label="Email Address">
+        </div>
+        <button type="submit" class="btn">Send Me My Free Audit</button>
+        <p style="font-size: 0.85rem; margin-top: 10px; color: #555; text-align: center;">&#128274; 100% Free. No commitment required. Your info is kept private.</p>
+      </form>
+      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+      
+      <p style="margin-top: 2rem;">Or email me directly at <a href="mailto:hphimeshpandey@gmail.com">hphimeshpandey@gmail.com</a></p>
       <p>I work remotely and support businesses that want better accessibility for US users.</p>
     </section>
   </main>
@@ -42,6 +60,69 @@
   <footer>
     <p>&copy; Himanshu | Accessibility Expert</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scanForm = document.getElementById('scanForm');
+      const scanMessage = document.getElementById('scanMessage');
+
+      if (scanForm) {
+        scanForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          // Show loading state
+          const submitBtn = scanForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+
+          // Send data directly to your email without backend via formsubmit.co
+          fetch("https://formsubmit.co/ajax/hphimeshpandey@gmail.com", {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              _subject: "New Accessibility Scan Request",
+              URL_to_Scan: document.getElementById('scanUrl').value,
+              User_Email: document.getElementById('scanEmail').value,
+              message: `
+                New Scan Request Received:
+
+                🌐 URL: ${document.getElementById('scanUrl').value}
+
+                📧 User Email: ${document.getElementById('scanEmail').value}
+    `
+            })
+          })
+            .then(response => response.json())
+            .then(data => {
+              // Show success message
+              scanMessage.textContent = "Thank you! Your request has been received. You will get your report within 24 hours."; scanMessage.style.color = "#174642";
+              scanMessage.style.background = "#eef7f4";
+              scanMessage.removeAttribute('hidden');
+              scanForm.reset();
+            })
+            .catch(error => {
+              // Show error message
+              scanMessage.textContent = "Oops! Something went wrong. Please try again.";
+              scanMessage.style.color = "#721c24";
+              scanMessage.style.background = "#f8d7da";
+              scanMessage.removeAttribute('hidden');
+            })
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+
+              // Hide message after a few seconds
+              setTimeout(() => {
+                scanMessage.setAttribute('hidden', '');
+              }, 8000);
+            });
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
