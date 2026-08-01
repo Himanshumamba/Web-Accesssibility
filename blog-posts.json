@@ -1,5 +1,25 @@
 [
   {
+    "id": "beyond-click-here-crafting-accessible-link-text-for-all-2026-08-01",
+    "slug": "beyond-click-here-crafting-accessible-link-text-for-all",
+    "title": "Beyond 'Click Here': Crafting Accessible Link Text for All",
+    "date": "2026-08-01",
+    "excerpt": "Accessible link text is crucial for users of assistive technologies, providing vital context without visual cues. Learn how to write descriptive and actionable links that enhance navigation and understanding for everyone.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Link Text",
+      "Screen Readers",
+      "Usability"
+    ],
+    "body": [
+      "For many users, especially those relying on screen readers, the text of a link is their primary clue about its destination and purpose. Generic phrases like 'Click Here,' 'Read More,' or 'Learn More' provide no context when read out of sequence or in a list, making navigation frustrating and inefficient for these individuals.",
+      "Instead, ensure your link text is descriptive and meaningful even when taken out of context. For example, instead of 'Click Here for our Privacy Policy,' use 'Read our Privacy Policy.' Or, rather than 'Learn More' after a product description, try 'Learn more about [Product Name] features' or 'View [Product Name] specifications.' This clarity is paramount.",
+      "This simple change significantly improves user experience for everyone, fulfilling WCAG 2.1 Success Criterion 2.4.4 (Link Purpose (In Context)). By adopting clear, descriptive link text, you empower all users to navigate your site with confidence and clarity, fostering a more inclusive and effective digital environment."
+    ]
+  },
+  {
     "id": "beyond-aesthetics-crafting-impactful-alt-text-for-accessibility-2026-07-01",
     "slug": "beyond-aesthetics-crafting-impactful-alt-text-for-accessibility",
     "title": "Beyond Aesthetics: Crafting Impactful Alt Text for Accessibility",
