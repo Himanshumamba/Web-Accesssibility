@@ -1,5 +1,26 @@
 [
   {
+    "id": "beyond-image-crafting-effective-alt-text-for-true-inclusion-2026-09-01",
+    "slug": "beyond-image-crafting-effective-alt-text-for-true-inclusion",
+    "title": "Beyond 'Image': Crafting Effective Alt Text for True Inclusion",
+    "date": "2026-09-01",
+    "excerpt": "Alt text is a fundamental component of web accessibility, offering descriptive context for visual content to users who cannot see it. Mastering its creation is crucial for ensuring your website is truly inclusive and compliant with WCAG standards.",
+    "readTime": "3 min read",
+    "tags": [
+      "Web Accessibility",
+      "WCAG",
+      "Alt Text",
+      "Image Accessibility",
+      "Digital Inclusion",
+      "ADA Compliance"
+    ],
+    "body": [
+      "In the world of web accessibility, alt text (alternative text) often gets reduced to a compliance checkbox. However, it's far more than a mere technical requirement; it's a powerful tool for inclusion, providing a textual equivalent for images for screen reader users, those with low bandwidth, or when images fail to load. Without thoughtfully crafted alt text, users relying on assistive technologies miss out on crucial information, context, and the overall experience your visual content is meant to convey.",
+      "So, how do you write effective alt text? The key is to be concise, accurate, and descriptive, focusing on the information or function the image provides. Avoid starting with phrases like 'image of' or 'picture of' – screen readers already announce it's an image. Instead, describe what's happening, what's depicted, or what the image's purpose is. For decorative images, an empty alt attribute (`alt=\"\"`) is appropriate. For complex images like charts or graphs, provide a brief summary in the alt text and more detailed information in nearby text or a linked description.",
+      "Prioritizing meaningful alt text elevates your website's accessibility, usability, and even its search engine optimization. It demonstrates a commitment to providing an equitable experience for all users, regardless of their visual abilities. Take a moment with each image you add to your site and ask: 'What information or purpose does this image convey?' Your answer is the foundation for truly inclusive alt text, paving the way for a more accessible web for everyone."
+    ]
+  },
+  {
     "id": "beyond-click-here-crafting-accessible-link-text-for-all-2026-08-01",
     "slug": "beyond-click-here-crafting-accessible-link-text-for-all",
     "title": "Beyond 'Click Here': Crafting Accessible Link Text for All",
