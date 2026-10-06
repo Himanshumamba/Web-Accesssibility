@@ -20,21 +20,21 @@
   <header>
     <h2>Himanshu | Accessibility Expert</h2>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="services.html">Services</a> |
-      <a href="pricing.html">Pricing</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html">Home</a> |
+  <a href="blog.html">Blog</a> |
+  <a href="services.html">Services</a> |
+  <a href="pricing.html">Pricing</a> |
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a>
+</nav>
   </header>
 
   <main>
     <section class="section" id="accessibility-scan">
       <h1>Contact Me</h1>
-      <h2>Get Your Free, Expert-Led Accessibility Audit</h2>
+      <h2>Run a Free Accessibility Scan</h2>
       <p>
-        Enter your URL below. I’ll manually review your site and send you an actionable report within 24 hours—no automated junk, just real insights.
+        Enter your URL below. I will manually review your site and send you an actionable report within 24 hours.
       </p>
       <form id="scanForm" class="scan-form">
         <div class="form-group">
@@ -47,8 +47,8 @@
           <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com"
             aria-label="Email Address">
         </div>
-        <button type="submit" class="btn">Send Me My Free Audit</button>
-        <p style="font-size: 0.85rem; margin-top: 10px; color: #555; text-align: center;">&#128274; 100% Free. No commitment required. Your info is kept private.</p>
+        <button type="submit" class="btn">Run Free Scan</button>
+        <p style="font-size: 0.85rem; margin-top: 10px; color: #555; text-align: center;">100% free. No commitment required. Your info is kept private.</p>
       </form>
       <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
       
@@ -89,9 +89,9 @@
               message: `
                 New Scan Request Received:
 
-                🌐 URL: ${document.getElementById('scanUrl').value}
+                URL: ${document.getElementById('scanUrl').value}
 
-                📧 User Email: ${document.getElementById('scanEmail').value}
+                User Email: ${document.getElementById('scanEmail').value}
     `
             })
           })

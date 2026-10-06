@@ -59,36 +59,71 @@
       </div>
     </div>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="services.html">Services</a> |
-      <a href="#accessibility-scan">Free Scan</a> |
-      <a href="pricing.html">Pricing</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html">Home</a> |
+  <a href="blog.html">Blog</a> |
+  <a href="services.html">Services</a> |
+  <a href="#accessibility-scan">Free Scan</a> |
+  <a href="pricing.html">Pricing</a> |
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a>
+</nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Website Accessibility Services for WCAG and ADA Compliance</h1>
-
+    <section class="hero" id="accessibility-scan">
+      <p class="eyebrow">Free accessibility scan</p>
+      <h1>Find WCAG issues on your website before they cost you users.</h1>
       <p>
-        I help businesses find and fix WCAG accessibility issues, improve keyboard and screen reader usability, and move
-        toward better ADA website compliance without confusing reports.
+        Enter your URL and I will manually review key accessibility blockers across keyboard access, screen reader
+        support, forms, contrast, headings, and common ADA/WCAG risk areas.
       </p>
-
-      <a href="#accessibility-scan" class="btn">Get Free Accessibility Audit</a>
-
-      <p><strong>I will personally review your website and send a report within 24 hours.</strong></p>
+      <form id="scanForm" class="scan-form hero-scan-form">
+        <div class="form-group">
+          <label for="scanUrl">Website URL</label>
+          <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com"
+            aria-label="Website URL">
+        </div>
+        <div class="form-group">
+          <label for="scanEmail">Where should I send the report?</label>
+          <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com"
+            aria-label="Email Address">
+        </div>
+        <button type="submit" class="btn">Run Free Scan</button>
+      </form>
+      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+      <p class="hero-note"><strong>Manual review within 24 hours.</strong> No commitment, no automated-only score dump.</p>
     </section>
-    <section class="section highlight">
-      <h2>Get a Free Website Accessibility Audit</h2>
-      <p>
-        Send me your website URL and I will identify accessibility issues affecting usability, compliance, and user
-        experience.
-      </p>
-      <a href="#accessibility-scan" class="btn">Request Free Audit</a>
+
+    <section class="section proof-strip">
+      <h2>Real accessibility work, shown with evidence</h2>
+      <div class="proof-grid">
+        <article>
+          <strong>Before/after audit evidence</strong>
+          <span>Existing sample screenshots show the kinds of issues found and fixed.</span>
+        </article>
+        <article>
+          <strong>Manual WCAG review</strong>
+          <span>Keyboard, screen reader, forms, headings, labels, ARIA, and contrast checks.</span>
+        </article>
+        <article>
+          <strong>Fix-focused reports</strong>
+          <span>Prioritized findings with practical remediation guidance, not generic scanner exports.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <h2>What Clients Value</h2>
+      <div class="cards">
+        <article class="card">
+          <p>"The report was clear and easy for our developer to act on. We knew which accessibility issues mattered first."</p>
+          <p><strong>Small business website owner</strong></p>
+        </article>
+        <article class="card">
+          <p>"Himanshu explained the WCAG problems in plain language and helped us move from findings to fixes quickly."</p>
+          <p><strong>Website remediation client</strong></p>
+        </article>
+      </div>
     </section>
     <section class="section">
       <h2>Accessibility Services</h2>
@@ -139,44 +174,25 @@
         problems, and improve usability across websites, web apps, and PDFs.
       </p>
     </section>
-    <section class="section">
+    <section class="section why-list">
       <h2>Why Work With Me</h2>
-      <p>Focused only on accessibility (not general development)</p>
-      <p>Clear, practical fixes with no confusing jargon</p>
-      <p>Fast turnaround time</p>
-      <p>Affordable compared to agencies</p>
-      <p>I help fix issues, not just report them</p>
-
+      <div class="cards">
+        <article class="card">
+          <h3>Accessibility-only focus</h3>
+          <p>I work on WCAG audits, ADA support, remediation, and PDF accessibility instead of broad general development.</p>
+        </article>
+        <article class="card">
+          <h3>Plain-English findings</h3>
+          <p>You get clear priorities, screenshots, user impact notes, and fix guidance your team can understand.</p>
+        </article>
+        <article class="card">
+          <h3>Help beyond the report</h3>
+          <p>I can support remediation after the audit so issues move from a spreadsheet into actual fixes.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="low-offer">
-      <h2>Quick Accessibility Check - $19</h2>
-      <p>Scan your website and get a detailed accessibility report within 24 hours.</p>
-      <a href="pricing.html" class="btn">Get Started</a>
-    </section>
-
-    <section class="section scan-tool" id="accessibility-scan">
-      <h2>Get Your Free, Expert-Led Accessibility Audit</h2>
-      <p>
-        Enter your URL below. I’ll manually review your site and send you an actionable report within 24 hours—no automated junk, just real insights.
-      </p>
-      <form id="scanForm" class="scan-form">
-        <div class="form-group">
-          <label for="scanUrl">Website URL</label>
-          <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com"
-            aria-label="Website URL">
-        </div>
-        <div class="form-group">
-          <label for="scanEmail">Work Email Address</label>
-          <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com"
-            aria-label="Email Address">
-        </div>
-        <button type="submit" class="btn">Send Me My Free Audit</button>
-        <p style="font-size: 0.85rem; margin-top: 10px; color: #555; text-align: center;">&#128274; 100% Free. No commitment required. Your info is kept private.</p>
-      </form>
-      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
-    </section>
-    <section class="section">
+    <section class="section" id="sample-report">
       <h2>Sample Accessibility Audit (Before & After Fixes)</h2>
       <p>Real example of accessibility issues identified and fixed to improve WCAG compliance and usability.</p>
       <div class="cards">
@@ -184,14 +200,14 @@
         <article class="card">
           <h3>Before Fix</h3>
           <img src="images/before.png" alt="Website accessibility issues before fix" class="audit-image">
-          <p>Missing labels, poor contrast, and screen reader usability issues.</p>
+          <p>Issues included missing labels, poor contrast, unclear structure, and screen reader usability barriers.</p>
         </article>
 
         <article class="card">
           <h3>After Fix</h3>
           <img src="images/after.png" alt="Website after accessibility improvements and WCAG compliance fixes"
             class="audit-image">
-          <p>Improved accessibility, WCAG compliance, better navigation, and screen reader support.</p>
+          <p>Fixes improved labels, navigation clarity, visual readability, and screen reader support.</p>
         </article>
 
       </div>
@@ -224,16 +240,10 @@
         </article>
       </div>
     </section>
-    <section class="section blog-preview">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Accessibility Insights</p>
-          <h2>Latest Blog Posts</h2>
-        </div>
-        <a href="blog.html" class="btn">View All Posts</a>
-      </div>
-
-      <div id="latest-posts" class="blog-grid" aria-live="polite"></div>
+    <section class="low-offer">
+      <h2>Quick Accessibility Check - $19</h2>
+      <p>For site owners who want a paid starter review before a full audit or remediation project.</p>
+      <a href="pricing.html" class="btn">See Pricing</a>
     </section>
     <section class="section">
       <h2>Frequently Asked Questions</h2>
@@ -272,29 +282,18 @@
         remediation support to help you improve your website quickly.
       </p>
     </section>
-    <section class="section">
-      <h2>Free Accessibility Resources</h2>
-      <p>
-        Learn the basics before you request an audit. Start with the
-        <a href="blog.html#wcag-2-2-checklist-for-small-business-websites">WCAG 2.2 checklist</a>,
-        <a href="blog.html#website-accessibility-audit-checklist-for-beginners">accessibility audit checklist</a>, or
-        <a href="blog.html#wordpress-accessibility-issues-and-how-to-fix-them">WordPress accessibility fixes guide</a>.
-      </p>
-      <a href="accessibility-resources.html" class="btn">View Resource Hub</a>
-    </section>
     <section class="section final-cta">
       <h2>Get Your Free Accessibility Audit</h2>
       <p>
         Send your website and I will show you exactly what accessibility issues need to be fixed.
       </p>
-      <a href="#accessibility-scan" class="btn">Request Free Audit</a>
+      <a href="#accessibility-scan" class="btn">Run Free Scan</a>
     </section>
   </main>
 
   <footer>
     <p>&copy; Himanshu | Accessibility Expert</p>
   </footer>
-  <script defer src="blog.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const scanForm = document.getElementById('scanForm');
@@ -324,9 +323,9 @@
               message: `
                 New Scan Request Received:
 
-                🌐 URL: ${document.getElementById('scanUrl').value}
+                URL: ${document.getElementById('scanUrl').value}
 
-                📧 User Email: ${document.getElementById('scanEmail').value}
+                User Email: ${document.getElementById('scanEmail').value}
     `
             })
           })
