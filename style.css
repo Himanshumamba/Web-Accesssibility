@@ -56,9 +56,54 @@ header {
 }
 
 header nav a {
-  margin-left: 1em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4em 0.65em;
+  border-radius: 6px;
   text-decoration: none;
   color: #033B37;
+  font-weight: 700;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background: #eef7f4;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+header nav a:focus-visible {
+  outline: 3px solid #033B37;
+  outline-offset: 2px;
+}
+
+.utility-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.utility-navigation a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4em 0.75em;
+  border-radius: 6px;
+  color: #033B37;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.utility-navigation a:hover {
+  background: #eef7f4;
+}
+
+.utility-navigation a:focus-visible {
+  outline: 3px solid #033B37;
+  outline-offset: 2px;
 }
 
 main {
@@ -797,10 +842,15 @@ p {
     width: 100%;
   }
 
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+    width: 100%;
+  }
+
   header nav a {
-    margin-left: 0;
-    margin-right: 1em;
-    display: inline-block;
+    margin: 0;
   }
 
   .section-header {
