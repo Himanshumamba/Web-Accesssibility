@@ -161,6 +161,40 @@ section+section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.platform-strip,
+.free-review {
+  text-align: left;
+}
+
+.platform-strip {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(3, 59, 55, 0.1);
+  box-shadow: 0 12px 28px rgba(3, 59, 55, 0.08);
+}
+
+.platform-list {
+  color: #174642;
+  line-height: 1.7;
+}
+
+.check-list,
+.evidence-list {
+  max-width: 680px;
+  margin: 1.2em auto;
+  padding-left: 1.25em;
+  text-align: left;
+}
+
+.check-list li,
+.evidence-list li {
+  margin-bottom: 0.55em;
+}
+
+.offer-list {
+  color: #fff;
+}
+
 .proof-strip {
   text-align: left;
 }
