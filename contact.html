@@ -8,7 +8,7 @@
   <meta name="description"
     content="Contact Himanshu Pandey for WCAG audits, website accessibility fixes, ADA support, PDF accessibility remediation, and accessibility consulting.">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://web-accessibility-fixes-audit.netlify.app/contact.html">
+  <link rel="canonical" href="https://websiteaccessibilityfix.com/contact.html">
   <script defer src="analytics.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
     rel="stylesheet">
@@ -36,7 +36,7 @@
   <main>
     <section class="section" id="accessibility-scan">
       <h1>Contact Me</h1>
-      <h2>Run a Free Accessibility Scan</h2>
+      <h2>Request a Free Manual Accessibility Review</h2>
       <p>
         Enter your URL below. I will manually review your site and send you an actionable report within 24 hours.
       </p>
@@ -59,17 +59,19 @@
             aria-label="Email Address">
         </div>
         <button type="submit" class="btn">Send Me My Free Accessibility Assessment</button>
+        <p class="form-submit-note">Sending may take a few seconds. Please wait for the confirmation before leaving this page.</p>
         <p style="font-size: 0.85rem; margin-top: 10px; color: #555; text-align: center;">100% free. No commitment required. Your info is kept private.</p>
       </form>
-      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+      <div id="scanMessage" class="scan-message" hidden role="status" aria-live="polite" aria-atomic="true"></div>
       
       <p style="margin-top: 2rem;">Or email me directly at <a href="mailto:hphimeshpandey@gmail.com">hphimeshpandey@gmail.com</a></p>
-      <p>I work remotely and support businesses that want better accessibility for all users.</p>
+      <p>I provide remote WCAG accessibility audits and hands-on website remediation for businesses worldwide.</p>
     </section>
   </main>
 
   <footer class="site-footer">
   <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <nav class="footer-navigation" aria-label="Footer links"><a href="blog.html">Accessibility Blog</a></nav>
   <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
 </footer>
   <script>
@@ -78,59 +80,65 @@
       const scanMessage = document.getElementById('scanMessage');
 
       if (scanForm) {
-        scanForm.addEventListener('submit', (e) => {
+        scanForm.addEventListener('submit', async (e) => {
           e.preventDefault();
 
-          // Show loading state
           const submitBtn = scanForm.querySelector('button[type="submit"]');
           const originalText = submitBtn.textContent;
-          submitBtn.textContent = 'Sending...';
+          submitBtn.textContent = 'Sending request…';
           submitBtn.disabled = true;
+          submitBtn.setAttribute('aria-disabled', 'true');
+          scanForm.setAttribute('aria-busy', 'true');
+          scanMessage.className = 'scan-message is-pending';
+          scanMessage.textContent = 'Sending your request… Please keep this page open.';
+          scanMessage.hidden = false;
 
-          // Send data directly to your email without backend via formsubmit.co
-          fetch("https://formsubmit.co/ajax/hphimeshpandey@gmail.com", {
-            method: "POST",
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              _subject: "New Accessibility Scan Request",
-              URL_to_Scan: document.getElementById('scanUrl').value,
-              User_Email: document.getElementById('scanEmail').value,
-              message: `
+          let stillWaiting = true;
+          const slowNotice = window.setTimeout(() => {
+            if (stillWaiting) {
+              scanMessage.textContent = 'Your request is still sending. Please wait, or use the direct email link below if you need a quick reply.';
+            }
+          }, 8000);
+
+          try {
+            const response = await fetch("https://formsubmit.co/ajax/hphimeshpandey@gmail.com", {
+              method: "POST",
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                _subject: "New Accessibility Scan Request",
+                URL_to_Scan: document.getElementById('scanUrl').value,
+                User_Email: document.getElementById('scanEmail').value,
+                message: `
                 New Scan Request Received:
 
                 URL: ${document.getElementById('scanUrl').value}
 
                 User Email: ${document.getElementById('scanEmail').value}
-    `
+                `
+              })
             })
-          })
-            .then(response => response.json())
-            .then(data => {
-              // Show success message
-              scanMessage.textContent = "Thank you! Your request has been received. You will get your report within 24 hours."; scanMessage.style.color = "#174642";
-              scanMessage.style.background = "#eef7f4";
-              scanMessage.removeAttribute('hidden');
-              scanForm.reset();
-            })
-            .catch(error => {
-              // Show error message
-              scanMessage.textContent = "Oops! Something went wrong. Please try again.";
-              scanMessage.style.color = "#721c24";
-              scanMessage.style.background = "#f8d7da";
-              scanMessage.removeAttribute('hidden');
-            })
-            .finally(() => {
-              submitBtn.textContent = originalText;
-              submitBtn.disabled = false;
+            const result = await response.json();
+            if (!response.ok || result.success === false) {
+              throw new Error('The request service did not accept the submission.');
+            }
 
-              // Hide message after a few seconds
-              setTimeout(() => {
-                scanMessage.setAttribute('hidden', '');
-              }, 8000);
-            });
+            scanMessage.className = 'scan-message is-success';
+            scanMessage.textContent = 'Thank you! Your request was received. I will send your report within 24 hours.';
+            scanForm.reset();
+          } catch (error) {
+            scanMessage.className = 'scan-message is-error';
+            scanMessage.textContent = 'We could not confirm your request. Please try again or use the direct email link below.';
+          } finally {
+            stillWaiting = false;
+            window.clearTimeout(slowNotice);
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-disabled');
+            scanForm.removeAttribute('aria-busy');
+          }
         });
       }
     });

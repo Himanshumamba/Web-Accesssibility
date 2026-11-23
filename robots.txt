@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://web-accessibility-fixes-audit.netlify.app/sitemap.xml
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://websiteaccessibilityfix.com/sitemap.xml

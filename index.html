@@ -8,12 +8,12 @@
   <meta name="description"
     content="Manual WCAG 2.2 accessibility audits, code-level remediation, and developer-ready guidance for ADA, Section 508, EAA, AODA, and UK accessibility requirements.">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://web-accessibility-fixes-audit.netlify.app/">
+  <link rel="canonical" href="https://websiteaccessibilityfix.com/">
   <meta property="og:title" content="Website Accessibility Audits &amp; Remediation | Himanshu Pandey">
   <meta property="og:description"
     content="WCAG accessibility audits, ADA support, and hands-on website remediation for businesses. Get clear findings and practical fixes from Himanshu Pandey.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://web-accessibility-fixes-audit.netlify.app/">
+  <meta property="og:url" content="https://websiteaccessibilityfix.com/">
 
   <meta name="google-site-verification" content="XutRjq8m41sy_gQDgGn4t2mORThLp48SKGGCe3sElGs" />
 
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": "Himanshu Pandey"
   },
-  "url": "https://web-accessibility-fixes-audit.netlify.app/",
+  "url": "https://websiteaccessibilityfix.com/",
   "sameAs": [
     "https://www.linkedin.com/company/web-accessibility-expert/"
   ],
@@ -54,7 +54,7 @@
 </script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261124">
 </head>
 
 <body class="homepage site-page">
@@ -247,32 +247,35 @@
     </section>
 
     <section class="section free-review">
-      <h2>Get My Free 3-Issue Mini Teardown</h2>
-      <p>
-        Send me one key page—homepage, product page, or checkout—and a work email. I will manually identify three
-        important accessibility issues and send practical next steps within 24–48 hours.
-      </p>
-      <form id="scanForm" class="scan-form assessment-form">
-        <div class="form-group">
-          <label for="scanUrl">Website URL</label>
-          <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com" aria-label="Website URL">
-        </div>
-        <div class="form-group">
-          <label for="scanEmail">Where should I send the report?</label>
-          <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com" aria-label="Email Address">
-        </div>
-        <button type="submit" class="btn">Request My Free Teardown</button>
-      </form>
-      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
-      <ul class="check-list">
-        <li>Keyboard accessibility checks</li>
-        <li>Forms and labels</li>
-        <li>Headings and page structure</li>
-        <li>Links and buttons</li>
-        <li>Color contrast</li>
-        <li>Common WCAG issues</li>
-      </ul>
-      <p><strong>Manual review. No automated-only score. No commitment.</strong></p>
+      <div class="free-review-copy">
+        <p class="eyebrow">Free accessibility review</p>
+        <h2>Get a Free 3-Issue Mini Teardown</h2>
+        <p class="section-intro">I’ll review one important page—such as your homepage, product page, or checkout—and send three practical accessibility findings within 24–48 hours.</p>
+        <ul class="check-list free-review-benefits">
+          <li>Keyboard access and focus</li>
+          <li>Forms, labels, links, and buttons</li>
+          <li>Headings and page structure</li>
+          <li>Color contrast</li>
+          <li>Common WCAG barriers</li>
+        </ul>
+      </div>
+      <div class="free-review-form-card">
+        <h3>Request your free review</h3>
+        <p>Share the page URL and the email address where I should send the findings.</p>
+        <form id="scanForm" class="scan-form assessment-form">
+          <div class="form-group">
+            <label for="scanUrl">Website page URL</label>
+            <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com/page">
+          </div>
+          <div class="form-group">
+            <label for="scanEmail">Email address</label>
+            <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com">
+          </div>
+          <button type="submit" class="btn">Request My Free Teardown</button>
+        </form>
+        <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+        <p class="free-review-note"><strong>Manual review. No automated-only score. No commitment.</strong></p>
+      </div>
     </section>
 
     <section class="section" id="value-section">
@@ -294,31 +297,38 @@
       <p class="eyebrow">Accessibility expertise</p>
       <h2>Accessibility Expertise Across Modern Web Platforms</h2>
       <p class="section-intro">I perform both accessibility testing and code-level remediation across modern website platforms and custom frontend builds.</p>
-      <div class="platform-badges" aria-label="Supported platforms and technologies">
-        <span>WordPress</span>
-        <span>WooCommerce</span>
-        <span>Shopify</span>
-        <span>Shopify Liquid</span>
-        <span>Shopify Plus</span>
-        <span>Webflow</span>
-        <span>Wix</span>
-        <span>Magento</span>
-        <span>Squarespace</span>
-        <span>Tilda</span>
-        <span>React</span>
-        <span>TypeScript</span>
-        <span>Next.js</span>
-        <span>Vue</span>
-        <span>Custom HTML/CSS/JavaScript</span>
-        <span>HTML / ARIA</span>
-      </div>
-      <div class="testing-strip" aria-label="Accessibility testing workflow">
-        <strong>Manual testing workflow</strong>
-        <span>NVDA</span>
-        <span>JAWS</span>
-        <span>VoiceOver</span>
-        <span>Keyboard-only testing</span>
-        <span>Browser and viewport testing</span>
+      <div class="expertise-groups">
+        <div class="expertise-group">
+          <h3>Platforms and technologies</h3>
+          <ul class="platform-badges" aria-label="Supported platforms and technologies">
+            <li>WordPress</li>
+            <li>WooCommerce</li>
+            <li>Shopify</li>
+            <li>Shopify Liquid</li>
+            <li>Shopify Plus</li>
+            <li>Webflow</li>
+            <li>Wix</li>
+            <li>Magento</li>
+            <li>Squarespace</li>
+            <li>Tilda</li>
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>Vue</li>
+            <li>Custom HTML/CSS/JavaScript</li>
+            <li>HTML / ARIA</li>
+          </ul>
+        </div>
+        <div class="expertise-group">
+          <h3>Assistive technology and manual checks</h3>
+          <ul class="testing-badges" aria-label="Accessibility testing methods">
+            <li>NVDA</li>
+            <li>JAWS</li>
+            <li>VoiceOver</li>
+            <li>Keyboard-only testing</li>
+            <li>Browser and viewport testing</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -512,6 +522,7 @@
 
   <footer class="site-footer">
   <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <nav class="footer-navigation" aria-label="Footer links"><a href="blog.html">Accessibility Blog</a></nav>
   <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
 </footer>
   <script>
