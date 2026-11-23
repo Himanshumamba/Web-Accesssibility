@@ -2041,7 +2041,7 @@ p {
 
 .site-page .tool-url-field {
   max-width: 620px;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
 }
 
 .site-page .tool-url-field label,
