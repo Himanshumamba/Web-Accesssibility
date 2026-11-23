@@ -2067,6 +2067,11 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.site-page .self-check-form > button {
+  display: flex;
+  margin: 0 auto;
+}
+
 .site-page .self-check-item {
   min-width: 0;
   margin: 0;
@@ -2241,10 +2246,14 @@ p {
   flex-shrink: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .site-page .self-check-grid,
   .site-page .contrast-controls {
     grid-template-columns: 1fr;
+  }
+
+  .site-page .self-check-form > button {
+    width: 100%;
   }
 
   .site-page .tool-cta {
@@ -2259,5 +2268,10 @@ p {
   .site-page .check-options {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .site-page .check-options label {
+    box-sizing: border-box;
+    width: 100%;
   }
 }
