@@ -13,8 +13,8 @@
   <meta property="og:url" content="https://websiteaccessibilityfix.com/accessibility-checker.html">
   <script defer src="analytics.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261124-3">
-  <script defer src="accessibility-checker.js?v=20261124-2"></script>
+  <link rel="stylesheet" href="style.css?v=20261124-4">
+  <script defer src="accessibility-checker.js?v=20261124-3"></script>
 </head>
 <body class="site-page">
   <header class="site-header">
@@ -156,6 +156,18 @@
               <input id="backgroundPicker" type="color" value="#ffffff" aria-label="Choose background color">
               <input id="backgroundHex" type="text" value="#ffffff" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
             </div>
+          </div>
+        </div>
+        <div class="contrast-adjuster">
+          <div class="contrast-adjuster-heading">
+            <label for="textLightness">Adjust text color shade</label>
+            <output id="textLightnessValue" for="textLightness">18%</output>
+          </div>
+          <p id="textLightnessHelp">Slide to lighten or darken the text color. The preview and WCAG results update as you move it.</p>
+          <input id="textLightness" type="range" min="0" max="100" step="1" value="18" aria-describedby="textLightnessHelp">
+          <div class="contrast-copy-row">
+            <button id="copyTextColor" class="btn-secondary" type="button">Copy current text color</button>
+            <span id="copyTextColorStatus" role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
         </div>
         <p id="hexHelp" class="field-help">Use a value such as #262536 or #FFFFFF.</p>

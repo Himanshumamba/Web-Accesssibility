@@ -43,6 +43,8 @@ const checks = [
   }
 ];
 
+let lightnessBaseColor = null;
+
 function addTextElement(parent, tagName, text, className) {
   const element = document.createElement(tagName);
   element.textContent = text;
@@ -174,6 +176,50 @@ function relativeLuminance(hexColor) {
   return (0.2126 * linear[0]) + (0.7152 * linear[1]) + (0.0722 * linear[2]);
 }
 
+function hexToHsl(hexColor) {
+  const hex = hexColor.slice(1);
+  const [red, green, blue] = [0, 2, 4].map((offset) => Number.parseInt(hex.slice(offset, offset + 2), 16) / 255);
+  const max = Math.max(red, green, blue);
+  const min = Math.min(red, green, blue);
+  const delta = max - min;
+  const lightness = (max + min) / 2;
+  let hue = 0;
+  let saturation = 0;
+
+  if (delta !== 0) {
+    saturation = delta / (1 - Math.abs((2 * lightness) - 1));
+    if (max === red) {
+      hue = 60 * (((green - blue) / delta) % 6);
+    } else if (max === green) {
+      hue = 60 * (((blue - red) / delta) + 2);
+    } else {
+      hue = 60 * (((red - green) / delta) + 4);
+    }
+    if (hue < 0) hue += 360;
+  }
+
+  return { hue, saturation, lightness };
+}
+
+function hslToHex(hue, saturation, lightness) {
+  const normalizedSaturation = saturation;
+  const normalizedLightness = lightness / 100;
+  const chroma = (1 - Math.abs((2 * normalizedLightness) - 1)) * normalizedSaturation;
+  const hueSection = ((hue % 360) + 360) % 360 / 60;
+  const secondary = chroma * (1 - Math.abs((hueSection % 2) - 1));
+  const offset = normalizedLightness - (chroma / 2);
+  let channels;
+
+  if (hueSection < 1) channels = [chroma, secondary, 0];
+  else if (hueSection < 2) channels = [secondary, chroma, 0];
+  else if (hueSection < 3) channels = [0, chroma, secondary];
+  else if (hueSection < 4) channels = [0, secondary, chroma];
+  else if (hueSection < 5) channels = [secondary, 0, chroma];
+  else channels = [chroma, 0, secondary];
+
+  return `#${channels.map((channel) => Math.round((channel + offset) * 255).toString(16).padStart(2, "0")).join("").toUpperCase()}`;
+}
+
 function updateContrast() {
   const foregroundInput = document.getElementById("foregroundHex");
   const backgroundInput = document.getElementById("backgroundHex");
@@ -181,11 +227,17 @@ function updateContrast() {
   const backgroundPicker = document.getElementById("backgroundPicker");
   const preview = document.getElementById("contrastPreview");
   const result = document.getElementById("contrastResult");
+  const lightnessSlider = document.getElementById("textLightness");
+  const lightnessValue = document.getElementById("textLightnessValue");
+  const copyButton = document.getElementById("copyTextColor");
   const foreground = normalizeHex(foregroundInput.value);
   const background = normalizeHex(backgroundInput.value);
 
   if (!foreground || !background) {
-    result.textContent = "Enter a valid six-digit hex color for both text and background.";
+    result.replaceChildren();
+    addTextElement(result, "p", "Enter a valid six-digit hex color for both text and background.");
+    lightnessSlider.disabled = !foreground;
+    copyButton.disabled = !foreground;
     return;
   }
 
@@ -195,6 +247,14 @@ function updateContrast() {
   backgroundPicker.value = background;
   preview.style.setProperty("--preview-foreground", foreground);
   preview.style.setProperty("--preview-background", background);
+  const foregroundHsl = hexToHsl(foreground);
+  lightnessBaseColor = lightnessBaseColor || foregroundHsl;
+  const lightnessPercent = Math.round(foregroundHsl.lightness * 100);
+  lightnessSlider.value = lightnessPercent;
+  lightnessSlider.disabled = false;
+  lightnessValue.value = `${lightnessPercent}%`;
+  lightnessValue.textContent = `${lightnessPercent}%`;
+  copyButton.disabled = false;
 
   const luminances = [relativeLuminance(foreground), relativeLuminance(background)].sort((a, b) => b - a);
   const ratio = (luminances[0] + 0.05) / (luminances[1] + 0.05);
@@ -205,8 +265,22 @@ function updateContrast() {
 
   result.replaceChildren();
   addTextElement(result, "strong", `Contrast ratio: ${ratio.toFixed(2)}:1`);
-  addTextElement(result, "p", `WCAG AA: ${aaNormal ? "meets" : "does not meet"} the 4.5:1 threshold for normal text; ${aaLarge ? "meets" : "does not meet"} the 3:1 threshold for large text.`);
-  addTextElement(result, "p", `WCAG AAA: ${aaaNormal ? "meets" : "does not meet"} the 7:1 threshold for normal text; ${aaaLarge ? "meets" : "does not meet"} the 4.5:1 threshold for large text.`);
+  const outcomes = document.createElement("div");
+  outcomes.className = "contrast-outcomes";
+  [
+    { label: "WCAG AA - normal text", threshold: "4.5:1", passes: aaNormal },
+    { label: "WCAG AA - large text", threshold: "3:1", passes: aaLarge },
+    { label: "WCAG AAA - normal text", threshold: "7:1", passes: aaaNormal },
+    { label: "WCAG AAA - large text", threshold: "4.5:1", passes: aaaLarge }
+  ].forEach(({ label, threshold, passes }) => {
+    const row = document.createElement("p");
+    row.className = "contrast-outcome";
+    addTextElement(row, "span", `${label} (${threshold})`);
+    const badge = addTextElement(row, "strong", passes ? "Pass" : "Needs adjustment");
+    badge.className = passes ? "contrast-pass" : "contrast-fail";
+    outcomes.append(row);
+  });
+  result.append(outcomes);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -225,17 +299,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 0);
   });
 
-  document.getElementById("foregroundHex")?.addEventListener("input", updateContrast);
+  document.getElementById("foregroundHex")?.addEventListener("input", () => {
+    const color = normalizeHex(document.getElementById("foregroundHex").value);
+    lightnessBaseColor = color ? hexToHsl(color) : null;
+    document.getElementById("copyTextColorStatus").textContent = "";
+    updateContrast();
+  });
   document.getElementById("backgroundHex")?.addEventListener("input", updateContrast);
 
   document.getElementById("foregroundPicker")?.addEventListener("input", (event) => {
     document.getElementById("foregroundHex").value = event.currentTarget.value.toUpperCase();
+    lightnessBaseColor = hexToHsl(event.currentTarget.value.toUpperCase());
+    document.getElementById("copyTextColorStatus").textContent = "";
     updateContrast();
   });
 
   document.getElementById("backgroundPicker")?.addEventListener("input", (event) => {
     document.getElementById("backgroundHex").value = event.currentTarget.value.toUpperCase();
     updateContrast();
+  });
+
+  const textLightness = document.getElementById("textLightness");
+  const foregroundHex = document.getElementById("foregroundHex");
+  textLightness?.addEventListener("input", (event) => {
+    const color = normalizeHex(foregroundHex.value);
+    if (!color) return;
+    const baseColor = lightnessBaseColor || hexToHsl(color);
+    foregroundHex.value = hslToHex(baseColor.hue, baseColor.saturation, Number(event.currentTarget.value));
+    document.getElementById("copyTextColorStatus").textContent = "";
+    updateContrast();
+  });
+
+  document.getElementById("copyTextColor")?.addEventListener("click", async () => {
+    const color = normalizeHex(foregroundHex.value);
+    const status = document.getElementById("copyTextColorStatus");
+    if (!color) return;
+
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(color);
+      status.textContent = `${color} copied.`;
+    } catch (error) {
+      foregroundHex.focus();
+      foregroundHex.select();
+      status.textContent = `Color selected: ${color}. Copy the highlighted value.`;
+    }
   });
 
   const manualReviewLink = document.getElementById("manualReviewLink");
