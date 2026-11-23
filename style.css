@@ -1244,6 +1244,39 @@ p {
   font-size: 0.9rem;
 }
 
+.homepage .home-tool-promo {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1120px;
+  margin: 1.5rem auto 2.5rem;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border: 1px solid #e7dcf8;
+  border-radius: 14px;
+  background: #faf8ff;
+}
+
+.homepage .home-tool-promo .eyebrow {
+  margin: 0 0 0.35rem;
+}
+
+.homepage .home-tool-promo h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+}
+
+.homepage .home-tool-promo p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0;
+}
+
+.homepage .home-tool-promo .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .homepage .service-card,
 .homepage .card {
   border: 1px solid #eceaf1;
@@ -1557,6 +1590,16 @@ p {
   .homepage .trust-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.1rem 0.5rem;
+  }
+
+  .homepage .home-tool-promo {
+    align-items: stretch;
+    flex-direction: column;
+    margin: 1.25rem 1rem 2rem;
+  }
+
+  .homepage .home-tool-promo .btn {
+    width: 100%;
   }
 
   .homepage .assessment-form {
