@@ -102,8 +102,10 @@ function renderReviewPlan(form, results) {
   if (needsAttention.length > 0) {
     addTextElement(results, "h3", "Start with the issues you found");
     const issueList = document.createElement("ul");
+    issueList.className = "tool-findings-list";
     needsAttention.forEach((check) => {
       const item = document.createElement("li");
+      item.className = "tool-finding-card";
       addTextElement(item, "strong", check.title);
       addTextElement(item, "p", check.guidance);
       addTextElement(item, "p", check.criteria, "tool-criteria");
@@ -115,8 +117,10 @@ function renderReviewPlan(form, results) {
   if (notChecked.length > 0) {
     addTextElement(results, "h3", "Checks to try next");
     const unsureList = document.createElement("ul");
+    unsureList.className = "tool-findings-list";
     notChecked.forEach((check) => {
       const item = document.createElement("li");
+      item.className = "tool-finding-card";
       addTextElement(item, "strong", check.title);
       addTextElement(item, "p", check.guidance);
       addTextElement(item, "p", check.criteria, "tool-criteria");
@@ -129,6 +133,7 @@ function renderReviewPlan(form, results) {
     const details = document.createElement("details");
     addTextElement(details, "summary", `Areas you marked as working (${markedWorking.length})`);
     const markedList = document.createElement("ul");
+    markedList.className = "tool-working-list";
     markedWorking.forEach((check) => addTextElement(markedList, "li", check.title));
     details.append(markedList);
     results.append(details);
