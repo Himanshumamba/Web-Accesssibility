@@ -1277,6 +1277,13 @@ p {
   white-space: nowrap;
 }
 
+.homepage .home-tool-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
 .homepage .service-card,
 .homepage .card {
   border: 1px solid #eceaf1;
@@ -1555,6 +1562,8 @@ p {
   .homepage .site-header nav {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.15rem;
   }
 }
 
@@ -1600,6 +1609,11 @@ p {
 
   .homepage .home-tool-promo .btn {
     width: 100%;
+  }
+
+  .homepage .home-tool-actions {
+    width: 100%;
+    flex-direction: column;
   }
 
   .homepage .assessment-form {
@@ -1850,6 +1864,7 @@ p {
 
 .site-page .footer-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 0.55rem auto;
@@ -1941,6 +1956,8 @@ p {
   .site-page .site-header nav {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.15rem;
   }
 }
 
@@ -2226,6 +2243,28 @@ p {
   background: #fff;
 }
 
+.site-page .contrast-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+  text-align: left;
+}
+
+.site-page .contrast-steps .card {
+  padding: 1.1rem;
+  background: #fff;
+}
+
+.site-page .contrast-steps h3 {
+  margin-top: 0;
+  font-size: 1.08rem;
+}
+
+.site-page .contrast-guidance > h2:not(:first-child) {
+  margin-top: 2rem;
+}
+
 .site-page .contrast-controls {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2422,5 +2461,11 @@ p {
   .site-page .check-options label {
     box-sizing: border-box;
     width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-page .contrast-steps {
+    grid-template-columns: 1fr;
   }
 }

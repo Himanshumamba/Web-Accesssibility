@@ -299,52 +299,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 0);
   });
 
-  document.getElementById("foregroundHex")?.addEventListener("input", () => {
-    const color = normalizeHex(document.getElementById("foregroundHex").value);
-    lightnessBaseColor = color ? hexToHsl(color) : null;
-    document.getElementById("copyTextColorStatus").textContent = "";
+  if (document.getElementById("foregroundHex")) {
+    document.getElementById("foregroundHex").addEventListener("input", () => {
+      const color = normalizeHex(document.getElementById("foregroundHex").value);
+      lightnessBaseColor = color ? hexToHsl(color) : null;
+      document.getElementById("copyTextColorStatus").textContent = "";
+      updateContrast();
+    });
+    document.getElementById("backgroundHex")?.addEventListener("input", updateContrast);
+
+    document.getElementById("foregroundPicker")?.addEventListener("input", (event) => {
+      document.getElementById("foregroundHex").value = event.currentTarget.value.toUpperCase();
+      lightnessBaseColor = hexToHsl(event.currentTarget.value.toUpperCase());
+      document.getElementById("copyTextColorStatus").textContent = "";
+      updateContrast();
+    });
+
+    document.getElementById("backgroundPicker")?.addEventListener("input", (event) => {
+      document.getElementById("backgroundHex").value = event.currentTarget.value.toUpperCase();
+      updateContrast();
+    });
+
+    const textLightness = document.getElementById("textLightness");
+    const foregroundHex = document.getElementById("foregroundHex");
+    textLightness?.addEventListener("input", (event) => {
+      const color = normalizeHex(foregroundHex.value);
+      if (!color) return;
+      const baseColor = lightnessBaseColor || hexToHsl(color);
+      foregroundHex.value = hslToHex(baseColor.hue, baseColor.saturation, Number(event.currentTarget.value));
+      document.getElementById("copyTextColorStatus").textContent = "";
+      updateContrast();
+    });
+
+    document.getElementById("copyTextColor")?.addEventListener("click", async () => {
+      const color = normalizeHex(foregroundHex.value);
+      const status = document.getElementById("copyTextColorStatus");
+      if (!color) return;
+
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+        await navigator.clipboard.writeText(color);
+        status.textContent = `${color} copied.`;
+      } catch (error) {
+        foregroundHex.focus();
+        foregroundHex.select();
+        status.textContent = `Color selected: ${color}. Copy the highlighted value.`;
+      }
+    });
     updateContrast();
-  });
-  document.getElementById("backgroundHex")?.addEventListener("input", updateContrast);
-
-  document.getElementById("foregroundPicker")?.addEventListener("input", (event) => {
-    document.getElementById("foregroundHex").value = event.currentTarget.value.toUpperCase();
-    lightnessBaseColor = hexToHsl(event.currentTarget.value.toUpperCase());
-    document.getElementById("copyTextColorStatus").textContent = "";
-    updateContrast();
-  });
-
-  document.getElementById("backgroundPicker")?.addEventListener("input", (event) => {
-    document.getElementById("backgroundHex").value = event.currentTarget.value.toUpperCase();
-    updateContrast();
-  });
-
-  const textLightness = document.getElementById("textLightness");
-  const foregroundHex = document.getElementById("foregroundHex");
-  textLightness?.addEventListener("input", (event) => {
-    const color = normalizeHex(foregroundHex.value);
-    if (!color) return;
-    const baseColor = lightnessBaseColor || hexToHsl(color);
-    foregroundHex.value = hslToHex(baseColor.hue, baseColor.saturation, Number(event.currentTarget.value));
-    document.getElementById("copyTextColorStatus").textContent = "";
-    updateContrast();
-  });
-
-  document.getElementById("copyTextColor")?.addEventListener("click", async () => {
-    const color = normalizeHex(foregroundHex.value);
-    const status = document.getElementById("copyTextColorStatus");
-    if (!color) return;
-
-    try {
-      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
-      await navigator.clipboard.writeText(color);
-      status.textContent = `${color} copied.`;
-    } catch (error) {
-      foregroundHex.focus();
-      foregroundHex.select();
-      status.textContent = `Color selected: ${color}. Copy the highlighted value.`;
-    }
-  });
+  }
 
   const manualReviewLink = document.getElementById("manualReviewLink");
   const websiteUrl = document.getElementById("websiteUrl");
@@ -358,5 +361,4 @@ document.addEventListener("DOMContentLoaded", () => {
     startManualReview(pageUrl);
   });
 
-  updateContrast();
 });

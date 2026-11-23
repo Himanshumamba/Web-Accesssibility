@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free WCAG Contrast Checker | Color Contrast Ratio</title>
+  <meta name="description" content="Check text and background color contrast with this free WCAG contrast checker. See your contrast ratio and AA or AAA results, adjust the text shade, and copy its hex value.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://websiteaccessibilityfix.com/wcag-contrast-checker.html">
+  <meta property="og:title" content="Free WCAG Contrast Checker | Color Contrast Ratio">
+  <meta property="og:description" content="Compare text and background colors, see WCAG AA and AAA results, adjust the text shade, and copy its exact hex value.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://websiteaccessibilityfix.com/wcag-contrast-checker.html">
+  <script defer src="analytics.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261124-5">
+  <script defer src="accessibility-checker.js?v=20261124-4"></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="accessibility-checker.html">Website Self-Check</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section tool-hero">
+      <p class="eyebrow">Free color contrast tool</p>
+      <h1>Free WCAG Contrast Checker</h1>
+      <p>Compare text and background colors, see the contrast ratio, and check the pair against WCAG AA and AAA text thresholds. Adjust the text shade until it works for your design, then copy the exact hex color.</p>
+      <p class="tool-disclosure"><strong>Private and focused:</strong> Your selected colors are calculated in your browser. This tool checks one solid color pair; it does not scan or inspect a website.</p>
+    </section>
+
+    <section class="section tool-section contrast-section" aria-labelledby="contrast-title">
+      <div class="tool-section-heading">
+        <p class="eyebrow">Text and background colors</p>
+        <h2 id="contrast-title">Check your color contrast</h2>
+        <p>Choose colors with the pickers or enter six-digit hex values. The sample and WCAG results update as you make changes.</p>
+      </div>
+
+      <div class="contrast-tool">
+        <div class="contrast-controls">
+          <div class="contrast-color-control">
+            <label for="foregroundHex">Text color</label>
+            <div class="contrast-input-row">
+              <input id="foregroundPicker" type="color" value="#262536" aria-label="Choose text color">
+              <input id="foregroundHex" type="text" value="#262536" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
+            </div>
+          </div>
+          <div class="contrast-color-control">
+            <label for="backgroundHex">Background color</label>
+            <div class="contrast-input-row">
+              <input id="backgroundPicker" type="color" value="#ffffff" aria-label="Choose background color">
+              <input id="backgroundHex" type="text" value="#ffffff" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
+            </div>
+          </div>
+        </div>
+        <div class="contrast-adjuster">
+          <div class="contrast-adjuster-heading">
+            <label for="textLightness">Adjust text color shade</label>
+            <output id="textLightnessValue" for="textLightness">18%</output>
+          </div>
+          <p id="textLightnessHelp">Slide to lighten or darken the text color. The preview and WCAG results update as you move it.</p>
+          <input id="textLightness" type="range" min="0" max="100" step="1" value="18" aria-describedby="textLightnessHelp">
+          <div class="contrast-copy-row">
+            <button id="copyTextColor" class="btn-secondary" type="button">Copy current text color</button>
+            <span id="copyTextColorStatus" role="status" aria-live="polite" aria-atomic="true"></span>
+          </div>
+        </div>
+        <p id="hexHelp" class="field-help">Use a value such as #262536 or #FFFFFF.</p>
+        <div id="contrastPreview" class="contrast-preview" aria-label="Preview of text and background colors">
+          <strong>Sample text preview</strong>
+          <span>Try changing either color to see the contrast update.</span>
+        </div>
+        <div id="contrastResult" class="contrast-result" role="status" aria-live="polite" aria-atomic="true"></div>
+      </div>
+
+      <p class="tool-disclosure">The contrast ratio is calculated for the selected text and background colors. It does not check images, gradients, transparency, non-text controls, or the rest of your page. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Read W3C guidance on contrast minimums</a>.</p>
+    </section>
+
+    <section class="section tool-section contrast-guidance" aria-labelledby="how-to-use-title">
+      <h2 id="how-to-use-title">How to use this WCAG contrast checker</h2>
+      <div class="contrast-steps">
+        <article class="card">
+          <h3>1. Choose your colors</h3>
+          <p>Set the text color and the color directly behind it with the picker or hex field.</p>
+        </article>
+        <article class="card">
+          <h3>2. Review the result</h3>
+          <p>Check the live ratio and the AA or AAA results for normal and large text.</p>
+        </article>
+        <article class="card">
+          <h3>3. Adjust and copy</h3>
+          <p>Move the shade slider to tune the text color, then copy its hex value when it fits your design and passes your target.</p>
+        </article>
+      </div>
+
+      <h2>What do the WCAG results mean?</h2>
+      <p>For WCAG AA, normal text needs a contrast ratio of at least 4.5:1, while large text needs 3:1. WCAG AAA sets higher thresholds: 7:1 for normal text and 4.5:1 for large text. Large text means at least 18 point regular or 14 point bold. The right target depends on your content and requirements, so review the <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">W3C explanation of contrast minimums</a>.</p>
+      <p>Contrast is only one part of accessibility. The tool does not evaluate page structure, keyboard access, labels, focus, or whether colors remain readable over imagery. For a broader first pass, use the <a href="accessibility-checker.html">free website accessibility self-check</a>. You can also read the <a href="blog.html#color-contrast-accessibility-checker-guide">color contrast accessibility guide</a>.</p>
+      <p>This tool is maintained by Himanshu Pandey, a web accessibility specialist who helps businesses identify and fix WCAG barriers. <a href="about.html">Learn about my experience</a>.</p>
+
+      <div class="tool-cta">
+        <div>
+          <h2>Need a person to check your page?</h2>
+          <p>Request a free manual 3-issue review for one important page and get practical next steps.</p>
+        </div>
+        <a class="btn" href="contact.html">Request a Free Manual Review</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+    <nav class="footer-navigation" aria-label="Footer links">
+      <a href="blog.html">Accessibility Blog</a>
+      <a href="accessibility-checker.html">Free Website Self-Check</a>
+      <a href="wcag-contrast-checker.html" aria-current="page">Free WCAG Contrast Checker</a>
+    </nav>
+    <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+  </footer>
+</body>
+</html>

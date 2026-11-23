@@ -54,7 +54,7 @@
 </script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261124">
+  <link rel="stylesheet" href="style.css?v=20261124-5">
 </head>
 
 <body class="homepage site-page">
@@ -68,6 +68,7 @@
       <a href="index.html" aria-current="page">Home</a>
       <a href="#services">Services</a>
       <a href="#sample-report">Work</a>
+      <a href="#free-tools">Free Tools</a>
       <a href="blog.html">Insights</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -111,13 +112,16 @@
       </div>
     </section>
 
-    <section class="section home-tool-promo" aria-labelledby="home-tool-title">
+    <section class="section home-tool-promo" id="free-tools" aria-labelledby="home-tool-title">
       <div>
-        <p class="eyebrow">Free website tool</p>
-        <h2 id="home-tool-title">Check common accessibility barriers yourself</h2>
-        <p>Use a guided WCAG self-check and text contrast calculator, then request a manual review if you want help with your page.</p>
+        <p class="eyebrow">Free website tools</p>
+        <h2 id="home-tool-title">Start with a free accessibility check</h2>
+        <p>Review common barriers on one page or compare text and background colors with the WCAG contrast checker. Both tools give you a practical starting point.</p>
       </div>
-      <a href="accessibility-checker.html" class="btn btn-secondary">Open the Free Checker</a>
+      <div class="home-tool-actions">
+        <a href="accessibility-checker.html" class="btn btn-secondary">Run the Website Self-Check</a>
+        <a href="wcag-contrast-checker.html" class="btn">Check Color Contrast</a>
+      </div>
     </section>
 
     <section class="section services-section" id="services">
@@ -532,7 +536,7 @@
 
   <footer class="site-footer">
   <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
-  <nav class="footer-navigation" aria-label="Footer links"><a href="blog.html">Accessibility Blog</a></nav>
+  <nav class="footer-navigation" aria-label="Footer links"><a href="blog.html">Accessibility Blog</a><a href="wcag-contrast-checker.html">Free WCAG Contrast Checker</a></nav>
   <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
 </footer>
   <script>

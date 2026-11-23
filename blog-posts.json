@@ -363,7 +363,7 @@
     ],
     "body": [
       "Color contrast problems are common because designs often use light gray text, low-contrast buttons, subtle links, or brand colors that look good but are difficult to read.",
-      "Use a contrast checker on body text, headings, navigation links, buttons, form labels, error messages, footer links, and text over images. Do not test only the homepage headline.",
+      "Use the <a href=\"wcag-contrast-checker.html\">free WCAG contrast checker</a> on body text, headings, navigation links, buttons, form labels, error messages, footer links, and text over images. Do not test only the homepage headline.",
       "Watch for placeholder text, disabled-looking buttons that are still clickable, and hover states that reduce readability. Mobile screens and sunlight can make weak contrast even harder to read.",
       "Contrast fixes are often quick wins during <a href=\"website-accessibility-remediation.html\">website accessibility remediation</a> and should be checked before and after design changes."
     ]

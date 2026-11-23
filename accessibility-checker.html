@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Website Accessibility Checker | WCAG 2.2 Self-Check</title>
-  <meta name="description" content="Use a free WCAG 2.2 self-check and contrast calculator to review common website barriers. Get practical next steps or request a manual 3-issue review.">
+  <meta name="description" content="Use this free guided WCAG 2.2 website accessibility self-check to review common barriers on one important page and get practical next steps.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://websiteaccessibilityfix.com/accessibility-checker.html">
   <meta property="og:title" content="Free Website Accessibility Checker | WCAG 2.2 Self-Check">
-  <meta property="og:description" content="Review common website accessibility barriers with a guided self-check and a WCAG contrast calculator.">
+  <meta property="og:description" content="Review common website accessibility barriers with a guided manual self-check and get practical next steps.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://websiteaccessibilityfix.com/accessibility-checker.html">
   <script defer src="analytics.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261124-4">
-  <script defer src="accessibility-checker.js?v=20261124-3"></script>
+  <link rel="stylesheet" href="style.css?v=20261124-5">
+  <script defer src="accessibility-checker.js?v=20261124-4"></script>
 </head>
 <body class="site-page">
   <header class="site-header">
@@ -37,7 +37,7 @@
     <section class="section tool-hero">
       <p class="eyebrow">Free accessibility tool</p>
       <h1>Free Website Accessibility Checker</h1>
-      <p>Use this guided WCAG 2.2 self-check to review common barriers on one important page, such as your homepage, product page, or checkout. It gives you practical next steps and includes a text contrast calculator.</p>
+      <p>Use this guided WCAG 2.2 self-check to review common barriers on one important page, such as your homepage, product page, or checkout. For a focused color check, use the <a href="wcag-contrast-checker.html">free WCAG contrast checker</a>.</p>
       <p class="tool-disclosure"><strong>What this tool does:</strong> It helps you perform a short manual review. It does not crawl your website, produce an accessibility score, or determine WCAG conformance.</p>
     </section>
 
@@ -45,7 +45,7 @@
       <div class="tool-section-heading">
         <p class="eyebrow">About 5 minutes</p>
         <h2 id="self-check-title">Check one page for common barriers</h2>
-        <p>Open your page in another tab and try each check. Choose “Not checked” if you are unsure.</p>
+        <p>Open your page in another tab and try each check. Choose "Not checked" if you are unsure.</p>
       </div>
 
       <form id="selfCheckForm" class="self-check-form">
@@ -134,51 +134,15 @@
       <noscript><p class="tool-disclosure">Enable JavaScript in your browser to build a review plan. The questions above can still be used as a manual checklist.</p></noscript>
     </section>
 
-    <section class="section tool-section contrast-section" aria-labelledby="contrast-title">
-      <div class="tool-section-heading">
-        <p class="eyebrow">WCAG contrast calculator</p>
-        <h2 id="contrast-title">Check text color contrast</h2>
-        <p>Enter the text and background colors as six-digit hex values. The ratio is calculated in your browser.</p>
+    <section class="section tool-section contrast-promo" aria-labelledby="contrast-promo-title">
+      <div class="tool-cta">
+        <div>
+          <p class="eyebrow">Color contrast</p>
+          <h2 id="contrast-promo-title">Need to check a color pair?</h2>
+          <p>Use the dedicated WCAG contrast checker to compare colors, adjust a text shade, and copy the hex value.</p>
+        </div>
+        <a class="btn" href="wcag-contrast-checker.html">Open the Free Contrast Checker</a>
       </div>
-
-      <div class="contrast-tool">
-        <div class="contrast-controls">
-          <div class="contrast-color-control">
-            <label for="foregroundHex">Text color</label>
-            <div class="contrast-input-row">
-              <input id="foregroundPicker" type="color" value="#262536" aria-label="Choose text color">
-              <input id="foregroundHex" type="text" value="#262536" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
-            </div>
-          </div>
-          <div class="contrast-color-control">
-            <label for="backgroundHex">Background color</label>
-            <div class="contrast-input-row">
-              <input id="backgroundPicker" type="color" value="#ffffff" aria-label="Choose background color">
-              <input id="backgroundHex" type="text" value="#ffffff" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
-            </div>
-          </div>
-        </div>
-        <div class="contrast-adjuster">
-          <div class="contrast-adjuster-heading">
-            <label for="textLightness">Adjust text color shade</label>
-            <output id="textLightnessValue" for="textLightness">18%</output>
-          </div>
-          <p id="textLightnessHelp">Slide to lighten or darken the text color. The preview and WCAG results update as you move it.</p>
-          <input id="textLightness" type="range" min="0" max="100" step="1" value="18" aria-describedby="textLightnessHelp">
-          <div class="contrast-copy-row">
-            <button id="copyTextColor" class="btn-secondary" type="button">Copy current text color</button>
-            <span id="copyTextColorStatus" role="status" aria-live="polite" aria-atomic="true"></span>
-          </div>
-        </div>
-        <p id="hexHelp" class="field-help">Use a value such as #262536 or #FFFFFF.</p>
-        <div id="contrastPreview" class="contrast-preview" aria-label="Preview of text and background colors">
-          <strong>Sample text preview</strong>
-          <span>Try changing either color to see the contrast update.</span>
-        </div>
-        <div id="contrastResult" class="contrast-result" role="status" aria-live="polite" aria-atomic="true"></div>
-      </div>
-
-      <p class="tool-disclosure">This calculation checks only the color pair you enter. It does not inspect your page or check other accessibility requirements. WCAG contrast requirements depend on text size and context; see the <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">WCAG contrast guidance</a>.</p>
     </section>
 
     <section class="section tool-section" aria-labelledby="next-steps-title">
@@ -201,7 +165,7 @@
     <nav class="footer-navigation" aria-label="Footer links">
       <a href="blog.html">Accessibility Blog</a>
       <a href="accessibility-checker.html" aria-current="page">Free Accessibility Self-Check</a>
-    </nav>
+    <a href="wcag-contrast-checker.html">Free WCAG Contrast Checker</a></nav>
     <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
   </footer>
 </body>
