@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Accessibility Expert | WCAG & ADA Audits + Code Fixes</title>
+  <title>Website Accessibility Audits &amp; Remediation | Himanshu Pandey</title>
   <meta name="description"
-    content="Website accessibility expert helping businesses identify and fix WCAG and ADA issues directly in website code without disrupting design, performance, SEO, or UX.">
+    content="Manual WCAG 2.2 accessibility audits, code-level remediation, and developer-ready guidance for ADA, Section 508, EAA, AODA, and UK accessibility requirements.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://web-accessibility-fixes-audit.netlify.app/">
-  <meta property="og:title" content="Web Accessibility Expert | WCAG & ADA Audits + Code Fixes">
+  <meta property="og:title" content="Website Accessibility Audits &amp; Remediation | Himanshu Pandey">
   <meta property="og:description"
-    content="I help businesses identify and fix accessibility issues directly in their website code — without breaking design, performance, SEO, or user experience.">
+    content="WCAG accessibility audits, ADA support, and hands-on website remediation for businesses. Get clear findings and practical fixes from Himanshu Pandey.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://web-accessibility-fixes-audit.netlify.app/">
 
@@ -28,12 +28,25 @@
     "name": "Himanshu Pandey"
   },
   "url": "https://web-accessibility-fixes-audit.netlify.app/",
+  "sameAs": [
+    "https://www.linkedin.com/company/web-accessibility-expert/"
+  ],
   "description": "Website accessibility audit and remediation service helping businesses identify and address WCAG and ADA accessibility barriers for websites, web apps, and PDFs.",
-  "areaServed": "United States",
+  "areaServed": [
+    "United States",
+    "United Kingdom",
+    "European Union",
+    "Canada",
+    "Australia"
+  ],
   "serviceType": [
     "Website Accessibility Audit",
     "WCAG Accessibility Fixes",
     "ADA Accessibility Support",
+    "Section 508 Accessibility Support",
+    "European Accessibility Act Support",
+    "AODA Accessibility Support",
+    "UK Accessibility Support",
     "PDF Accessibility Remediation"
   ],
   "email": "mailto:hphimeshpandey@gmail.com"
@@ -44,57 +57,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="homepage site-page">
 
-  <header>
-    <div class="brand">
-      <img src="images/profilehp.jpg" alt="Himanshu Pandey" class="profile-image">
-      <div class="brand-text">
-        <h2>Himanshu | Accessibility Expert</h2>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.upwork.com/freelancers/himanshup72" target="_blank" rel="noopener noreferrer">Upwork</a>
-        </div>
-      </div>
-    </div>
+  <header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
     <nav aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
+      <a href="#services">Services</a>
+      <a href="#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="accessibility-scan">
+    <section class="hero homepage-hero" id="accessibility-scan">
       <div class="hero-inner">
-        <p class="eyebrow">Web accessibility expert</p>
-        <h1>Web Accessibility Expert — WCAG &amp; ADA Audits + Code Fixes</h1>
-        <p class="hero-subtitle">
-          I help businesses identify and fix accessibility issues directly in their website code — without breaking
-          design, performance, SEO, or user experience.
-        </p>
-        <p class="hero-proof">50+ Websites Delivered • 200+ Accessibility Issues Fixed • 5★ Upwork Client Feedback</p>
-        <!-- <div class="hero-actions" aria-label="Primary calls to action">
-          <a href="#scanForm" class="btn">Get My Free Accessibility Assessment</a>
-          <a href="#services" class="btn btn-secondary">View Accessibility Services</a>
-        </div> -->
-        <form id="scanForm" class="scan-form hero-scan-form">
-          <div class="form-group">
-            <label for="scanUrl">Website URL</label>
-            <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com"
-              aria-label="Website URL">
-          </div>
-          <div class="form-group">
-            <label for="scanEmail">Where should I send the report?</label>
-            <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com"
-              aria-label="Email Address">
-          </div>
-          <button type="submit" class="btn">Get My Free Accessibility Assessment</button>
-        </form>
-        <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
-        <p class="hero-note"><strong>Manual review and practical remediation guidance.</strong> No automated-only score dump.</p>
+        <p class="eyebrow">WCAG 2.2 AA <span aria-hidden="true">&middot;</span> ADA / Section 508 <span aria-hidden="true">&middot;</span> EAA / AODA / UK</p>
+        <h1>Make Your Website <span class="hero-highlight">Accessible.</span><br>Fix What Others Only Report.</h1>
+        <p class="hero-subtitle">Manual accessibility audits and code-level remediation for ADA, Section 508, European Accessibility Act (EAA), AODA, and UK requirements—delivered with screenshot evidence and developer-ready guidance.</p>
+        <div class="hero-actions" aria-label="Primary calls to action">
+          <a href="#scanForm" class="btn">Get a Free 3-Issue Teardown</a>
+          <a href="https://calendly.com/hphimeshpandey/15-min-discovery-call" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book a 15-Minute Call</a>
+        </div>
+        <p class="hero-note"><strong>Manual review. Practical remediation guidance.</strong> No automated-only score dump.</p>
       </div>
     </section>
 
@@ -115,6 +106,102 @@
         <article class="trust-item">
           <div class="trust-number">5★</div>
           <div class="trust-label">Client Feedback</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <p class="eyebrow">Accessibility services</p>
+      <h2>Accessibility Support Built Around Real Website Fixes</h2>
+      <p class="section-intro">
+        I help businesses identify and fix accessibility barriers in the code that matters most — without sacrificing
+        design, performance, SEO, or user experience.
+      </p>
+      <div class="service-grid">
+        <article class="card service-card">
+          <h3>WCAG Accessibility Audits</h3>
+          <p>WCAG accessibility audit and remediation planning for websites, ecommerce stores, and custom web experiences.</p>
+        </article>
+        <article class="card service-card">
+          <h3>Accessibility Remediation</h3>
+          <p>Code-level fixes for HTML, CSS, JavaScript, ARIA, keyboard access, focus states, forms, modals, menus, and more.</p>
+        </article>
+        <article class="card service-card">
+          <h3>PDF Accessibility</h3>
+          <p>Review and remediation for document structure, reading order, headings, tables, links, forms, and navigation.</p>
+        </article>
+        <article class="card service-card">
+          <h3>Ecommerce Accessibility</h3>
+          <p>Accessibility support for Shopify, WooCommerce, and Magento storefronts, including product pages, forms, navigation, and cart interactions.</p>
+        </article>
+      </div>
+      <div class="service-focus">
+        <h3>Typical remediation areas</h3>
+        <ul class="tag-list service-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>ARIA</li>
+          <li>Forms</li>
+          <li>Keyboard navigation</li>
+          <li>Focus management</li>
+          <li>Headings</li>
+          <li>Links and buttons</li>
+          <li>Modals</li>
+          <li>Menus</li>
+          <li>Cart drawers</li>
+          <li>Third-party components</li>
+          <li>Screen-reader compatibility</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="sample-report">
+      <p class="eyebrow">Website improvements</p>
+      <h2>Sample Accessibility Remediation Work</h2>
+      <p class="section-intro">Real examples of accessibility barriers identified and addressed while preserving the original design and user experience.</p>
+      <article class="card case-study-card">
+        <h3>Shopify Accessibility Remediation</h3>
+        <div class="case-study-grid">
+          <figure class="case-image-wrap">
+            <img src="images/before.png" alt="Website before accessibility remediation" class="audit-image">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure class="case-image-wrap">
+            <img src="images/after.png" alt="Website after accessibility remediation" class="audit-image">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="case-details">
+          <div>
+            <h4>Problem</h4>
+            <p>Keyboard navigation, focus behavior, and interactive-element barriers affecting the storefront experience.</p>
+          </div>
+          <div>
+            <h4>Fix</h4>
+            <p>Improved keyboard interaction, visible focus, semantic HTML, ARIA usage, and accessible component behavior.</p>
+          </div>
+          <div>
+            <h4>Result</h4>
+            <p>Improved usability while preserving the original visual design and tested interaction flow.</p>
+          </div>
+        </div>
+      </article>
+      <div class="cards mini-case-grid">
+        <article class="card mini-case-card">
+          <p class="blog-kicker">WCAG remediation</p>
+          <h3>WordPress and agency handoff</h3>
+          <p>Clear audit findings, practical fixes, and implementation support for themes, plugins, forms, and keyboard interactions.</p>
+        </article>
+        <article class="card mini-case-card">
+          <p class="blog-kicker">Measured improvement</p>
+          <h3>Desktop and mobile accessibility gains</h3>
+          <p>Client work documented an accessibility rating improvement from 88 to 96 on desktop and 86 to 92 on mobile.</p>
+        </article>
+        <article class="card mini-case-card">
+          <p class="blog-kicker">PDF accessibility</p>
+          <h3>Structured document remediation</h3>
+          <p>Reading order, headings, tables, links, form fields, and navigation made clearer for PDF users and assistive technology.</p>
         </article>
       </div>
     </section>
@@ -159,6 +246,35 @@
       </div>
     </section>
 
+    <section class="section free-review">
+      <h2>Get My Free 3-Issue Mini Teardown</h2>
+      <p>
+        Send me one key page—homepage, product page, or checkout—and a work email. I will manually identify three
+        important accessibility issues and send practical next steps within 24–48 hours.
+      </p>
+      <form id="scanForm" class="scan-form assessment-form">
+        <div class="form-group">
+          <label for="scanUrl">Website URL</label>
+          <input type="url" id="scanUrl" name="scanUrl" required placeholder="https://yourwebsite.com" aria-label="Website URL">
+        </div>
+        <div class="form-group">
+          <label for="scanEmail">Where should I send the report?</label>
+          <input type="email" id="scanEmail" name="scanEmail" required placeholder="name@company.com" aria-label="Email Address">
+        </div>
+        <button type="submit" class="btn">Request My Free Teardown</button>
+      </form>
+      <div id="scanMessage" class="scan-message" hidden aria-live="polite"></div>
+      <ul class="check-list">
+        <li>Keyboard accessibility checks</li>
+        <li>Forms and labels</li>
+        <li>Headings and page structure</li>
+        <li>Links and buttons</li>
+        <li>Color contrast</li>
+        <li>Common WCAG issues</li>
+      </ul>
+      <p><strong>Manual review. No automated-only score. No commitment.</strong></p>
+    </section>
+
     <section class="section" id="value-section">
       <p class="eyebrow">What clients value</p>
       <h2>What Clients Value</h2>
@@ -182,6 +298,7 @@
         <span>WordPress</span>
         <span>WooCommerce</span>
         <span>Shopify</span>
+        <span>Shopify Liquid</span>
         <span>Shopify Plus</span>
         <span>Webflow</span>
         <span>Wix</span>
@@ -189,43 +306,38 @@
         <span>Squarespace</span>
         <span>Tilda</span>
         <span>React</span>
+        <span>TypeScript</span>
         <span>Next.js</span>
         <span>Vue</span>
         <span>Custom HTML/CSS/JavaScript</span>
+        <span>HTML / ARIA</span>
+      </div>
+      <div class="testing-strip" aria-label="Accessibility testing workflow">
+        <strong>Manual testing workflow</strong>
+        <span>NVDA</span>
+        <span>JAWS</span>
+        <span>VoiceOver</span>
+        <span>Keyboard-only testing</span>
+        <span>Browser and viewport testing</span>
       </div>
     </section>
 
-    <section class="section free-review">
-      <h2>Get My Free Accessibility Assessment</h2>
-      <p>
-        Send me your website URL and work email. I will manually review the most important accessibility barriers and
-        share practical next steps before you decide whether to hire me.
-      </p>
-      <ul class="check-list">
-        <li>Keyboard accessibility checks</li>
-        <li>Forms and labels</li>
-        <li>Headings and page structure</li>
-        <li>Links and buttons</li>
-        <li>Color contrast</li>
-        <li>Common WCAG issues</li>
-      </ul>
-      <p><strong>Manual review. No automated-only score. No commitment.</strong></p>
-    </section>
+
 
     <section class="section proof-strip">
       <h2>Real accessibility work, shown with evidence</h2>
       <div class="proof-grid">
         <article>
-          <strong>Before/after audit evidence</strong>
-          <span>Existing sample screenshots show the kinds of issues found and fixed.</span>
+          <strong>Before/after screenshot evidence</strong>
+          <span>Visual examples show the exact barrier, affected interaction, and verified remediation.</span>
         </article>
         <article>
           <strong>Manual WCAG review</strong>
-          <span>Keyboard, screen reader, forms, headings, labels, ARIA, and contrast checks.</span>
+          <span>Keyboard focus, NVDA/JAWS/VoiceOver, forms, headings, labels, ARIA, semantics, and contrast.</span>
         </article>
         <article>
           <strong>Fix-focused reports</strong>
-          <span>Prioritized findings with practical remediation guidance, not generic scanner exports.</span>
+          <span>Developer-ready findings prioritized by user impact, with code guidance—not generic scanner exports.</span>
         </article>
       </div>
     </section>
@@ -283,51 +395,7 @@
       <p class="section-intro"><a href="blog.html">Browse all blog posts</a></p>
     </section>
 
-    <section class="section services-section" id="services">
-      <p class="eyebrow">Accessibility services</p>
-      <h2>Accessibility Support Built Around Real Website Fixes</h2>
-      <p class="section-intro">
-        I help businesses identify and fix accessibility barriers in the code that matters most — without sacrificing
-        design, performance, SEO, or user experience.
-      </p>
-      <div class="service-grid">
-        <article class="card service-card">
-          <h3>Accessibility Audits</h3>
-          <p>WCAG accessibility audit and remediation planning for websites, ecommerce stores, and custom web experiences.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Accessibility Remediation</h3>
-          <p>Code-level fixes for HTML, CSS, JavaScript, ARIA, keyboard access, focus states, forms, modals, menus, and more.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Accessibility Testing</h3>
-          <p>Practical review of keyboard behavior, headings, buttons, links, labels, and screen-reader compatibility issues.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Ongoing Accessibility Support</h3>
-          <p>Hands-on help for recurring issues, design updates, third-party components, and frontend accessibility improvements.</p>
-        </article>
-      </div>
-      <div class="service-focus">
-        <h3>Typical remediation areas</h3>
-        <ul class="tag-list service-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>ARIA</li>
-          <li>Forms</li>
-          <li>Keyboard navigation</li>
-          <li>Focus management</li>
-          <li>Headings</li>
-          <li>Links and buttons</li>
-          <li>Modals</li>
-          <li>Menus</li>
-          <li>Cart drawers</li>
-          <li>Third-party components</li>
-          <li>Screen-reader compatibility</li>
-        </ul>
-      </div>
-    </section>
+
     <section class="section why-list">
       <h2>Why Work With Me</h2>
       <div class="cards">
@@ -346,38 +414,7 @@
       </div>
     </section>
 
-    <section class="section" id="sample-report">
-      <p class="eyebrow">Website improvements</p>
-      <h2>Sample Accessibility Remediation Work</h2>
-      <p class="section-intro">Real examples of accessibility barriers identified and addressed while preserving the original design and user experience.</p>
-      <article class="card case-study-card">
-        <h3>Shopify Accessibility Remediation</h3>
-        <div class="case-study-grid">
-          <figure class="case-image-wrap">
-            <img src="images/before.png" alt="Website before accessibility remediation" class="audit-image">
-            <figcaption>Before</figcaption>
-          </figure>
-          <figure class="case-image-wrap">
-            <img src="images/after.png" alt="Website after accessibility remediation" class="audit-image">
-            <figcaption>After</figcaption>
-          </figure>
-        </div>
-        <div class="case-details">
-          <div>
-            <h4>Problem</h4>
-            <p>Keyboard and interactive-element accessibility barriers.</p>
-          </div>
-          <div>
-            <h4>Fix</h4>
-            <p>Improved keyboard interaction, focus states, semantic HTML and ARIA.</p>
-          </div>
-          <div>
-            <h4>Result</h4>
-            <p>Improved usability while preserving the existing visual design.</p>
-          </div>
-        </div>
-      </article>
-    </section>
+
 
     <section class="section audit-includes">
       <h2>What You Get in My Accessibility Audit</h2>
@@ -406,28 +443,30 @@
         </article>
       </div>
     </section>
-    <section class="low-offer">
-      <h2>Quick Accessibility Review - $19</h2>
-      <p>
-        Not ready for a full WCAG audit? Start with a focused review of your website's most important accessibility
-        issues.
-      </p>
-      <ul class="check-list offer-list">
-        <li>Key accessibility issues identified</li>
-        <li>Priority level for each issue</li>
-        <li>Screenshot evidence where useful</li>
-        <li>Practical recommendations</li>
-        <li>Email delivery of your findings</li>
-      </ul>
-      <a href="pricing.html" class="btn">Get the $19 Accessibility Review</a>
+    <section class="section overlay-comparison">
+      <p class="eyebrow">Beyond overlays</p>
+      <h2>Why Code-Level Remediation Matters</h2>
+      <p class="section-intro">An overlay is an additional interface layer. It does not replace the accessible HTML, labels, focus behavior, semantics, and code fixes your users rely on.</p>
+      <div class="cards comparison-grid">
+        <article class="card">
+          <h3>Overlay widgets</h3>
+          <p>May add settings, language, or visual controls, but commonly leave underlying keyboard traps, broken forms, missing labels, and poor DOM semantics unresolved.</p>
+        </article>
+        <article class="card">
+          <h3>Code-level remediation</h3>
+          <p>Fixes the underlying product experience across browsers and assistive technologies, including React components, Shopify Liquid, WordPress themes, forms, dialogs, and PDFs.</p>
+        </article>
+      </div>
+      <p><strong>My approach:</strong> test manually, document the barrier with evidence, fix the source code, and retest the interaction.</p>
+      <a href="pricing.html" class="btn btn-secondary">View structured services and pricing</a>
     </section>
     <section class="section">
       <h2>Frequently Asked Questions</h2>
       <div class="cards">
         <article class="card">
-          <h3>Do you work with US clients?</h3>
-          <p>Yes. I support businesses serving users in the United States and can work remotely on audits, remediation,
-            and PDF accessibility projects.</p>
+          <h3>Which regional requirements do you cover?</h3>
+          <p>I support WCAG 2.2 work for ADA and Section 508 projects in the US, the EAA in Europe, AODA in Canada,
+            and UK Equality Act / PSBAR expectations. The relevant standard and scope are agreed before work begins.</p>
         </article>
         <article class="card">
           <h3>Do you only report issues?</h3>
@@ -448,9 +487,9 @@
       </p>
 
       <p>
-        Fixing accessibility issues improves usability, helps meet WCAG guidelines, and reduces ADA accessibility risk.
-        Businesses that serve users in the United States often use accessibility audits to support better legal posture
-        and improve user experience.
+        Fixing accessibility issues improves usability and supports WCAG conformance work for ADA, Section 508,
+        the EAA, AODA, and UK accessibility obligations. An audit also provides a practical evidence trail and
+        prioritized remediation plan for internal or agency teams.
       </p>
 
       <p>
@@ -459,22 +498,22 @@
       </p>
     </section>
     <section class="section final-cta">
-      <p class="eyebrow">Free accessibility assessment</p>
-      <h2>Not Sure What Accessibility Problems Your Website Has?</h2>
+      <p class="eyebrow">Free 3-issue mini teardown</p>
+      <h2>Have Accessibility Issues on Your Website? Let’s Fix Them.</h2>
       <p>
-        Get a free 1-page accessibility assessment highlighting key accessibility barriers and practical next steps before
-        you decide whether to hire me.
+        Get a free mini teardown and practical next steps, then we can discuss the right audit and remediation support for your team.
       </p>
       <div class="hero-actions final-cta-actions">
-        <a href="#scanForm" class="btn">Get My Free Accessibility Assessment</a>
+        <a href="#scanForm" class="btn">Get a Free Teardown</a>
         <a href="contact.html" class="btn btn-secondary">Contact Me</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; Himanshu | Accessibility Expert</p>
-  </footer>
+  <footer class="site-footer">
+  <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+</footer>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const scanForm = document.getElementById('scanForm');
@@ -498,7 +537,7 @@
               'Accept': 'application/json'
             },
             body: JSON.stringify({
-              _subject: "New Accessibility Review Request",
+              _subject: "New Free 3-Issue Teardown Request",
               URL_to_Scan: document.getElementById('scanUrl').value,
               User_Email: document.getElementById('scanEmail').value,
               message: `
@@ -513,7 +552,7 @@
             .then(response => response.json())
             .then(data => {
               // Show success message
-              scanMessage.textContent = "Thank you! Your request has been received. You will get your report within 24 hours."; scanMessage.style.color = "#174642";
+              scanMessage.textContent = "Thank you! Your request has been received. You will get your mini teardown within 24–48 hours."; scanMessage.style.color = "#174642";
               scanMessage.style.background = "#eef7f4";
               scanMessage.removeAttribute('hidden');
               scanForm.reset();

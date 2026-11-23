@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-    body {font-family: Arial, sans-serif; line-height: 1.6; color: #033B37; background: #f8f9fa; padding: 2em;}
-    h1, h2, h3 {color: #003B49;}
-    h1 {margin-bottom: 1em;}
-    h2 {margin-top: 2em; margin-bottom: 0.5em;}
-    p {margin-bottom: 1em;}
-    a {color: #033B37; text-decoration: underline;}
-    a:hover {color: #ffc845;}
-    ul {margin-left: 1.5em; margin-bottom: 1em;}
-    footer {margin-top: 3em; text-align: center; font-size: 0.9rem; color: #555;}
-  </style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You | Web Accessibility Audit</title>
   <meta name="robots" content="noindex,follow">
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {font-family: 'Atkinson Hyperlegible', sans-serif; background:#f8f9fa; color:#033B37; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; text-align:center; padding:2em;}
-    h1 {font-size:2rem; margin-bottom:1em; color:#003B49;}
-    p {font-size:1.1rem; margin-bottom:2em;}
-    a {display:inline-block; background:#ffc845; color:#033B37; padding:0.75em 1.5em; border-radius:8px; font-weight:bold; text-decoration:none;}
-    a:hover {background:#f5f8f8;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>Thank You!</h1>
-  <p>Your request for a free accessibility audit has been submitted successfully.<br>I  will review your website or documents and get back to you soon.</p>
-  <a href="/">Back to Home</a>
+<body class="site-page thank-you-body">
+<header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </nav>
+  </header>
+  <main class="section thank-you-page">
+    <p class="eyebrow">Request received</p>
+    <h1>Thank You!</h1>
+    <p>Your request for a free accessibility audit has been submitted successfully. I will review your website or documents and get back to you soon.</p>
+    <a class="btn" href="index.html">Back to Home</a>
+  </main>
+  <footer class="site-footer">
+  <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+</footer>
 </body>
 </html>

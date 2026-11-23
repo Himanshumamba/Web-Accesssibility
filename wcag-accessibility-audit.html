@@ -11,16 +11,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header>
-  <h2>Himanshu | Accessibility Expert</h2>
-<nav aria-label="Main navigation">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-</nav>
-</header>
+<body class="site-page">
+<header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </nav>
+  </header>
 <main>
 <section class="section">
   <h1>WCAG Accessibility Audit Service</h1>
@@ -40,6 +46,9 @@
   <p>Start with the <a href="blog.html#wcag-2-2-checklist-for-small-business-websites">WCAG 2.2 checklist</a>, <a href="blog.html#how-to-test-website-accessibility-manually">manual accessibility testing guide</a>, and <a href="blog.html#keyboard-navigation-accessibility-checklist">keyboard navigation checklist</a>.</p>
 </section>
 </main>
-<footer><p>&copy; Himanshu | Accessibility Expert</p></footer>
+<footer class="site-footer">
+  <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+</footer>
 </body>
 </html>

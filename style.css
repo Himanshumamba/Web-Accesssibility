@@ -936,3 +936,798 @@ p {
 .scan-message[hidden] {
   display: none;
 }
+
+/* Homepage refresh inspired by the clean, centered reference. */
+.homepage {
+  background: #fff;
+  color: #171827;
+}
+
+.homepage .site-header {
+  box-sizing: border-box;
+  min-height: 72px;
+  padding: 0.7rem clamp(1.25rem, 5vw, 4rem);
+  gap: 1rem;
+  border-bottom: 1px solid #eeedf2;
+  background: #fff;
+}
+
+.homepage .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #171827;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.homepage .brand-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #6924df;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.homepage .brand-text {
+  gap: 0.1rem;
+  line-height: 1.25;
+}
+
+.homepage .brand-text strong {
+  font-size: 0.98rem;
+}
+
+.homepage .brand-text span {
+  color: #717181;
+  font-size: 0.77rem;
+  font-weight: 400;
+}
+
+.homepage .site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+}
+
+.homepage .site-header nav a {
+  min-height: 42px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 7px;
+  color: #414253;
+  font-size: 0.91rem;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.homepage .site-header nav a:hover,
+.homepage .site-header nav a[aria-current="page"] {
+  background: transparent;
+  color: #6924df;
+  text-decoration: none;
+}
+
+.homepage .site-header nav a.nav-cta {
+  margin-left: 0.45rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #6924df;
+  color: #fff;
+  font-weight: 700;
+}
+
+.homepage .site-header nav a.nav-cta:hover {
+  background: #5419c2;
+  color: #fff;
+}
+
+.homepage .site-header nav a:focus-visible,
+.homepage a:focus-visible,
+.homepage button:focus-visible,
+.homepage input:focus-visible {
+  outline: 3px solid #6924df;
+  outline-offset: 3px;
+}
+
+.homepage .section {
+  max-width: 1100px;
+}
+
+.homepage h1,
+.homepage h2,
+.homepage h3 {
+  color: #171827;
+}
+
+.homepage .low-offer h2,
+.homepage footer p {
+  color: #fff;
+}
+
+.homepage p {
+  color: #555667;
+}
+
+.homepage .low-offer p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.homepage .eyebrow {
+  color: #6924df;
+}
+
+.homepage .hero.homepage-hero {
+  padding: 4.6rem 1.5rem 3.1rem;
+  background: #fff;
+}
+
+.homepage-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 auto 1.25rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid #eee7fb;
+  border-radius: 999px;
+  background: #f6f1ff;
+  color: #6326bd;
+  font-size: 0.76rem;
+  letter-spacing: 0.035em;
+}
+
+.homepage-hero h1 {
+  max-width: 980px;
+  margin: 0 auto 1.1rem;
+  color: #171827;
+  font-size: clamp(2.45rem, 6.4vw, 4.65rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.homepage-hero .hero-highlight {
+  color: #6924df;
+}
+
+.homepage-hero .hero-subtitle {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #666777;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.homepage .hero-actions {
+  margin: 1.6rem auto 0.8rem;
+  gap: 0.75rem;
+}
+
+.homepage .btn {
+  min-height: 48px;
+  padding: 0.8rem 1.35rem;
+  border: 1px solid #6924df;
+  border-radius: 7px;
+  background: #6924df;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgba(86, 30, 191, 0.12);
+}
+
+.homepage .btn:hover {
+  transform: none;
+  background: #5419c2;
+  border-color: #5419c2;
+}
+
+.homepage .btn-secondary {
+  border-color: #dedde5;
+  background: #fff;
+  color: #303142;
+  box-shadow: none;
+}
+
+.homepage .btn-secondary:hover {
+  background: #f8f6fc;
+  border-color: #c8b3eb;
+  color: #5419c2;
+}
+
+.homepage-hero .hero-note {
+  margin: 1rem auto 0;
+  color: #747485;
+  font-size: 0.9rem;
+}
+
+.homepage .section.trust-bar {
+  box-sizing: border-box;
+  max-width: none;
+  margin: 0;
+  padding: 2.35rem clamp(1.25rem, 5vw, 4rem);
+  border-radius: 0;
+  background: #5c21db;
+}
+
+.homepage .trust-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+  gap: 1rem;
+}
+
+.homepage .trust-item {
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.homepage .trust-number,
+.homepage .trust-label {
+  color: #fff;
+}
+
+.homepage .trust-number {
+  font-size: clamp(1.7rem, 3.6vw, 2.45rem);
+}
+
+.homepage .trust-label {
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+}
+
+.homepage .service-card,
+.homepage .card {
+  border: 1px solid #eceaf1;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(28, 22, 43, 0.045);
+}
+
+.homepage .service-card h3,
+.homepage .case-study-card h3 {
+  color: #28263a;
+}
+
+.homepage .service-focus,
+.homepage .platform-strip,
+.homepage .free-review,
+.homepage .audit-includes {
+  border-color: #ece6f6;
+}
+
+.homepage .service-list li,
+.homepage .platform-badges span {
+  background: #f3edff;
+  color: #4d248f;
+}
+
+.homepage .proof-grid article {
+  border-left-color: #6924df;
+}
+
+.homepage .audit-benefit::before {
+  background: #6924df;
+  box-shadow: 0 0 0 6px rgba(105, 36, 223, 0.12);
+}
+
+.homepage .free-review {
+  background: #faf8ff;
+  border: 1px solid #ece6f6;
+  border-radius: 14px;
+}
+
+.homepage .assessment-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 0.8rem;
+  max-width: 900px;
+  margin: 1.5rem 0;
+  padding: 1.1rem;
+  border: 1px solid #e7e2ef;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(28, 22, 43, 0.045);
+}
+
+.homepage .assessment-form .form-group label {
+  color: #343346;
+  font-size: 0.9rem;
+}
+
+.homepage .assessment-form input {
+  min-height: 46px;
+  margin: 0.45rem 0 0;
+  border-color: #dcd9e4;
+}
+
+.homepage .assessment-form .btn {
+  margin: 0;
+  white-space: normal;
+}
+
+.homepage .testing-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  color: #555667;
+}
+
+.homepage .testing-strip strong {
+  width: 100%;
+  color: #28263a;
+}
+
+.homepage .testing-strip span {
+  display: inline-flex;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #e7e2ef;
+  border-radius: 999px;
+  background: #faf8ff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.homepage .overlay-comparison {
+  border: 1px solid #ece6f6;
+  border-radius: 14px;
+  background: #faf8ff;
+}
+
+.homepage .comparison-grid {
+  margin: 1.5rem 0;
+}
+
+.homepage .mini-case-grid {
+  margin-top: 1.25rem;
+  text-align: left;
+}
+
+.homepage .mini-case-card h3 {
+  margin-top: 0;
+}
+
+.homepage .pricing-page,
+.homepage .pricing-grid {
+  width: 100%;
+}
+
+.pricing-grid {
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.pricing-card h2 {
+  margin-top: 0;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 940px) {
+  .homepage .site-header {
+    flex-wrap: wrap;
+  }
+
+  .homepage .site-header nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .homepage .site-header {
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+
+  .homepage .site-header nav {
+    gap: 0.1rem;
+  }
+
+  .homepage .site-header nav a {
+    min-height: 40px;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.85rem;
+  }
+
+  .homepage .site-header nav a.nav-cta {
+    margin-left: 0.1rem;
+  }
+
+  .homepage .hero.homepage-hero {
+    padding: 3.25rem 1.1rem 2.6rem;
+  }
+
+  .homepage-hero h1 {
+    font-size: clamp(2.35rem, 10vw, 3.5rem);
+    letter-spacing: -0.04em;
+  }
+
+  .homepage .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem 0.5rem;
+  }
+
+  .homepage .assessment-form {
+    grid-template-columns: 1fr;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .homepage .assessment-form .btn {
+    width: 100%;
+  }
+}
+
+/* Shared visual system for every public page. */
+.site-page {
+  background: #fff;
+  color: #171827;
+}
+
+.site-page main a:not(.btn):not(.pagination-link) {
+  color: #5c21db;
+}
+
+.site-page main a:not(.btn):not(.pagination-link):hover {
+  color: #4517ad;
+}
+
+.site-page .site-header {
+  box-sizing: border-box;
+  min-height: 72px;
+  padding: 0.7rem clamp(1.25rem, 5vw, 4rem);
+  gap: 1rem;
+  border-bottom: 1px solid #eeedf2;
+  background: #fff;
+}
+
+.site-page .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #171827;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-page .brand-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #6924df;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.site-page .brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1.25;
+}
+
+.site-page .brand-text strong {
+  color: #171827;
+  font-size: 0.98rem;
+}
+
+.site-page .brand-text span {
+  color: #717181;
+  font-size: 0.77rem;
+  font-weight: 400;
+}
+
+.site-page .site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+}
+
+.site-page .site-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 7px;
+  color: #414253;
+  font-size: 0.91rem;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-page .site-header nav a:hover,
+.site-page .site-header nav a[aria-current="page"] {
+  background: #f6f1ff;
+  color: #5c21db;
+  text-decoration: none;
+}
+
+.site-page .site-header nav a.nav-cta {
+  margin-left: 0.45rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #6924df;
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-page .site-header nav a.nav-cta:hover {
+  background: #5419c2;
+  color: #fff;
+}
+
+.site-page .site-header nav a:focus-visible,
+.site-page a:focus-visible,
+.site-page button:focus-visible,
+.site-page input:focus-visible,
+.site-page textarea:focus-visible {
+  outline: 3px solid #6924df;
+  outline-offset: 3px;
+}
+
+.site-page h1,
+.site-page h2,
+.site-page h3,
+.site-page h4 {
+  color: #171827;
+}
+
+.site-page p {
+  color: #555667;
+}
+
+.site-page .section {
+  max-width: 1100px;
+}
+
+.site-page .eyebrow,
+.site-page .blog-kicker {
+  color: #6924df;
+}
+
+.site-page .btn,
+.site-page button {
+  border-color: #6924df;
+  background: #6924df;
+  color: #fff;
+}
+
+.site-page .btn:hover,
+.site-page button:hover {
+  border-color: #5419c2;
+  background: #5419c2;
+  color: #fff;
+  transform: none;
+}
+
+.site-page .btn-secondary {
+  border-color: #dedde5;
+  background: #fff;
+  color: #303142;
+  box-shadow: none;
+}
+
+.site-page .btn-secondary:hover {
+  border-color: #c8b3eb;
+  background: #f8f6fc;
+  color: #5419c2;
+}
+
+.site-page .card,
+.site-page .blog-card,
+.site-page .blog-post,
+.site-page .pricing-card {
+  border: 1px solid #eceaf1;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(28, 22, 43, 0.045);
+}
+
+.site-page .tag,
+.site-page .platform-badges span,
+.site-page .service-list li {
+  border-color: #ece3fa;
+  background: #f3edff;
+  color: #4d248f;
+}
+
+.site-page .blog-hero {
+  background: linear-gradient(180deg, #fbf9ff 0%, #f3edff 100%);
+}
+
+.site-page .pagination-link.is-active {
+  border-color: #5c21db;
+  background: #5c21db;
+  color: #fff;
+}
+
+.site-page .low-offer {
+  background: #4d1dbb;
+}
+
+.site-page .low-offer h2,
+.site-page .low-offer p,
+.site-page .footer p,
+.site-page footer p {
+  color: #fff;
+}
+
+.site-page .low-offer .btn {
+  border-color: #fff;
+  background: #fff;
+  color: #4d1dbb;
+}
+
+.site-page .audit-includes,
+.site-page .free-review,
+.site-page .platform-strip {
+  border-color: #ece6f6;
+  background-color: #faf8ff;
+}
+
+.site-page .audit-benefit::before {
+  background: #6924df;
+  box-shadow: 0 0 0 6px rgba(105, 36, 223, 0.12);
+}
+
+.site-page .proof-grid article {
+  border-left-color: #6924df;
+}
+
+.site-page footer {
+  background: #171827;
+  color: #fff;
+}
+
+.site-page footer a {
+  color: #fff;
+}
+
+.site-page .footer-social {
+  margin: 0.45rem auto 0;
+}
+
+.site-page .footer-social a {
+  color: #fff;
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+.site-page .footer-social a:hover {
+  color: #d8c6ff;
+}
+
+.site-page .legal-page {
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 2.5rem auto 4rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid #eceaf1;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(28, 22, 43, 0.045);
+}
+
+.site-page .legal-page h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.site-page .legal-page h2 {
+  margin-top: 2rem;
+  padding-top: 0.3rem;
+}
+
+.site-page .appointment-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+  padding: 1.35rem;
+  border: 1px solid #e7dcf8;
+  border-radius: 14px;
+  background: #f7f3ff;
+  text-align: left;
+}
+
+.site-page .appointment-cta h2 {
+  margin: 0 0 0.35rem;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.site-page .appointment-cta p {
+  margin: 0;
+}
+
+.site-page .appointment-cta .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.site-page .thank-you-page {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.site-page.thank-you-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 940px) {
+  .site-page .site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-page .site-header nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-page .site-header {
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+
+  .site-page .site-header nav {
+    gap: 0.1rem;
+  }
+
+  .site-page .site-header nav a {
+    min-height: 40px;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.85rem;
+  }
+
+  .site-page .site-header nav a.nav-cta {
+    margin-left: 0.1rem;
+  }
+
+  .site-page .legal-page {
+    margin: 1.25rem 1rem 2.5rem;
+    padding: 1.35rem;
+  }
+
+  .site-page .appointment-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-page .appointment-cta .btn {
+    width: 100%;
+  }
+}

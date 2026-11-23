@@ -15,15 +15,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="site-page">
 
-  <header>
-    <h2>Himanshu | Accessibility Expert</h2>
+  <header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
       <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
     </nav>
   </header>
 
@@ -34,6 +40,13 @@
       <p>
         Enter your URL below. I will manually review your site and send you an actionable report within 24 hours.
       </p>
+      <div class="appointment-cta">
+        <div>
+          <h2>Prefer a quick conversation?</h2>
+          <p>Book a 15-minute discovery call at a time that works for you.</p>
+        </div>
+        <a class="btn" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Choose a Time</a>
+      </div>
       <form id="scanForm" class="scan-form">
         <div class="form-group">
           <label for="scanUrl">Website URL</label>
@@ -55,9 +68,10 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; Himanshu | Accessibility Expert</p>
-  </footer>
+  <footer class="site-footer">
+  <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+</footer>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const scanForm = document.getElementById('scanForm');

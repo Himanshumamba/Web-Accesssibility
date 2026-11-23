@@ -11,16 +11,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header>
-  <h2>Himanshu | Accessibility Expert</h2>
-  <nav aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<body class="site-page">
+<header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </nav>
+  </header>
 <main>
 <section class="section">
   <h1>ADA Website Compliance Support</h1>
@@ -40,6 +46,9 @@
   <p>Read the <a href="blog.html#ada-website-compliance-checklist-for-small-businesses">ADA website compliance checklist</a> and <a href="blog.html#common-wcag-failures-found-on-business-websites">common WCAG failures guide</a>.</p>
 </section>
 </main>
-<footer><p>&copy; Himanshu | Accessibility Expert</p></footer>
+<footer class="site-footer">
+  <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+  <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+</footer>
 </body>
 </html>
