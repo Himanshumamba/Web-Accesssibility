@@ -78,6 +78,22 @@
     document.addEventListener('DOMContentLoaded', () => {
       const scanForm = document.getElementById('scanForm');
       const scanMessage = document.getElementById('scanMessage');
+      const scanUrl = document.getElementById('scanUrl');
+      let requestedUrl = new URLSearchParams(window.location.search).get('url');
+
+      try {
+        const storedUrl = sessionStorage.getItem('accessibilityReviewUrl');
+        if (storedUrl) {
+          requestedUrl = storedUrl;
+          sessionStorage.removeItem('accessibilityReviewUrl');
+        }
+      } catch (error) {
+        // Continue with the contact form if session storage is unavailable.
+      }
+
+      if (requestedUrl && scanUrl) {
+        scanUrl.value = requestedUrl;
+      }
 
       if (scanForm) {
         scanForm.addEventListener('submit', async (e) => {

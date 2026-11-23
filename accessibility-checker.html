@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Website Accessibility Checker | WCAG 2.2 Self-Check</title>
+  <meta name="description" content="Use a free WCAG 2.2 self-check and contrast calculator to review common website barriers. Get practical next steps or request a manual 3-issue review.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://websiteaccessibilityfix.com/accessibility-checker.html">
+  <meta property="og:title" content="Free Website Accessibility Checker | WCAG 2.2 Self-Check">
+  <meta property="og:description" content="Review common website accessibility barriers with a guided self-check and a WCAG contrast calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://websiteaccessibilityfix.com/accessibility-checker.html">
+  <script defer src="analytics.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261124">
+  <script defer src="accessibility-checker.js"></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#sample-report">Work</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/hphimeshpandey/15-min-discovery-call" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section tool-hero">
+      <p class="eyebrow">Free accessibility tool</p>
+      <h1>Free Website Accessibility Checker</h1>
+      <p>Use this guided WCAG 2.2 self-check to review common barriers on one important page, such as your homepage, product page, or checkout. It gives you practical next steps and includes a text contrast calculator.</p>
+      <p class="tool-disclosure"><strong>What this tool does:</strong> It helps you perform a short manual review. It does not crawl your website, produce an accessibility score, or determine WCAG conformance.</p>
+    </section>
+
+    <section class="section tool-section" aria-labelledby="self-check-title">
+      <div class="tool-section-heading">
+        <p class="eyebrow">About 5 minutes</p>
+        <h2 id="self-check-title">Check one page for common barriers</h2>
+        <p>Open your page in another tab and try each check. Mark “Not checked” if you are unsure.</p>
+      </div>
+
+      <form id="selfCheckForm" class="self-check-form">
+        <div class="tool-url-field">
+          <label for="websiteUrl">Page URL <span>(optional)</span></label>
+          <input id="websiteUrl" name="websiteUrl" type="url" inputmode="url" autocomplete="url" placeholder="https://yourwebsite.com/page" aria-describedby="websiteUrlHelp">
+          <p id="websiteUrlHelp">The tool does not open or send this URL. If you request a manual review, it will prefill the contact form.</p>
+        </div>
+
+        <div class="self-check-grid">
+          <fieldset class="self-check-item">
+            <legend>Keyboard access</legend>
+            <p>Use Tab and Shift+Tab. Can you reach and operate the important links, buttons, menus, and form controls without a mouse?</p>
+            <div class="check-options">
+              <label><input type="radio" name="keyboard" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="keyboard" value="no"> I found a problem</label>
+              <label><input type="radio" name="keyboard" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Visible focus</legend>
+            <p>While tabbing through the page, can you clearly see which link, button, or field has keyboard focus?</p>
+            <div class="check-options">
+              <label><input type="radio" name="focus" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="focus" value="no"> I found a problem</label>
+              <label><input type="radio" name="focus" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Headings and structure</legend>
+            <p>Do headings describe the sections that follow and form a sensible hierarchy? Can you identify the main content?</p>
+            <div class="check-options">
+              <label><input type="radio" name="structure" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="structure" value="no"> I found a problem</label>
+              <label><input type="radio" name="structure" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Images and text alternatives</legend>
+            <p>Do informative images have useful alternative text, and are decorative images ignored by assistive technology?</p>
+            <div class="check-options">
+              <label><input type="radio" name="images" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="images" value="no"> I found a problem</label>
+              <label><input type="radio" name="images" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Forms and errors</legend>
+            <p>Does each field have a clear label? If an error occurs, does the message explain what went wrong and how to fix it?</p>
+            <div class="check-options">
+              <label><input type="radio" name="forms" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="forms" value="no"> I found a problem</label>
+              <label><input type="radio" name="forms" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Links and buttons</legend>
+            <p>Do link and button names explain their destination or action, including when read outside the surrounding paragraph?</p>
+            <div class="check-options">
+              <label><input type="radio" name="links" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="links" value="no"> I found a problem</label>
+              <label><input type="radio" name="links" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="self-check-item">
+            <legend>Zoom and small screens</legend>
+            <p>At 200% browser zoom and on a narrow screen, can you read and use the page without losing content or functionality?</p>
+            <div class="check-options">
+              <label><input type="radio" name="zoom" value="yes"> I checked; it works</label>
+              <label><input type="radio" name="zoom" value="no"> I found a problem</label>
+              <label><input type="radio" name="zoom" value="unsure"> Not checked</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <button type="submit" class="btn">Show My Review Plan</button>
+      </form>
+
+      <div id="checkResults" class="tool-results" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <noscript><p class="tool-disclosure">Enable JavaScript in your browser to build a review plan. The questions above can still be used as a manual checklist.</p></noscript>
+    </section>
+
+    <section class="section tool-section contrast-section" aria-labelledby="contrast-title">
+      <div class="tool-section-heading">
+        <p class="eyebrow">WCAG contrast calculator</p>
+        <h2 id="contrast-title">Check text color contrast</h2>
+        <p>Enter the text and background colors as six-digit hex values. The ratio is calculated in your browser.</p>
+      </div>
+
+      <div class="contrast-tool">
+        <div class="contrast-controls">
+          <div class="contrast-color-control">
+            <label for="foregroundHex">Text color</label>
+            <div class="contrast-input-row">
+              <input id="foregroundPicker" type="color" value="#262536" aria-label="Choose text color">
+              <input id="foregroundHex" type="text" value="#262536" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
+            </div>
+          </div>
+          <div class="contrast-color-control">
+            <label for="backgroundHex">Background color</label>
+            <div class="contrast-input-row">
+              <input id="backgroundPicker" type="color" value="#ffffff" aria-label="Choose background color">
+              <input id="backgroundHex" type="text" value="#ffffff" maxlength="7" spellcheck="false" autocapitalize="off" aria-describedby="hexHelp">
+            </div>
+          </div>
+        </div>
+        <p id="hexHelp" class="field-help">Use a value such as #262536 or #FFFFFF.</p>
+        <div id="contrastPreview" class="contrast-preview" aria-label="Preview of text and background colors">
+          <strong>Sample text preview</strong>
+          <span>Try changing either color to see the contrast update.</span>
+        </div>
+        <div id="contrastResult" class="contrast-result" role="status" aria-live="polite" aria-atomic="true"></div>
+      </div>
+
+      <p class="tool-disclosure">This calculation checks only the color pair you enter. It does not inspect your page or check other accessibility requirements. WCAG contrast requirements depend on text size and context; see the <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">WCAG contrast guidance</a>.</p>
+    </section>
+
+    <section class="section tool-section" aria-labelledby="next-steps-title">
+      <h2 id="next-steps-title">What to do with your results</h2>
+      <p>Start with the barriers you found on the page that matters most to your visitors, such as a contact form, product page, or checkout. Retest each issue after a fix, using a keyboard and assistive technology where appropriate.</p>
+      <p>A self-check is a starting point, not a compliance verdict. W3C explains that accessibility evaluation tools cannot determine conformance on their own and that knowledgeable human review is needed.</p>
+      <p><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Read W3C guidance on evaluating accessibility</a> or <a href="blog.html">browse practical accessibility guides</a>.</p>
+      <div class="tool-cta">
+        <div>
+          <h2>Want a person to review your page?</h2>
+          <p>Request a free manual 3-issue review and get practical next steps for your website.</p>
+        </div>
+        <a id="manualReviewLink" class="btn" href="contact.html">Request a Free Manual Review</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+    <nav class="footer-navigation" aria-label="Footer links">
+      <a href="blog.html">Accessibility Blog</a>
+      <a href="accessibility-checker.html" aria-current="page">Free Accessibility Self-Check</a>
+    </nav>
+    <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+  </footer>
+</body>
+</html>
