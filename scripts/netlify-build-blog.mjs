@@ -60,6 +60,21 @@ function normalizeSlug(post) {
   return slug;
 }
 
+function formatArchiveDate(value = "") {
+  const dateValue = String(value).slice(0, 10);
+  const date = new Date(`${dateValue}T00:00:00Z`);
+  if (!dateValue || Number.isNaN(date.getTime())) {
+    return escapeHtml(value);
+  }
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(date);
+}
+
 function renderTags(tags = []) {
   if (!Array.isArray(tags) || tags.length === 0) {
     return "";
@@ -74,20 +89,20 @@ function renderArchive(posts) {
   return `<div class="blog-posts">${posts.map((post) => {
     const slug = normalizeSlug(post);
     const href = `blog/${slug}.html`;
-    const tags = Array.isArray(post.tags)
+    const tags = Array.isArray(post.tags) && post.tags.length
       ? `<p class="blog-kicker">${post.tags.slice(0, 2).map(escapeHtml).join(" · ")}</p>`
       : "";
 
     return `
     <article class="blog-card card">
       <div class="blog-meta">
-        <span>${escapeHtml(post.date || "")}</span>
+        <time datetime="${escapeHtml(post.date || "")}">${formatArchiveDate(post.date || "")}</time>
         <span>${escapeHtml(post.readTime || "4 min read")}</span>
       </div>
       ${tags}
       <h3><a class="blog-link" href="${href}">${escapeHtml(post.title)}</a></h3>
-      <p>${escapeHtml(post.excerpt || "")}</p>
-      <a class="blog-link" href="${href}">Read ${escapeHtml(post.title)}</a>
+      <p class="blog-excerpt">${escapeHtml(post.excerpt || "")}</p>
+      <a class="blog-read-link" href="${href}" aria-label="Read article: ${escapeHtml(post.title)}">Read article <span aria-hidden="true">&rarr;</span></a>
     </article>`;
   }).join("")}</div>`;
 }
