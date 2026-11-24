@@ -2630,3 +2630,48 @@ p {
     gap: 1rem;
   }
 }
+
+.remediation-page main > .section {
+  text-align: left;
+}
+
+.remediation-page .section p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.remediation-page .section ol,
+.remediation-page .section ul {
+  max-width: 78ch;
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.5rem;
+  line-height: 1.65;
+}
+
+.remediation-page .section li + li {
+  margin-top: 0.4rem;
+}
+
+.remediation-page .section h3 {
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.remediation-page pre {
+  max-width: 78ch;
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid #dedce5;
+  border-radius: 8px;
+  background: #f7f6f9;
+  color: #232236;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.remediation-page pre code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+}

@@ -3,15 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Accessibility Remediation Services | Fix WCAG Issues</title>
-<meta name="description" content="Website accessibility remediation services for WCAG issues including forms, keyboard navigation, color contrast, alt text, ARIA, and screen reader fixes.">
+<title>Website Accessibility Fix | WCAG 2.2 AA Code Remediation</title>
+<meta name="description" content="Learn how to fix website accessibility issues with a WCAG 2.2 AA audit, code and content fixes, keyboard testing, and screen reader verification.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://websiteaccessibilityfix.com/website-accessibility-remediation.html">
+<meta property="og:title" content="Website Accessibility Fix | WCAG 2.2 AA Code Remediation">
+<meta property="og:description" content="A practical guide to auditing, prioritizing, fixing, and retesting website accessibility issues in code and content.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://websiteaccessibilityfix.com/website-accessibility-remediation.html">
 <script defer src="analytics.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261124-7">
+<link rel="stylesheet" href="style.css?v=20261124-8">
 </head>
-<body class="site-page">
+<body class="site-page remediation-page">
 <header class="site-header">
     <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
       <span class="brand-monogram" aria-hidden="true">HP</span>
@@ -28,27 +32,128 @@
     </nav>
   </header>
 <main>
-<section class="section">
-  <h1>Website Accessibility Remediation Services</h1>
-  <p>If you already have an accessibility report, I can help fix the issues and verify that the changes improve real usability for keyboard and assistive technology users.</p>
-  <a href="contact.html" class="btn">Get Help Fixing Issues</a>
-</section>
-<section class="section">
-  <h2>Accessibility Fixes I Help With</h2>
-  <div class="cards">
-    <article class="card"><h3>Front-End Fixes</h3><p>Buttons, links, headings, forms, modals, focus states, skip links, and semantic HTML.</p></article>
-    <article class="card"><h3>Content Fixes</h3><p>Alt text, link text, page structure, accessible instructions, and error messaging.</p></article>
-    <article class="card"><h3>Verification</h3><p>Retesting after remediation so your team knows what changed and what still needs attention.</p></article>
-  </div>
-</section>
-<section class="section">
-  <h2>Related Guides</h2>
-  <p>Read <a href="blog/how-to-fix-website-accessibility-issues-beginners-guide.html">how to fix website accessibility issues</a>, <a href="blog/form-accessibility-checklist-for-wcag-compliance.html">form accessibility checklist</a>, and <a href="blog/color-contrast-accessibility-checker-guide.html">color contrast guide</a>.</p>
-</section>
+  <section class="section">
+    <p class="eyebrow">Practical audit and code remediation</p>
+    <h1>How to Fix Website Accessibility Issues</h1>
+    <p class="section-intro">A website accessibility fix starts with an audit, then prioritizes barriers by their effect on real tasks. Fix the underlying code and content, then verify the result with keyboard-only use and screen readers such as NVDA, JAWS, and VoiceOver. Automated scanners help find issues, but they cannot confirm that a site is usable on their own.</p>
+    <ol>
+      <li><strong>Audit:</strong> combine an automated scan with manual checks of important pages and user flows.</li>
+      <li><strong>Prioritize:</strong> address blockers in navigation, forms, login, checkout, and other essential tasks first.</li>
+      <li><strong>Remediate:</strong> update HTML, CSS, JavaScript, and content at the source.</li>
+      <li><strong>Verify:</strong> repeat the checks with a keyboard and representative screen reader/browser combinations.</li>
+    </ol>
+    <p><a href="contact.html" class="btn">Get Help Fixing Website Issues</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Prioritize fixes by user impact</h2>
+    <p>Start with issues that stop people from completing an important task or prevent them from understanding what to do next. A useful remediation plan records the affected page or component, the user impact, the relevant WCAG criterion, the proposed fix, and how the fix will be retested.</p>
+    <ul>
+      <li><strong>Blockers:</strong> keyboard traps, inaccessible menus or dialogs, unlabeled required fields, and controls that cannot be operated without a mouse.</li>
+      <li><strong>Task failures:</strong> form errors that are not announced, unclear checkout steps, missing instructions, or buttons with no accessible name.</li>
+      <li><strong>Broad content problems:</strong> low contrast, repeated heading or labeling errors, missing image alternatives, and unclear link purpose.</li>
+    </ul>
+    <p>When one shared component causes the same barrier across many pages, fix the component and check its uses. This is often more reliable than applying separate patches page by page.</p>
+  </section>
+
+  <section class="section">
+    <h2>High-impact website accessibility fixes</h2>
+
+    <h3>Write meaningful alt text and mark decoration as decorative</h3>
+    <p>Describe an image when it conveys information or supports an action. Keep the text concise and specific to the page. If an image is purely decorative and adds no information, use an empty alternative so assistive technology can skip it.</p>
+    <pre><code>&lt;img src="team.jpg" alt="The support team reviewing customer feedback"&gt;
+&lt;img src="divider.svg" alt=""&gt;</code></pre>
+    <p>For linked images, make sure the alternative explains the link's purpose. Avoid repeating nearby captions or stuffing keywords into alt text.</p>
+
+    <h3>Meet text and control contrast requirements</h3>
+    <p>For WCAG 2.2 AA, normal text needs a contrast ratio of at least 4.5:1. Large text (at least 18 pt regular or 14 pt bold) needs at least 3:1. Visual information needed to identify user interface components and states, along with meaningful parts of graphics, generally needs 3:1 against adjacent colors. Check hover, focus, error, disabled, and selected states as well as the default view. Use the <a href="wcag-contrast-checker.html">WCAG contrast checker</a> to inspect color pairs, and see the <a href="https://www.w3.org/TR/WCAG22/">official WCAG 2.2 standard</a> for the criteria and exceptions.</p>
+
+    <h3>Give every form field a visible, programmatic label</h3>
+    <p>Placeholders can show an example, but they should not replace a persistent label. Associate error text with the field, identify the error in words, and provide a useful correction. For errors added dynamically, announce the error or move focus to a clear error summary when appropriate.</p>
+    <pre><code>&lt;label for="email"&gt;Email address&lt;/label&gt;
+&lt;input id="email" name="email" type="email"
+       aria-invalid="true" aria-describedby="email-error"&gt;
+&lt;p id="email-error"&gt;Enter an email address, such as name@example.com.&lt;/p&gt;</code></pre>
+    <p>Set <code>aria-invalid="true"</code> when the field has an error and remove it when corrected. Do not rely on color alone to identify invalid fields.</p>
+
+    <h3>Use semantic headings and declare the page language</h3>
+    <p>Set the document language on the root element so assistive technology can select an appropriate pronunciation. Organize content with headings that describe each section and reflect its structure. Use CSS for visual styling instead of choosing a heading level only for its size.</p>
+    <pre><code>&lt;html lang="en"&gt;
+  &lt;h1&gt;Account settings&lt;/h1&gt;
+  &lt;h2&gt;Contact information&lt;/h2&gt;
+  &lt;h3&gt;Email preferences&lt;/h3&gt;
+&lt;/html&gt;</code></pre>
+
+    <h3>Make every interaction work from the keyboard</h3>
+    <p>Use Tab and Shift+Tab to reach interactive controls in a logical order. Use Enter to activate links and buttons, Space to activate buttons and native checkboxes, and Escape to dismiss a dismissible dialog or menu when that behavior is expected. Keep focus visible, ensure it is not hidden behind sticky content, and make sure users can leave every component without a mouse.</p>
+    <pre><code>:focus-visible {
+  outline: 3px solid #1457d9;
+  outline-offset: 3px;
+}</code></pre>
+    <p>Prefer native links, buttons, and form controls. Custom widgets need keyboard behavior, accessible names, states, and focus handling that match the interaction. After a dialog closes, return focus to the control that opened it.</p>
+
+    <h3>Make link and button text describe the action</h3>
+    <p>Link text should explain its destination, and button text should name the action. Replace context-free labels such as “click here,” “read more,” or “submit” with wording that still makes sense when encountered in a list of links or buttons.</p>
+    <ul>
+      <li><strong>Vague:</strong> <code>&lt;a href="/pricing"&gt;Click here&lt;/a&gt;</code></li>
+      <li><strong>Clear:</strong> <code>&lt;a href="/pricing"&gt;View accessibility service pricing&lt;/a&gt;</code></li>
+      <li><strong>Action-specific button:</strong> <code>&lt;button type="submit"&gt;Send contact request&lt;/button&gt;</code></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>A practical accessibility remediation workflow</h2>
+    <ol>
+      <li><strong>Choose representative pages and flows.</strong> Include shared templates and key tasks such as navigation, search, account access, forms, and checkout.</li>
+      <li><strong>Run automated checks.</strong> Use tools such as axe, WAVE, and Lighthouse to catch detectable markup, naming, and contrast issues. Treat results as leads to review; automated tools cannot judge every context or interaction.</li>
+      <li><strong>Test manually.</strong> Navigate with the keyboard, inspect focus order and visible focus, zoom and reflow the page, and test important flows with screen readers. Check NVDA and JAWS with supported Windows browsers and VoiceOver with Safari on Apple devices where those combinations match your audience.</li>
+      <li><strong>Prioritize findings.</strong> Record the user impact, affected templates, WCAG success criterion, and remediation owner. Fix barriers that block critical tasks first, then address recurring patterns and lower-impact issues.</li>
+      <li><strong>Remediate the source.</strong> Correct the component, template, design token, or content that creates the issue. Document any third-party limitation and the available workaround or next step.</li>
+      <li><strong>Retest and record results.</strong> Repeat the failed check, exercise nearby states and flows, and run regression checks on pages that share the changed component.</li>
+    </ol>
+    <p>Use the <a href="wcag-accessibility-audit.html">WCAG accessibility audit service</a> to identify and prioritize findings, or read the <a href="blog/how-to-test-website-accessibility-manually.html">manual accessibility testing guide</a> for a self-check routine.</p>
+  </section>
+
+  <section class="section">
+    <h2>Hands-on website accessibility audits and remediation</h2>
+    <p>Website Accessibility Fix helps site owners, developers, and agencies move from findings to practical changes. Work can include a scoped manual audit, developer-ready issue notes, code and content remediation, and retesting of the agreed pages or user flows.</p>
+    <ul>
+      <li>Review page templates, components, forms, menus, and critical interactions.</li>
+      <li>Prioritize findings against WCAG 2.2 AA with clear user impact and fix guidance.</li>
+      <li>Make hands-on updates to the agreed codebase or provide implementation-ready changes for your team.</li>
+      <li>Retest fixes with automated checks, keyboard use, and screen reader review.</li>
+    </ul>
+    <p>The scope and results are documented so your team can continue maintaining accessible patterns. No automated overlay can replace fixing the underlying code and content, and an audit or remediation engagement is not a blanket guarantee of legal compliance.</p>
+    <p><a href="contact.html" class="btn">Request an Accessibility Review</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Frequently asked questions</h2>
+    <h3>How do I fix website accessibility issues?</h3>
+    <p>Audit key pages and user flows, prioritize barriers by user impact, update the code and content that cause them, then retest with automated tools, a keyboard, and representative screen readers.</p>
+
+    <h3>Can an automated accessibility scan fix my website?</h3>
+    <p>No. Scanners can identify some detectable problems, but people still need to review context, test interactions, and make source-level code and content changes. Re-run scans after fixes as one part of verification.</p>
+
+    <h3>What does WCAG 2.2 AA code remediation include?</h3>
+    <p>It depends on the audit findings. Common work includes semantic HTML, labels and error messages, contrast, keyboard support, accessible names, focus behavior, and content alternatives. A complete review also considers other applicable WCAG criteria and the pages and states in scope.</p>
+
+    <h3>Do you install accessibility overlays?</h3>
+    <p>No. The service focuses on auditing and fixing underlying code and content, then checking the changes with people-centered testing methods.</p>
+
+    <h3>Will remediation guarantee legal compliance?</h3>
+    <p>No single scan or remediation project can guarantee legal compliance. The work can target agreed WCAG criteria and document what was tested, what was fixed, and any known limitations.</p>
+  </section>
+
+  <section class="section">
+    <h2>Ready to fix accessibility issues in your code?</h2>
+    <p>Share your audit findings, key pages, or the user flow that needs attention. Get a practical scope for audit, remediation, and verification.</p>
+    <p><a href="contact.html" class="btn">Talk About Your Accessibility Fix</a></p>
+  </section>
 </main>
 <footer class="site-footer">
   <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
-  <nav class="footer-navigation" aria-label="Footer links"><a href="blog.html">Accessibility Blog</a><a href="wcag-contrast-checker.html">Free WCAG Contrast Checker</a></nav>
+  <nav class="footer-navigation" aria-label="Footer links"><a href="selected-work.html">Anonymized Work</a><a href="agency-accessibility-support.html">Agency Support</a><a href="blog.html">Accessibility Blog</a><a href="wcag-contrast-checker.html">Free WCAG Contrast Checker</a></nav>
   <p class="footer-social"><a href="https://www.linkedin.com/company/web-accessibility-expert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
 </footer>
 </body>
