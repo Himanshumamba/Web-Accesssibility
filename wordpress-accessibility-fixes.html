@@ -6,10 +6,25 @@
 <title>WordPress Accessibility Fixes | WCAG and ADA Website Support</title>
 <meta name="description" content="WordPress accessibility fixes for themes, plugins, forms, menus, contrast, headings, alt text, and WCAG issues on business websites.">
 <meta name="robots" content="index,follow">
+  <meta property="og:title" content="WordPress Accessibility Fixes | WCAG and ADA Website Support">
+  <meta property="og:description" content="WordPress accessibility fixes for themes, plugins, forms, menus, contrast, headings, and keyboard navigation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://websiteaccessibilityfix.com/wordpress-accessibility-fixes.html">
 <link rel="canonical" href="https://websiteaccessibilityfix.com/wordpress-accessibility-fixes.html">
 <script defer src="analytics.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20261124-7">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "WordPress Accessibility Fixes",
+    "provider": {"@type": "Person", "name": "Himanshu Pandey"},
+    "url": "https://websiteaccessibilityfix.com/wordpress-accessibility-fixes.html",
+    "description": "WordPress accessibility fixes for themes, plugins, forms, menus, contrast, headings, and keyboard navigation.",
+    "serviceType": "WordPress Accessibility Remediation"
+}
+  </script>
 </head>
 <body class="site-page">
 <header class="site-header">
@@ -29,21 +44,104 @@
   </header>
 <main>
 <section class="section">
+  <p class="eyebrow">WordPress &amp; WooCommerce WCAG Remediation</p>
   <h1>WordPress Accessibility Fixes</h1>
-  <p>I help WordPress site owners fix accessibility problems caused by themes, page builders, plugins, forms, menus, and content structure.</p>
-  <a href="contact.html" class="btn">Request WordPress Accessibility Help</a>
-</section>
-<section class="section">
-  <h2>Common WordPress Issues</h2>
-  <div class="cards">
-    <article class="card"><h3>Theme and Builder Problems</h3><p>Low contrast, missing focus styles, poor heading order, inaccessible sliders, and unclear buttons.</p></article>
-    <article class="card"><h3>Plugin and Form Problems</h3><p>Contact forms, popups, booking tools, and ecommerce flows that are hard to use with assistive technology.</p></article>
-    <article class="card"><h3>Content Problems</h3><p>Missing alt text, vague links, inaccessible PDFs, and pages that are difficult to scan or navigate.</p></article>
+  <p class="section-intro">I help WordPress site owners, ecommerce stores, and agencies fix accessibility barriers caused by themes, page builders, plugins, contact forms, navigation menus, and content structure—preserving your design while improving real usability.</p>
+  <div class="hero-actions">
+    <a href="contact.html" class="btn">Request WordPress Accessibility Help</a>
+    <a href="pricing.html" class="btn btn-secondary">View Remediation Pricing</a>
   </div>
 </section>
+
+<section class="section">
+  <h2>Why WordPress Sites Often Fail WCAG Audits</h2>
+  <p>WordPress powers a huge share of business websites, but out-of-the-box themes and third-party plugins rarely ship with full WCAG 2.2 AA compliance. Page builders frequently output nested <code>&lt;div&gt;</code> elements instead of semantic landmarks, sliders and popups trap keyboard focus, and popular form plugins omit proper error announcements or accessible labels.</p>
+  <p>Installing an accessibility plugin or overlay widget won&#39;t fix these underlying DOM issues. Real <a href="website-accessibility-remediation.html">WordPress accessibility remediation</a> means updating theme templates, child-theme CSS, and lightweight JavaScript hooks so your site works smoothly for keyboard and screen reader users.</p>
+</section>
+
+<section class="section">
+  <h2>Common WordPress Issues I Fix</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>Theme &amp; Page Builder Problems</h3>
+      <p>Low color contrast, missing visible focus outlines, skipped heading levels (H1 to H4), missing "Skip to main content" links, and inaccessible mobile hamburger menus.</p>
+    </article>
+    <article class="card">
+      <h3>Plugin &amp; Form Problems</h3>
+      <p>Contact Form 7, WPForms, and Gravity Forms missing programmatic labels or ARIA error associations; popups, booking widgets, and carousels that trap keyboard focus.</p>
+    </article>
+    <article class="card">
+      <h3>WooCommerce Storefront Issues</h3>
+      <p>Inaccessible product variation selectors, unannounced mini-cart drawer updates, missing alt text on product galleries, and confusing checkout validation errors.</p>
+    </article>
+    <article class="card">
+      <h3>Content &amp; Media Problems</h3>
+      <p>Missing alt text in the Media Library, vague "Read More" links in post loops, untagged PDF downloads, and embedded iframes without descriptive <code>title</code> attributes.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Themes, Builders &amp; Plugins Supported</h2>
+  <p>I work directly inside self-hosted <strong>WordPress.org</strong> and <strong>WooCommerce</strong> sites built with <strong>Elementor</strong>, <strong>Divi</strong>, <strong>Gutenberg / Block Themes</strong>, <strong>GeneratePress</strong>, <strong>Astra</strong>, <strong>ACF</strong>, and custom PHP child themes—as well as form builders like <strong>Gravity Forms</strong>, <strong>WPForms</strong>, and <strong>Contact Form 7</strong>.</p>
+</section>
+
+<section class="section">
+  <h2>Practical WordPress Code Fixes (Examples)</h2>
+  <h3>1. Restoring Visible Keyboard Focus in Child Theme CSS</h3>
+  <p>Many themes hide focus rings globally. Restoring a high-contrast focus indicator immediately helps keyboard users:</p>
+  <pre><code>a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0b5fff;
+  outline-offset: 2px;
+}</code></pre>
+
+  <h3>2. Ensuring Accessible Form Labels</h3>
+  <p>Avoid placeholder-only inputs. Always pair every field with an explicit <code>&lt;label&gt;</code>:</p>
+  <pre><code>&lt;!-- Avoid --&gt;
+&lt;input type="email" placeholder="Email address"&gt;
+
+&lt;!-- Accessible --&gt;
+&lt;label for="wp-contact-email"&gt;Email address (required)&lt;/label&gt;
+&lt;input id="wp-contact-email" type="email" required aria-required="true"&gt;</code></pre>
+</section>
+
+<section class="section">
+  <h2>My WordPress Remediation Process</h2>
+  <ol>
+    <li><strong>Manual Audit:</strong> I test your live WordPress site with keyboard-only navigation, NVDA/VoiceOver, and browser DevTools to pinpoint theme, plugin, and content barriers.</li>
+    <li><strong>Prioritized Action Plan:</strong> You receive clear findings separated into quick CSS/content wins and template/plugin fixes.</li>
+    <li><strong>Safe Child-Theme Implementation:</strong> Fixes are applied cleanly via child themes, custom CSS, or targeted JS/PHP snippets so future WordPress core and plugin updates don&#39;t overwrite your accessibility improvements.</li>
+    <li><strong>Retesting:</strong> Every fixed interaction—menus, forms, modals, and checkout—is retested and verified.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>Do I need to rebuild or change my WordPress theme to be accessible?</summary>
+    <p>Usually no. Most existing themes—including Elementor, Divi, Astra, and custom builds—can be remediated with child-theme template overrides, CSS contrast/focus updates, and targeted JavaScript for menus and modals.</p>
+  </details>
+  <details>
+    <summary>Can you fix WooCommerce product pages and checkout accessibility?</summary>
+    <p>Yes. I audit and fix product galleries, swatch/variation selectors, cart drawers, quantity controls, and checkout form validation.</p>
+  </details>
+  <details>
+    <summary>How long do WordPress accessibility fixes take?</summary>
+    <p>Most small business WordPress sites can be audited and remediated within 1 to 2 weeks depending on theme complexity and plugin count.</p>
+  </details>
+</section>
+
 <section class="section">
   <h2>Related Guides</h2>
-  <p>Read <a href="blog/wordpress-accessibility-issues-and-how-to-fix-them.html">WordPress accessibility issues and fixes</a> and <a href="blog/how-to-make-a-wordpress-website-ada-compliant.html">how to improve WordPress accessibility</a>.</p>
+  <p>Read <a href="blog/wordpress-accessibility-issues-and-how-to-fix-them.html">WordPress accessibility issues and fixes</a>, <a href="blog/how-to-make-a-wordpress-website-ada-compliant.html">how to make a WordPress website ADA compliant</a>, or try the <a href="accessibility-checker.html">free website accessibility self-check</a>.</p>
+  <div class="hero-actions">
+    <a href="contact.html" class="btn">Request WordPress Accessibility Help</a>
+    <a href="wcag-accessibility-audit.html" class="btn btn-secondary">Explore WCAG Audits</a>
+  </div>
 </section>
 </main>
 <footer class="site-footer">

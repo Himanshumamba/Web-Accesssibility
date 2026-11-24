@@ -39,13 +39,27 @@
       <h1>Form Accessibility Checklist for WCAG Compliance</h1>
       <div class="blog-post-meta">
         <time datetime="2026-06-04">2026-06-04</time>
-        <span>6 min read</span>
+        <span>10 min read</span>
       </div>
       <p class="section-intro">A WCAG form accessibility checklist for labels, required fields, instructions, validation, errors, keyboard access, focus management, and successful submission.</p>
-      <p>Forms are one of the most important accessibility areas because they control leads, purchases, appointments, and support requests. A form that is hard to use can directly reduce conversions.</p>
-      <p>Every field needs a clear visible label and a programmatic label. Required fields should be identified in text, not only by color. Instructions should appear before users make mistakes.</p>
-      <p>Error messages should explain what went wrong and how to fix it. After submission, focus should move to a useful message or error summary so keyboard and screen reader users know what happened.</p>
-      <p>If your contact or checkout forms are important to revenue, include them in a <a href="../wcag-accessibility-audit.html">WCAG accessibility audit</a> or <a href="../contact.html">send me the form URL for review</a>.</p>
+      <h2>Why Form Accessibility Directly Impacts Revenue and Compliance</h2>
+      <p>Forms are where users convert—requesting quotes, booking appointments, signing up for accounts, and completing ecommerce checkouts. When a form is inaccessible, visitors literally cannot do business with you, and forms are one of the most frequently cited barriers in ADA and WCAG audits.</p>
+      <h2>WCAG Criteria Every Form Must Meet</h2>
+      <ul><li>1.3.1 Info and Relationships (Level A): Labels and field groups are programmatically associated with inputs.</li><li>2.4.6 Headings and Labels (Level AA): Labels clearly describe the purpose of each field.</li><li>3.3.1 Error Identification (Level A): Errors are described in text, not only by turning a border red.</li><li>3.3.2 Labels or Instructions (Level A): Required fields, format expectations (e.g., MM/DD/YYYY), and hints are provided upfront.</li><li>3.3.3 Error Suggestion (Level AA): When an input error is detected and suggestions are known, helpful correction guidance is provided.</li><li>4.1.2 Name, Role, Value (Level A): Custom checkboxes, toggles, and dropdowns expose their state to assistive technology.</li></ul>
+      <h2>The Complete Form Accessibility Checklist</h2>
+      <ol><li>Always pair <code>&lt;label for=&quot;...&quot;&gt;</code> with a matching <code>id</code> on every <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code>.</li><li>Never use <code>placeholder</code> as a replacement for a visible <code>&lt;label&gt;</code>—placeholders disappear as soon as typing starts and often fail contrast.</li><li>Group related radio buttons and checkboxes inside <code>&lt;fieldset&gt;</code> with a descriptive <code>&lt;legend&gt;</code>.</li><li>Indicate required fields clearly in text (or <code>(required)</code>) and <code>aria-required=&quot;true&quot;</code>, never by an unexplained red asterisk alone.</li><li>Link helper text and inline error messages to the input using <code>aria-describedby</code> and set <code>aria-invalid=&quot;true&quot;</code> on invalid fields.</li><li>Ensure error messages and submission confirmations are announced via <code>aria-live=&quot;polite&quot;</code> or by moving focus to an error summary.</li><li>Include <code>autocomplete</code> attributes (<code>name</code>, <code>email</code>, <code>tel</code>, <code>street-address</code>) to support cognitive and motor accessibility.</li></ol>
+      <h2>Accessible Form Code Example</h2>
+      <pre><code>&lt;form novalidate&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;work-email&quot;&gt;Work email (required)&lt;/label&gt;
+    &lt;input id=&quot;work-email&quot; name=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required aria-required=&quot;true&quot; aria-describedby=&quot;email-hint email-error&quot;&gt;
+    &lt;p id=&quot;email-hint&quot;&gt;We will send your audit summary here.&lt;/p&gt;
+    &lt;p id=&quot;email-error&quot; role=&quot;alert&quot; hidden&gt;Please enter a valid email address, such as name@company.com.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot;&gt;Request Free Review&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      <h2>Common WordPress &amp;amp; Ecommerce Form Pitfalls</h2>
+      <p>Popular WordPress plugins (Contact Form 7, WPForms, Gravity Forms) and Shopify newsletter/checkout forms often ship with placeholder-only inputs, low-contrast error text, or custom select dropdowns that break keyboard navigation. See our <a href="../../wordpress-accessibility-fixes.html">WordPress accessibility fixes</a> page or <a href="../../contact.html">send us your form URL for a free teardown</a>.</p>
       <ul class="tag-list article-tags" aria-label="Article topics"><li>Form Accessibility</li><li>WCAG Compliance</li><li>Checklist</li></ul>
       <div class="article-cta card">
         <h2>Need help fixing an accessibility issue?</h2>

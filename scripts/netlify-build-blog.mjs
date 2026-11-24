@@ -75,6 +75,32 @@ function formatArchiveDate(value = "") {
   }).format(date);
 }
 
+function renderBodyBlock(block) {
+  if (typeof block === "string") {
+    return `<p>${formatText(block)}</p>`;
+  }
+  if (!block || typeof block !== "object") {
+    return "";
+  }
+  if (block.type === "h2") {
+    const idAttr = block.id ? ` id="${escapeHtml(block.id)}"` : "";
+    return `<h2${idAttr}>${formatText(block.text || "")}</h2>`;
+  }
+  if (block.type === "h3") {
+    return `<h3>${formatText(block.text || "")}</h3>`;
+  }
+  if (block.type === "code") {
+    return `<pre><code>${escapeHtml(block.text || "")}</code></pre>`;
+  }
+  if (block.type === "ul" && Array.isArray(block.items)) {
+    return `<ul>${block.items.map((item) => `<li>${formatText(item)}</li>`).join("")}</ul>`;
+  }
+  if (block.type === "ol" && Array.isArray(block.items)) {
+    return `<ol>${block.items.map((item) => `<li>${formatText(item)}</li>`).join("")}</ol>`;
+  }
+  return block.text ? `<p>${formatText(block.text)}</p>` : "";
+}
+
 function renderTags(tags = []) {
   if (!Array.isArray(tags) || tags.length === 0) {
     return "";
@@ -169,7 +195,7 @@ function renderArticle(post, slug) {
         <span>${escapeHtml(post.readTime || "4 min read")}</span>
       </div>
       <p class="section-intro">${description}</p>
-      ${body.map((paragraph) => `<p>${formatText(paragraph)}</p>`).join("\n      ")}
+      ${body.map((block) => renderBodyBlock(block)).join("\n      ")}
       ${renderTags(post.tags)}
       <div class="article-cta card">
         <h2>Need help fixing an accessibility issue?</h2>

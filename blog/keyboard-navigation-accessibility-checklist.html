@@ -39,13 +39,37 @@
       <h1>Keyboard Navigation Accessibility Checklist</h1>
       <div class="blog-post-meta">
         <time datetime="2026-06-04">2026-06-04</time>
-        <span>5 min read</span>
+        <span>11 min read</span>
       </div>
       <p class="section-intro">A keyboard navigation accessibility checklist for testing menus, links, buttons, forms, modals, focus order, focus indicators, and escape behavior.</p>
-      <p>Keyboard navigation is one of the fastest ways to find serious accessibility problems. If a user cannot complete a task without a mouse, the website may block people with motor disabilities and screen reader users.</p>
-      <p>Tab through the page from top to bottom. Every interactive element should receive focus in a logical order. The focus indicator should be visible, and the current location should never feel hidden.</p>
-      <p>Check menus, dropdowns, modals, cookie banners, forms, sliders, and checkout flows. Make sure users can open, operate, and close components with standard keyboard commands.</p>
-      <p>Keyboard testing is included in my <a href="../wcag-accessibility-audit.html">manual WCAG audits</a>. You can also read <a href="../blog/how-to-test-website-accessibility-manually.html">how to test website accessibility manually</a>.</p>
+      <h2>Why Keyboard Accessibility Is Non-Negotiable</h2>
+      <p>Every interactive feature on your website must work without a mouse or trackpad. People with motor disabilities, repetitive strain injuries, tremors, and blind screen reader users all rely on keyboard navigation—or assistive hardware like switch devices and sip-and-puff controllers that emulate keyboard input.</p>
+      <p>If a visitor cannot open your navigation menu, close a promotional popup, select a product size, or submit your contact form using only a keyboard, your site creates a complete roadblock.</p>
+      <h2>Core WCAG 2.2 Keyboard Success Criteria</h2>
+      <ul><li>2.1.1 Keyboard (Level A): All functionality is operable through a keyboard interface.</li><li>2.1.2 No Keyboard Trap (Level A): Keyboard focus can always be moved away from any component using standard keys.</li><li>2.4.1 Bypass Blocks (Level A): A mechanism (such as a skip link) is available to bypass repeated header navigation.</li><li>2.4.3 Focus Order (Level A): Focusable components receive focus in an order that preserves meaning and operability.</li><li>2.4.7 Focus Visible (Level AA): Any keyboard-operable user interface has a mode of operation where the keyboard focus indicator is visible.</li><li>2.4.11 Focus Not Obscured (Minimum) (WCAG 2.2 Level AA): When a component receives focus, it is not entirely hidden by sticky headers, cookie banners, or chat widgets.</li></ul>
+      <h2>Essential Keyboard Controls to Test</h2>
+      <ul><li>Tab: Move forward to the next link, button, or form control.</li><li>Shift + Tab: Move backward to the previous interactive element.</li><li>Enter: Activate links and submit buttons.</li><li>Space: Activate buttons, toggle checkboxes, and scroll.</li><li>Escape: Close modals, dropdown menus, and tooltips.</li><li>Arrow keys: Navigate inside radio groups, tablists, menus, and custom sliders.</li></ul>
+      <h2>Complete Keyboard Accessibility Checklist</h2>
+      <ol><li>Skip link works: Pressing Tab once on page load reveals a visible &#39;Skip to main content&#39; link that moves focus past the header.</li><li>Visible focus indicator: Every focused link, button, and input displays a clear, high-contrast outline (never <code>outline: none</code> without a replacement).</li><li>Logical Tab order: Focus moves top-to-bottom, left-to-right matching the visual layout.</li><li>No hidden focusable elements: Off-screen mobile menus or closed drawers are hidden with <code>display: none</code> or <code>inert</code> so Tab doesn&#39;t disappear off-screen.</li><li>Modals trap focus cleanly and restore it: Opening a dialog moves focus inside it, keeps Tab inside until closed, and returns focus to the trigger button on Escape.</li><li>No sticky-header obstruction: Focused elements are never covered by sticky navbars or floating chat bubbles (use <code>scroll-margin-top</code>).</li></ol>
+      <h2>Practical Code Fixes for Keyboard Accessibility</h2>
+      <h3>1. Accessible Focus Styles</h3>
+      <pre><code>:focus-visible {
+  outline: 3px solid #0b5fff;
+  outline-offset: 2px;
+}
+
+/* Prevent sticky header from hiding focused targets */
+[id] {
+  scroll-margin-top: 96px;
+}</code></pre>
+      <h3>2. Use Native Buttons Instead of Clickable Divs</h3>
+      <pre><code>&lt;!-- Avoid: not keyboard focusable or operable with Enter/Space --&gt;
+&lt;div class=&quot;menu-toggle&quot; onclick=&quot;toggleMenu()&quot;&gt;Menu&lt;/div&gt;
+
+&lt;!-- Accessible --&gt;
+&lt;button type=&quot;button&quot; class=&quot;menu-toggle&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;main-nav&quot;&gt;Menu&lt;/button&gt;</code></pre>
+      <h2>Next Steps</h2>
+      <p>Unplug your mouse for five minutes and try completing your main user journey—from homepage to contact form or checkout. If you hit a dead end, read <a href="../how-to-test-website-accessibility-manually.html">how to test website accessibility manually</a> or book a <a href="../../wcag-accessibility-audit.html">manual WCAG accessibility audit</a>.</p>
       <ul class="tag-list article-tags" aria-label="Article topics"><li>Keyboard Accessibility</li><li>WCAG</li><li>Checklist</li></ul>
       <div class="article-cta card">
         <h2>Need help fixing an accessibility issue?</h2>

@@ -39,13 +39,45 @@
       <h1>Alt Text Accessibility Best Practices for WCAG</h1>
       <div class="blog-post-meta">
         <time datetime="2026-06-04">2026-06-04</time>
-        <span>5 min read</span>
+        <span>10 min read</span>
       </div>
       <p class="section-intro">A practical guide to writing accessible alt text for WCAG, including decorative images, informative images, linked images, charts, screenshots, and SEO mistakes.</p>
-      <p>Good alt text explains the purpose of an image in its current context. It should help a screen reader user understand the same important information a sighted user gets from the image.</p>
-      <p>Decorative images should usually use empty alt text so they are skipped. Informative images need concise descriptions. Linked images need alt text that describes the link destination or action, not only the visual appearance.</p>
-      <p>Avoid keyword stuffing. Alt text is not a place to force SEO phrases. It should be useful, accurate, and relevant to the surrounding content.</p>
-      <p>If your site has many images, include image review in your <a href="../wcag-accessibility-audit.html">WCAG accessibility audit</a> and pair it with the <a href="../blog/free-website-accessibility-testing-tools-checklist.html">free testing tools checklist</a>.</p>
+      <h2>What Is Alt Text and Why Does It Matter for WCAG?</h2>
+      <p>Alternative text (alt text) is a written description added to an HTML <code>&lt;img&gt;</code> element via the <code>alt</code> attribute. Its primary job is to convey the same essential information or function to someone who cannot see the image as a sighted visitor receives visually.</p>
+      <p>For screen reader users (using NVDA, JAWS, or VoiceOver), alt text is read aloud when focus lands on an image. It also appears on screen when an image fails to load on slow connections, and helps search engines understand visual content accurately.</p>
+      <p>Under WCAG 2.2 Success Criterion 1.1.1 (Non-text Content, Level A), every non-text element that conveys information or performs an action must have a text alternative that serves the equivalent purpose.</p>
+      <h2>The 5 Image Categories and How to Write Alt Text for Each</h2>
+      <h3>1. Informative Images</h3>
+      <p>Informative images add meaning, context, or product details to the page. Write concise, specific descriptions (usually under 125 characters) that capture what matters in the current context—without starting with &#39;image of&#39; or &#39;picture of,&#39; since screen readers already announce the image role.</p>
+      <pre><code>&lt;!-- Avoid --&gt;
+&lt;img src=&quot;shoe.jpg&quot; alt=&quot;image of shoe&quot;&gt;
+
+&lt;!-- Better --&gt;
+&lt;img src=&quot;shoe.jpg&quot; alt=&quot;Men&#39;s navy waterproof trail running shoe, side profile&quot;&gt;</code></pre>
+      <h3>2. Decorative Images</h3>
+      <p>Purely decorative graphics—such as background flourishes, abstract dividers, or icons paired with visible text that already conveys the same meaning—should use an empty alt attribute (<code>alt=&quot;&quot;</code>). This tells screen readers to skip the image completely instead of reading out a meaningless filename.</p>
+      <pre><code>&lt;!-- Decorative divider --&gt;
+&lt;img src=&quot;wave-divider.svg&quot; alt=&quot;&quot;&gt;</code></pre>
+      <h3>3. Functional Images (Links and Buttons)</h3>
+      <p>When an image is the only content inside a link or button (like a company logo linking to the homepage or a magnifying glass icon inside a search button), the alt text must describe the action or destination—not the visual appearance.</p>
+      <pre><code>&lt;a href=&quot;/&quot;&gt;
+  &lt;img src=&quot;logo.png&quot; alt=&quot;Website Accessibility Fix, home&quot;&gt;
+&lt;/a&gt;
+
+&lt;button type=&quot;submit&quot;&gt;
+  &lt;img src=&quot;search-icon.svg&quot; alt=&quot;Search website&quot;&gt;
+&lt;/button&gt;</code></pre>
+      <h3>4. Complex Images (Charts, Graphs, and Diagrams)</h3>
+      <p>For data visualizations or workflow diagrams, a short alt attribute isn&#39;t enough. Provide a brief summary in the <code>alt</code> attribute and place the full data breakdown or explanation in nearby body text, a <code>&lt;figcaption&gt;</code>, or a linked data table.</p>
+      <h3>5. Images of Text</h3>
+      <p>Avoid putting important text inside images (such as promotional banners or pricing graphics). When unavoidable, the alt text must include the exact text shown in the image.</p>
+      <h2>Common Alt Text Mistakes (and How to Fix Them)</h2>
+      <ul><li>Leaving out the <code>alt</code> attribute altogether: Screen readers may read the raw file path like <code>IMG_4821_final_v2.jpg</code>.</li><li>Keyword stuffing for SEO: Repeating service keywords in alt text degrades the screen reader experience and violates WCAG intent.</li><li>Repeating adjacent text: If a card already has an <code>&lt;h3&gt;</code> titled &#39;WCAG Audit&#39; and a thumbnail image next to it, use <code>alt=&quot;&quot;</code> or describe the visual rather than repeating &#39;WCAG Audit&#39; twice.</li><li>Using <code>title</code> instead of <code>alt</code>: The <code>title</code> attribute is not reliably announced by screen readers and is inaccessible on touchscreens.</li></ul>
+      <h2>Platform Tips: WordPress, Shopify, and Custom HTML</h2>
+      <p>In WordPress, always add alt text in the Media Library or block settings—especially for featured images and WooCommerce product galleries. In Shopify, set descriptive alt text on every product variant photo in the Shopify Admin rather than relying on theme fallbacks. For custom React or HTML builds, enforce <code>alt</code> checks in your linter and include image review in your <a href="../wcag-accessibility-audit.html">WCAG accessibility audit</a>.</p>
+      <h2>How to Test Alt Text Manually</h2>
+      <ol><li>Run our <a href="../accessibility-checker.html">free website accessibility self-check</a> or WAVE to spot missing alt attributes.</li><li>Read every populated alt text in context: ask yourself, &#39;If I removed this image, what information would be missing?&#39;</li><li>Test key pages with NVDA or VoiceOver to hear how images sound alongside surrounding headings and links.</li></ol>
+      <p>Need help auditing images, forms, and interactive components across your site? Explore our <a href="../services.html">accessibility services</a> or <a href="../contact.html">request a free 3-issue review</a>.</p>
       <ul class="tag-list article-tags" aria-label="Article topics"><li>Alt Text</li><li>WCAG</li><li>Image Accessibility</li></ul>
       <div class="article-cta card">
         <h2>Need help fixing an accessibility issue?</h2>

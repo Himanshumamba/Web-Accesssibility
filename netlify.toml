@@ -16,3 +16,182 @@
 
 [functions]
   directory = "netlify/functions"
+
+# ============================================================
+# Blog Consolidation 301 Redirects
+# ============================================================
+
+# --- ALT TEXT: 19 duplicates → 1 canonical ---
+[[redirects]]
+  from = "/blog/accessible-images-why-alt-text-matters-and-how-to-write-it-well.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/better-alt-text-for-service-websites.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-aesthetics-crafting-effective-alt-text-for-a-truly-inclusive-web.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-aesthetics-crafting-impactful-alt-text-for-accessibility.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-aesthetics-crafting-meaningful-alt-text-for-a-more-inclusive-web.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-decoration-crafting-effective-alt-text-for-digital-inclusion.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-decoration-crafting-effective-alt-text-for-web-accessibility.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-decoration-crafting-meaningful-alt-text-for-a-truly-inclusive-web.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-image-crafting-effective-alt-text-for-true-accessibility.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-image-crafting-effective-alt-text-for-true-inclusion.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-vision-crafting-effective-alt-text-for-a-more-inclusive-web.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/making-images-accessible-your-guide-to-impactful-alt-text.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/making-your-images-speak-the-power-of-effective-alt-text.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/the-power-of-alt-text-enhancing-web-accessibility-one-image-at-a-time.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/the-power-of-words-mastering-alt-text-for-true-web-inclusion.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/unlock-your-images-why-accessible-alt-text-matters-more-than-you-think.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/unlocking-visuals-the-essential-role-of-meaningful-alt-text.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/unlocking-your-images-the-power-of-effective-alt-text.html"
+  to = "/blog/alt-text-accessibility-best-practices-for-wcag.html"
+  status = 301
+
+# --- LINK TEXT: 7 duplicates → 1 canonical ---
+[[redirects]]
+  from = "/blog/beyond-click-here-crafting-accessible-and-meaningful-link-text.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-click-here-crafting-accessible-link-text-for-all.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-08.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-24.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-26.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/empower-your-users-the-art-of-accessible-link-text.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/make-every-click-count-the-power-of-descriptive-link-text.html"
+  to = "/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html"
+  status = 301
+
+# --- KEYBOARD: 5 duplicates → 1 canonical ---
+[[redirects]]
+  from = "/blog/beyond-the-mouse-why-keyboard-accessibility-is-non-negotiable.html"
+  to = "/blog/keyboard-navigation-accessibility-checklist.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/navigating-the-web-with-just-a-keyboard-why-it-s-essential-for-everyone.html"
+  to = "/blog/keyboard-navigation-accessibility-checklist.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it.html"
+  to = "/blog/keyboard-navigation-accessibility-checklist.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/simple-keyboard-checks-for-business-sites.html"
+  to = "/blog/keyboard-navigation-accessibility-checklist.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/unlock-your-website-s-potential-why-keyboard-accessibility-is-non-negotiable.html"
+  to = "/blog/keyboard-navigation-accessibility-checklist.html"
+  status = 301
+
+# --- FORM LABELS: 2 duplicates → 1 canonical ---
+[[redirects]]
+  from = "/blog/beyond-placeholders-crafting-truly-accessible-form-labels.html"
+  to = "/blog/form-accessibility-checklist-for-wcag-compliance.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/clear-communication-the-essential-role-of-accessible-form-labels.html"
+  to = "/blog/form-accessibility-checklist-for-wcag-compliance.html"
+  status = 301
+
+# --- SEMANTIC HTML: 1 duplicate → 1 canonical ---
+[[redirects]]
+  from = "/blog/building-blocks-of-inclusivity-the-power-of-semantic-html.html"
+  to = "/blog/beyond-divs-the-power-of-semantic-html-for-true-web-accessibility.html"
+  status = 301
