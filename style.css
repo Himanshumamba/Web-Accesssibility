@@ -705,7 +705,43 @@ section+section {
 }
 
 .site-page .blog-article {
-  max-width: 850px;
+  max-width: 760px;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem);
+  text-align: left;
+}
+
+.site-page .blog-article > .eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+}
+
+.site-page .blog-article > h1 {
+  max-width: 28ch;
+  margin: 0 0 0.85rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  text-align: left;
+}
+
+.site-page .blog-article > .blog-post-meta {
+  margin: 0 0 1.5rem;
+  color: #686778;
+  font-size: 0.9rem;
+}
+
+.site-page .blog-article > p {
+  max-width: 70ch;
+  margin: 1.15rem 0;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.site-page .blog-article > p.section-intro {
+  max-width: 70ch;
+  margin: 0 0 1.5rem;
+  color: #414150;
+  font-size: 1.1rem;
+  line-height: 1.65;
 }
 
 .article-tags {
