@@ -12,7 +12,7 @@ node scripts/generate-blog-post.mjs
 
 The script saves a JSON file in `drafts/`. Review and edit the draft for accuracy, useful original examples, and client relevance before adding it to `blog-posts.json`. Generated drafts are not published automatically.
 
-The GitHub Actions workflow is manual only and uploads the draft as a short-lived workflow artifact for review. Local drafts are git-ignored. Automatic scheduled publishing is disabled. The former Windows scheduled-task runner also does not generate or publish posts.
+GitHub Actions generates and publishes one post on the 1st of each month at 12:00 UTC (5:30 PM India time). It adds the post to `blog-posts.json` and pushes the change; Netlify then builds the article page, archive, and sitemap. The workflow can also be started manually from GitHub Actions. It uses the `GEMINI_API_KEY` repository secret.
 
 ## Publish a reviewed post
 
