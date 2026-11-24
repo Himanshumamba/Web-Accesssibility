@@ -704,8 +704,10 @@ section+section {
   max-width: none;
 }
 
-.site-page .blog-article {
-  max-width: 760px;
+.site-page main > article.section.blog-article {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem);
   text-align: left;
 }
@@ -742,6 +744,12 @@ section+section {
   color: #414150;
   font-size: 1.1rem;
   line-height: 1.65;
+}
+
+.site-page .blog-article .article-cta > p {
+  max-width: none;
+  margin: 0 0 1rem;
+  text-align: left;
 }
 
 .article-tags {

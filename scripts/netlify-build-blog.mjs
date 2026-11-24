@@ -129,7 +129,7 @@ function renderArticle(post, slug) {
   <meta property="og:url" content="${canonical}">
   <script defer src="../analytics.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=20261124-9">
+  <link rel="stylesheet" href="../style.css?v=20261124-10">
   <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
