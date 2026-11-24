@@ -704,6 +704,31 @@ section+section {
   max-width: none;
 }
 
+.site-page .blog-article {
+  max-width: 850px;
+}
+
+.article-tags {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-tags li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35em 0.7em;
+  border-radius: 999px;
+  background: #eef7f4;
+  color: #174642;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.article-cta {
+  margin: 2rem 0;
+}
+
 .blog-post .tag-list {
   margin-top: 1em;
 }
@@ -792,7 +817,8 @@ img {
 }
 
 input,
-textarea {
+textarea,
+select {
   box-sizing: border-box;
   width: 100%;
   padding: 0.7em;
@@ -1736,7 +1762,8 @@ p {
 .site-page a:focus-visible,
 .site-page button:focus-visible,
 .site-page input:focus-visible,
-.site-page textarea:focus-visible {
+.site-page textarea:focus-visible,
+.site-page select:focus-visible {
   outline: 3px solid #6924df;
   outline-offset: 3px;
 }

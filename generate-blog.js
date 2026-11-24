@@ -61,16 +61,12 @@ async function generateBlogPost() {
       body: newPostData.body
     };
 
-    // Read the existing posts
-    const fileContent = fs.readFileSync('blog-posts.json', 'utf8');
-    const posts = JSON.parse(fileContent);
-
-    // Add the new post to the very top
-    posts.unshift(newPost);
-
-    // Write it back to the file
-    fs.writeFileSync('blog-posts.json', JSON.stringify(posts, null, 2), 'utf8');
-    console.log(`Successfully generated and added new blog post: "${newPost.title}"`);
+    // Keep generated content unpublished until it has been reviewed and edited.
+    fs.mkdirSync('drafts', { recursive: true });
+    const draftPath = `drafts/${dateString}-${slug}.json`;
+    fs.writeFileSync(draftPath, JSON.stringify(newPost, null, 2), 'utf8');
+    console.log(`Created blog draft: "${newPost.title}"`);
+    console.log(`Review and edit ${draftPath} before adding it to blog-posts.json.`);
 
   } catch (error) {
     console.error("Error generating blog post:", error);

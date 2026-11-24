@@ -1,5 +1,6 @@
 .env
 blog-automation.log
+drafts/
 .netlify
 node_modules
 .vscode

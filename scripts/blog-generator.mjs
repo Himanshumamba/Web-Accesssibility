@@ -156,10 +156,25 @@ export async function generatePost({ topic, config, existingPosts }) {
   };
 }
 
-export async function appendNextPost({ postsPath = defaultPostsPath, configPath = defaultConfigPath, initialPosts } = {}) {
+export async function createNextDraft({
+  postsPath = defaultPostsPath,
+  configPath = defaultConfigPath,
+  draftsDir = path.join(rootDir, "drafts"),
+  initialPosts
+} = {}) {
   const posts = initialPosts || await loadJson(postsPath);
   const config = await loadJson(configPath);
-  const usedTopics = new Set(posts.map((post) => post.sourceTopic).filter(Boolean));
+  let existingDrafts = [];
+  try {
+    const draftFiles = (await fs.readdir(draftsDir)).filter((file) => file.endsWith(".json"));
+    existingDrafts = await Promise.all(draftFiles.map((file) => loadJson(path.join(draftsDir, file))));
+  } catch (error) {
+    if (error.code !== "ENOENT") {
+      throw error;
+    }
+  }
+
+  const usedTopics = new Set([...posts, ...existingDrafts].map((post) => post.sourceTopic).filter(Boolean));
   const nextTopic = config.topics.find((topic) => !usedTopics.has(topic)) || config.topics[0];
 
   const newPost = await generatePost({
@@ -169,8 +184,9 @@ export async function appendNextPost({ postsPath = defaultPostsPath, configPath 
   });
 
   const withSourceTopic = { ...newPost, sourceTopic: nextTopic };
-  const updatedPosts = [withSourceTopic, ...posts];
-  await saveJson(postsPath, updatedPosts);
+  await fs.mkdir(draftsDir, { recursive: true });
+  const draftPath = path.join(draftsDir, `${withSourceTopic.date}-${withSourceTopic.slug}.json`);
+  await saveJson(draftPath, withSourceTopic);
 
-  return withSourceTopic;
+  return { post: withSourceTopic, draftPath };
 }

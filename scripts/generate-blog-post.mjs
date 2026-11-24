@@ -1,10 +1,11 @@
 import process from "node:process";
 
-import { appendNextPost } from "./blog-generator.mjs";
+import { createNextDraft } from "./blog-generator.mjs";
 
 async function main() {
-  const newPost = await appendNextPost();
-  console.log(`Created blog post: ${newPost.title}`);
+  const { post, draftPath } = await createNextDraft();
+  console.log(`Created draft: ${post.title}`);
+  console.log(`Review it before publishing: ${draftPath}`);
 }
 
 main().catch((error) => {

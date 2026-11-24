@@ -1,99 +1,319 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/services.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/blog.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/wcag-accessibility-audit.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/ada-website-compliance.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/website-accessibility-remediation.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/wordpress-accessibility-fixes.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/accessibility-resources.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/accessibility-checker.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/wcag-contrast-checker.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/pricing.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/about.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/contact.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-   <url>
+<url>
+      <loc>https://websiteaccessibilityfix.com/agency-accessibility-support.html</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://websiteaccessibilityfix.com/selected-work.html</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
       <loc>https://websiteaccessibilityfix.com/refund.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/privacy.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
-   <url>
+<url>
       <loc>https://websiteaccessibilityfix.com/terms-of-service.html</loc>
       <lastmod>2026-11-24</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-divs-the-power-of-semantic-html-for-true-web-accessibility.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-accessible-link-text-for-everyone.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-image-crafting-effective-alt-text-for-true-inclusion.html</loc>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-accessible-link-text-for-all.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-aesthetics-crafting-impactful-alt-text-for-accessibility.html</loc>
+    <lastmod>2026-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/how-to-check-if-your-website-is-wcag-compliant.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/wcag-2-2-checklist-for-small-business-websites.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/ada-website-compliance-checklist-for-small-businesses.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/how-to-fix-website-accessibility-issues-beginners-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/common-wcag-failures-found-on-business-websites.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/website-accessibility-audit-checklist-for-beginners.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/wordpress-accessibility-issues-and-how-to-fix-them.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/how-to-make-a-wordpress-website-ada-compliant.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/best-accessibility-audit-tools-for-website-owners.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/free-website-accessibility-testing-tools-checklist.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/how-to-test-website-accessibility-manually.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/alt-text-accessibility-best-practices-for-wcag.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/keyboard-navigation-accessibility-checklist.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/color-contrast-accessibility-checker-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/form-accessibility-checklist-for-wcag-compliance.html</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/unlocking-your-images-the-power-of-effective-alt-text.html</loc>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/navigating-the-web-with-keys-why-keyboard-accessibility-matters-and-how-to-ace-it.html</loc>
+    <lastmod>2026-05-31</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-aesthetics-crafting-effective-alt-text-for-a-truly-inclusive-web.html</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-decoration-crafting-meaningful-alt-text-for-a-truly-inclusive-web.html</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-decoration-crafting-effective-alt-text-for-web-accessibility.html</loc>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-26.html</loc>
+    <lastmod>2026-05-26</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-aesthetics-crafting-meaningful-alt-text-for-a-more-inclusive-web.html</loc>
+    <lastmod>2026-05-25</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-24.html</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-the-mouse-why-keyboard-accessibility-is-non-negotiable.html</loc>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/empower-your-users-the-art-of-accessible-link-text.html</loc>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-placeholders-crafting-truly-accessible-form-labels.html</loc>
+    <lastmod>2026-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-accessible-and-meaningful-link-text.html</loc>
+    <lastmod>2026-05-19</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-image-crafting-effective-alt-text-for-true-accessibility.html</loc>
+    <lastmod>2026-05-18</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/make-every-click-count-the-power-of-descriptive-link-text.html</loc>
+    <lastmod>2026-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/making-images-accessible-your-guide-to-impactful-alt-text.html</loc>
+    <lastmod>2026-05-16</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-decoration-crafting-effective-alt-text-for-true-image-accessibility.html</loc>
+    <lastmod>2026-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/the-power-of-words-mastering-alt-text-for-true-web-inclusion.html</loc>
+    <lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-decoration-crafting-effective-alt-text-for-digital-inclusion.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-vision-crafting-effective-alt-text-for-a-more-inclusive-web.html</loc>
+    <lastmod>2026-05-12</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/unlock-your-website-s-potential-why-keyboard-accessibility-is-non-negotiable.html</loc>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/the-power-of-alt-text-enhancing-web-accessibility-one-image-at-a-time.html</loc>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/accessible-images-why-alt-text-matters-and-how-to-write-it-well.html</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/beyond-click-here-crafting-truly-accessible-link-text-2026-05-08.html</loc>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/unlock-your-images-why-accessible-alt-text-matters-more-than-you-think.html</loc>
+    <lastmod>2026-05-04</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/making-your-images-speak-the-power-of-effective-alt-text.html</loc>
+    <lastmod>2026-05-03</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/building-blocks-of-inclusivity-the-power-of-semantic-html.html</loc>
+    <lastmod>2026-05-02</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/unlocking-visuals-the-essential-role-of-meaningful-alt-text.html</loc>
+    <lastmod>2026-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/navigating-the-web-with-just-a-keyboard-why-it-s-essential-for-everyone.html</loc>
+    <lastmod>2026-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/clear-communication-the-essential-role-of-accessible-form-labels.html</loc>
+    <lastmod>2026-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/why-accessibility-audits-save-time.html</loc>
+    <lastmod>2026-04-20</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/simple-keyboard-checks-for-business-sites.html</loc>
+    <lastmod>2026-04-18</lastmod>
+  </url>
+  <url>
+    <loc>https://websiteaccessibilityfix.com/blog/better-alt-text-for-service-websites.html</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
 </urlset>

@@ -1,16 +1,11 @@
-name: Monthly Auto Blog Post
+name: Create Accessibility Blog Draft
 
 on:
-  schedule:
-    # Runs automatically on the 1st day of every month at 12:00 PM UTC
-    - cron: '0 12 1 * *'
-  workflow_dispatch: # Allows you to run it manually by clicking a button in GitHub
+  workflow_dispatch:
 
 jobs:
-  generate-and-publish:
+  create-draft:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
@@ -21,18 +16,17 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Generate Blog Post
+      - name: Generate an unpublished draft
         env:
           # This securely gets the API key from your GitHub secrets
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node generate-blog.js
 
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          git add blog-posts.json
-          git commit -m "Auto-generated monthly blog post" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push
+      - name: Upload unpublished draft for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-blog-draft
+          path: drafts/*.json
+          if-no-files-found: error
+          retention-days: 7
 
