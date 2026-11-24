@@ -1624,6 +1624,14 @@ p {
   margin-top: auto;
 }
 
+.site-page .pricing-card > p {
+  width: 100%;
+  max-width: 70ch;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
 @media (max-width: 940px) {
   .homepage .site-header {
     flex-wrap: wrap;
