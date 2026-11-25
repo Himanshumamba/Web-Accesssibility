@@ -2717,6 +2717,50 @@ p {
   margin-top: 0.4rem;
 }
 
+.shopify-page main > .section ol,
+.shopify-page main > .section ul {
+  max-width: 78ch;
+  margin: 0.75rem auto 1rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  line-height: 1.65;
+}
+
+.shopify-page main > .section li + li {
+  margin-top: 0.5rem;
+}
+
+.shopify-page main > .section li::marker {
+  color: #6924df;
+  font-weight: 700;
+}
+
+.shopify-page main > .section details {
+  max-width: 78ch;
+  margin: 0.65rem auto;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e6e2ec;
+  border-radius: 0.75rem;
+  background: #fff;
+  text-align: left;
+}
+
+.shopify-page main > .section summary {
+  color: #171827;
+  font-weight: 700;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.shopify-page main > .section details[open] summary {
+  margin-bottom: 0.65rem;
+}
+
+.shopify-page main > .section details p {
+  margin: 0;
+  text-align: left;
+}
+
 .remediation-page .section h3 {
   margin-top: 1.75em;
   margin-bottom: 0.5em;
@@ -2861,5 +2905,462 @@ p {
 
   .nda-logo-tile--clone {
     display: none;
+  }
+}
+
+.ada-page main > .ada-section,
+.services-page main > .services-section {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.25rem, 4vw, 2rem);
+  text-align: left;
+}
+
+.ada-page main > .ada-section + .ada-section,
+.services-page main > .services-section + .services-section {
+  margin-top: 0;
+}
+
+.ada-page .ada-hero,
+.services-page .services-intro {
+  width: min(calc(100% - 2rem), 1180px);
+  max-width: 1180px;
+  margin: 2rem auto 0;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid #e8def7;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fbf9ff 0%, #f3edff 100%);
+}
+
+.ada-page .ada-hero h1,
+.services-page .services-intro h1 {
+  max-width: 18ch;
+  margin: 0 0 1rem;
+  color: #171827;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.ada-page .ada-hero > .eyebrow,
+.services-page .services-intro > .eyebrow {
+  margin: 0 0 0.75rem;
+}
+
+.ada-page .ada-hero .section-intro,
+.services-page .services-intro .section-intro {
+  max-width: 68ch;
+  margin: 0;
+  color: #48495a;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.ada-page .ada-hero .hero-actions,
+.services-page .services-intro .hero-actions {
+  justify-content: flex-start;
+  margin: 1.5rem 0 0;
+}
+
+.ada-benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ada-benefit-list li {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #e6dcf5;
+  border-radius: 999px;
+  background: #fff;
+  color: #4d248f;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ada-page .ada-section h2,
+.services-page .services-section h2 {
+  max-width: 32ch;
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.ada-page .ada-section > p,
+.services-page .services-section > p {
+  max-width: 72ch;
+  margin: 0 0 1rem;
+  color: #555667;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.ada-page .ada-overview {
+  padding-bottom: 2.5rem;
+}
+
+.ada-page .ada-overview p + p {
+  margin-top: 1rem;
+}
+
+.ada-page .ada-barriers .section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.ada-page .ada-barriers .cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ada-page .ada-barrier-card {
+  min-width: 0;
+  padding: 1.5rem;
+  border-top: 3px solid #6924df;
+  text-align: left;
+}
+
+.ada-barrier-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: #f3edff;
+  color: #5c21db;
+}
+
+.ada-barrier-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.ada-page .ada-barrier-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.ada-page .ada-barrier-card p {
+  max-width: none;
+  margin: 0;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.ada-page .ada-process ol,
+.services-page .services-process ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: page-step;
+}
+
+.ada-page .ada-process li,
+.services-page .services-process li {
+  position: relative;
+  min-width: 0;
+  padding: 1.25rem 1.25rem 1.25rem 4.25rem;
+  border: 1px solid #eceaf1;
+  border-radius: 12px;
+  background: #fff;
+  color: #555667;
+  line-height: 1.65;
+  text-align: left;
+  counter-increment: page-step;
+}
+
+.ada-page .ada-process li::before,
+.services-page .services-process li::before {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #f3edff;
+  color: #5c21db;
+  content: counter(page-step, decimal-leading-zero);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ada-page .ada-tools > p,
+.ada-page .ada-industries > p {
+  max-width: 72ch;
+}
+
+.ada-page .ada-industries {
+  border-top: 1px solid #eee9f6;
+  border-bottom: 1px solid #eee9f6;
+  background: #fbf9ff;
+}
+
+.ada-page .ada-industries strong {
+  color: #303142;
+}
+
+.ada-page .ada-faq details {
+  padding: 1rem 1.15rem;
+  border: 1px solid #e8e5ee;
+  border-radius: 12px;
+  background: #fff;
+  text-align: left;
+}
+
+.ada-page .ada-faq details + details {
+  margin-top: 0.75rem;
+}
+
+.ada-page .ada-faq summary {
+  min-height: 1.5rem;
+  color: #252638;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.ada-page .ada-faq summary:focus-visible {
+  outline: 3px solid #6924df;
+  outline-offset: 4px;
+}
+
+.ada-page .ada-faq details[open] {
+  border-color: #d7c6f2;
+  background: #fcfaff;
+}
+
+.ada-page .ada-faq details p {
+  max-width: 72ch;
+  margin: 0.9rem 0 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.ada-page .ada-related {
+  margin-bottom: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #e8def7;
+  border-radius: 18px;
+  background: #f8f5ff;
+}
+
+.ada-page .ada-related .hero-actions {
+  justify-content: flex-start;
+  margin: 1.5rem 0 0;
+}
+
+.services-page .services-intro .service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.services-page .service-card {
+  min-width: 0;
+  padding: 1.35rem;
+  text-align: left;
+}
+
+.service-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 50%;
+  background: #f3edff;
+  color: #5c21db;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.services-page .service-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.services-page .service-card h2 a {
+  color: #382065;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.services-page .service-card h2 a:hover,
+.services-page .service-card h2 a:focus-visible {
+  color: #5419c2;
+  text-decoration: underline;
+}
+
+.services-page .service-card p {
+  max-width: none;
+  margin: 0;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.services-page .services-process {
+  padding-top: 3rem;
+}
+
+.services-page .comparison-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.services-page .comparison-grid .card {
+  min-width: 0;
+  padding: 1.4rem;
+  text-align: left;
+}
+
+.services-page .comparison-grid h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.services-page .comparison-grid p {
+  max-width: none;
+  margin: 0;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.services-page .services-compare .section-intro {
+  margin-top: 1.5rem;
+}
+
+.services-page .services-audience {
+  margin-top: 1rem;
+  border: 1px solid #e8def7;
+  border-radius: 18px;
+  background: #fbf9ff;
+}
+
+.services-page .services-audience .hero-actions {
+  justify-content: flex-start;
+  margin: 1.5rem 0 0;
+}
+
+.services-page .service-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.services-page .service-tool-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.25rem;
+  border: 1px solid #eceaf1;
+  border-radius: 12px;
+  background: #fff;
+  color: #382065;
+  text-align: left;
+  text-decoration: none;
+}
+
+.services-page .service-tool-card:hover {
+  border-color: #d7c6f2;
+  background: #fcfaff;
+  text-decoration: none;
+}
+
+.services-page .service-tool-card strong {
+  line-height: 1.4;
+}
+
+.services-page .service-tool-card span {
+  color: #555667;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.services-page .service-guide-links {
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 940px) {
+  .services-page .services-intro .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .ada-page main > .ada-hero,
+  .services-page main > .services-intro {
+    width: calc(100% - 1.5rem);
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .ada-page .ada-hero h1,
+  .services-page .services-intro h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .ada-page .ada-hero .hero-actions,
+  .services-page .services-intro .hero-actions,
+  .ada-page .ada-related .hero-actions,
+  .services-page .services-audience .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ada-page .ada-hero .hero-actions .btn,
+  .services-page .services-intro .hero-actions .btn,
+  .ada-page .ada-related .hero-actions .btn,
+  .services-page .services-audience .hero-actions .btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .ada-page .ada-barriers .cards,
+  .ada-page .ada-process ol,
+  .services-page .services-intro .service-grid,
+  .services-page .services-process ol,
+  .services-page .comparison-grid,
+  .services-page .service-tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ada-page main > .ada-section,
+  .services-page main > .services-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .ada-page main > .ada-related,
+  .services-page main > .services-audience {
+    width: calc(100% - 1.5rem);
+    padding: 1.5rem;
+  }
+
+  .ada-benefit-list {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
