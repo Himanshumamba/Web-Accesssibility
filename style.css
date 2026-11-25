@@ -951,6 +951,14 @@ p {
     gap: 0.85rem;
   }
 
+  .privacy-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-proof-grid li {
+    padding: 1.25rem;
+  }
+
   .hero-actions .btn,
   .cta-row .btn,
   .hero-scan-form .btn {
@@ -1868,6 +1876,63 @@ p {
   color: #5419c2;
 }
 
+.privacy-proof-section {
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+}
+
+.privacy-proof-section h2 {
+  margin-bottom: 1.35rem;
+}
+
+.privacy-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.privacy-proof-grid li {
+  position: relative;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #eceaf1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(28, 22, 43, 0.045);
+}
+
+.privacy-proof-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: #f3edff;
+  color: #6924df;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.privacy-proof-grid h3 {
+  margin: 0 0 0.65rem;
+  color: #252738;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.privacy-proof-grid p {
+  margin: 0;
+  color: #555667;
+  line-height: 1.65;
+}
+
 .site-page .card,
 .site-page .blog-card,
 .site-page .blog-post,
@@ -2674,4 +2739,127 @@ p {
 .remediation-page pre code {
   font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
   font-size: 0.9em;
+}
+
+/* Anonymized NDA Client Logo Wall (Subtle / Redacted Marquee) */
+.nda-logos-section {
+  max-width: 1120px;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+}
+
+.nda-logos-note {
+  max-width: 64ch;
+  margin: 0.5em auto 1.5em;
+  font-size: 0.96rem;
+  color: #275a56;
+}
+
+.nda-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75em 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.nda-marquee-track {
+  display: flex;
+  gap: 1.15em;
+  width: max-content;
+  animation: ndaMarqueeScroll 38s linear infinite;
+}
+
+.nda-marquee:hover .nda-marquee-track,
+.nda-marquee:focus-within .nda-marquee-track {
+  animation-play-state: paused;
+}
+
+.nda-logo-tile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65em;
+  padding: 0.8em 1.25em;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(3, 59, 55, 0.08);
+  box-shadow: 0 6px 16px rgba(3, 59, 55, 0.04);
+  user-select: none;
+}
+
+.nda-logo-blur {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  filter: blur(4px);
+  opacity: 0.42;
+  transition: opacity 0.25s ease;
+}
+
+.nda-logo-tile:hover .nda-logo-blur {
+  opacity: 0.58;
+}
+
+.nda-logo-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #033B37 0%, #275a56 100%);
+  flex-shrink: 0;
+}
+
+.nda-logo-mark--alt {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #275a56 0%, #ffc845 100%);
+}
+
+.nda-logo-wordmark {
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.04em;
+  color: #033B37;
+  white-space: nowrap;
+}
+
+.nda-logo-sector {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #275a56;
+  background: #eef7f4;
+  padding: 0.22em 0.6em;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.nda-logos-footer {
+  margin-top: 1.25em;
+  font-size: 0.94rem;
+}
+
+@keyframes ndaMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nda-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .nda-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+
+  .nda-logo-tile--clone {
+    display: none;
+  }
 }
