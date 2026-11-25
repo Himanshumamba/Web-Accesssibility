@@ -1,6 +1,6 @@
 # Blog publishing
 
-Published articles live in `blog-posts.json`. The Netlify build creates one crawlable HTML page per article under `blog/`, fills the static archive in `blog.html`, and adds article URLs to `sitemap.xml`.
+Published articles live in `blog-posts.json`. The Netlify build creates one crawlable HTML page per article under `blog/`, paginates the archive into static pages with nine articles each, and adds article and archive-page URLs to `sitemap.xml`. New scheduled posts are sorted into the archive and pagination is regenerated automatically.
 
 ## Create a draft
 

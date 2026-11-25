@@ -968,6 +968,11 @@ p {
     white-space: normal;
   }
 
+  .section > .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
   .hero-scan-form {
     grid-template-columns: 1fr;
   }
@@ -1843,6 +1848,12 @@ p {
   max-width: 1100px;
 }
 
+.site-page pre {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .site-page .eyebrow,
 .site-page .blog-kicker {
   color: #6924df;
@@ -2097,6 +2108,10 @@ p {
     flex-wrap: wrap;
   }
 
+  .privacy-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .site-page .site-header nav {
     width: 100%;
     justify-content: flex-start;
@@ -2109,6 +2124,10 @@ p {
   .site-page .site-header {
     align-items: flex-start;
     padding: 0.8rem 1rem;
+  }
+
+  .privacy-proof-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-page .site-header nav {
