@@ -1329,42 +1329,114 @@ p {
 
 .homepage .home-tool-promo {
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.82fr) minmax(420px, 1.18fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   max-width: 1120px;
-  margin: 1.5rem auto 2.5rem;
-  padding: clamp(1.2rem, 3vw, 1.8rem);
+  margin: 1.5rem auto 2.75rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
   border: 1px solid #e7dcf8;
-  border-radius: 14px;
+  border-radius: 18px;
   background: #faf8ff;
+  box-shadow: 0 18px 44px rgba(55, 37, 82, 0.08);
+  text-align: left;
+  overflow: hidden;
 }
 
 .homepage .home-tool-promo .eyebrow {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.78rem;
 }
 
 .homepage .home-tool-promo h2 {
-  margin: 0 0 0.45rem;
-  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  max-width: 18ch;
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
 }
 
 .homepage .home-tool-promo p:not(.eyebrow) {
-  max-width: 680px;
+  max-width: 38ch;
   margin: 0;
-}
-
-.homepage .home-tool-promo .btn {
-  flex-shrink: 0;
-  white-space: nowrap;
+  line-height: 1.62;
 }
 
 .homepage .home-tool-actions {
-  display: flex;
-  flex-shrink: 0;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.65rem;
+  width: 100%;
+}
+
+.homepage .home-tool-action {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 68px;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #e4dced;
+  border-radius: 12px;
+  background: #fff;
+  color: #171827;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(62, 43, 91, 0.04);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.homepage .home-tool-action:hover {
+  border-color: #b89ce2;
+  box-shadow: 0 9px 22px rgba(62, 43, 91, 0.11);
+  transform: translateY(-2px);
+}
+
+.homepage .home-tool-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #f1eaff;
+  color: #6924df;
+}
+
+.homepage .home-tool-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.homepage .home-tool-action-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.homepage .home-tool-action-copy strong {
+  color: #171827;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.homepage .home-tool-action-copy small {
+  margin-top: 0.2rem;
+  color: #737383;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.homepage .home-tool-arrow {
+  color: #6924df;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: transform 160ms ease;
+}
+
+.homepage .home-tool-action:hover .home-tool-arrow {
+  transform: translateX(3px);
 }
 
 .homepage .service-card,
@@ -1694,17 +1766,15 @@ p {
 
   .homepage .home-tool-promo {
     align-items: stretch;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     margin: 1.25rem 1rem 2rem;
+    padding: 1.25rem;
   }
 
-  .homepage .home-tool-promo .btn {
-    width: 100%;
-  }
-
-  .homepage .home-tool-actions {
-    width: 100%;
-    flex-direction: column;
+  .homepage .home-tool-promo h2,
+  .homepage .home-tool-promo p:not(.eyebrow) {
+    max-width: none;
   }
 
   .homepage .assessment-form {
