@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Automated Website Accessibility Scan | WCAG Issue Checker</title>
+  <meta name="description" content="Run a free automated accessibility scan for one public webpage. Review common WCAG issues, affected elements, and items that need manual testing.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://websiteaccessibilityfix.com/accessibility-audit.html">
+  <meta property="og:title" content="Free Automated Website Accessibility Scan">
+  <meta property="og:description" content="Scan one public webpage for common accessibility issues and see which items need human review.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://websiteaccessibilityfix.com/accessibility-audit.html">
+  <script defer src="analytics.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261127-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Automated Website Accessibility Scan",
+    "url": "https://websiteaccessibilityfix.com/accessibility-audit.html",
+    "applicationCategory": "Accessibility Tool",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <a class="brand-mark" href="index.html" aria-label="Himanshu Pandey, home">
+      <span class="brand-monogram" aria-hidden="true">HP</span>
+      <span class="brand-text"><strong>Himanshu Pandey</strong><span>Web Accessibility Specialist</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="selected-work.html">Work</a>
+      <a href="accessibility-audit.html" aria-current="page">Free Scan</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section tool-hero">
+      <p class="eyebrow">Free automated website scan</p>
+      <h1>Find Common Accessibility Issues in One Page</h1>
+      <p>Enter a public page URL to check common WCAG 2.2, heading, image, form, link, and programmatic-label issues in a real browser.</p>
+      <p class="tool-disclosure"><strong>Important:</strong> This is an automated first pass. It cannot test every WCAG requirement, keyboard journey, screen-reader experience, visual edge case, or legal obligation.</p>
+    </section>
+
+    <section class="section tool-section" aria-labelledby="scan-title">
+      <div class="tool-section-heading">
+        <p class="eyebrow">Public webpage only</p>
+        <h2 id="scan-title">Scan a webpage</h2>
+        <p>Only scan pages you own or have permission to test. Login pages, private applications, and local addresses are not supported.</p>
+        <p><strong>Free limit:</strong> Three scans per IP address in each 24-hour period.</p>
+      </div>
+      <form id="accessibilityScanForm" class="scan-form">
+        <div class="form-group">
+          <label for="scanWebsiteUrl">Website page URL</label>
+          <input id="scanWebsiteUrl" name="url" type="url" required placeholder="https://example.com/page" autocomplete="url">
+        </div>
+        <button id="scanSubmit" type="submit" class="btn">Run Free Accessibility Scan</button>
+      </form>
+      <div id="scanStatus" class="scan-message" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="scanResults" class="tool-results" aria-live="polite" aria-atomic="true" hidden></div>
+    </section>
+
+    <section class="section tool-section" aria-labelledby="after-title">
+      <h2 id="after-title">What happens after the automated scan?</h2>
+      <div class="contrast-steps">
+        <article class="card">
+          <h3>1. Review the findings</h3>
+          <p>Start with high-impact issues and confirm that each automated result applies to the page.</p>
+        </article>
+        <article class="card">
+          <h3>2. Test the real user journey</h3>
+          <p>Use a keyboard, zoom, mobile layouts, and assistive technology to verify behavior that automation cannot judge.</p>
+        </article>
+        <article class="card">
+          <h3>3. Request expert remediation</h3>
+          <p>Get prioritized findings and code-level fixes for your WordPress, Shopify, React, Vue, or custom website.</p>
+        </article>
+      </div>
+      <div class="tool-cta">
+        <div>
+          <h2>Want findings plus practical fixes?</h2>
+          <p>Request a free three-issue manual teardown or scope a focused accessibility audit.</p>
+        </div>
+        <a class="btn" href="contact.html">Request a Manual Review</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p class="footer-copyright">&copy; Himanshu Pandey | Web Accessibility Specialist</p>
+    <nav class="footer-navigation" aria-label="Footer links">
+      <a href="accessibility-audit.html" aria-current="page">Free Automated Scan</a>
+      <a href="accessibility-checker.html">Free Website Self-Check</a>
+      <a href="wcag-contrast-checker.html">Free WCAG Contrast Checker</a>
+    </nav>
+  </footer>
+  <script>
+    const form = document.getElementById("accessibilityScanForm");
+    const status = document.getElementById("scanStatus");
+    const results = document.getElementById("scanResults");
+    const submit = document.getElementById("scanSubmit");
+
+    function addElement(parent, tag, text, className) {
+      const element = document.createElement(tag);
+      element.textContent = text;
+      if (className) element.className = className;
+      parent.append(element);
+      return element;
+    }
+
+    function showStatus(message, className) {
+      status.hidden = false;
+      status.className = `scan-message ${className}`;
+      status.textContent = message;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const url = document.getElementById("scanWebsiteUrl").value.trim();
+      submit.disabled = true;
+      submit.textContent = "Scanning page...";
+      showStatus("Opening the page in a real browser and checking common accessibility rules...", "is-pending");
+      results.hidden = true;
+      results.replaceChildren();
+
+      try {
+        const response = await fetch("/.netlify/functions/accessibility-scan", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({url})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "The scan could not be completed.");
+
+        showStatus(`Scan complete for ${data.title || data.finalUrl}`, "is-success");
+        results.hidden = false;
+
+        const summary = document.createElement("div");
+        summary.className = "tool-results-summary";
+        [
+          ["Automated violations", data.summary.violations],
+          ["Needs manual review", data.summary.manualReviewItems],
+          ["Passed rule groups", data.summary.passes]
+        ].forEach(([label, value]) => {
+          const card = document.createElement("article");
+          card.className = "card";
+          addElement(card, "strong", String(value));
+          addElement(card, "span", label);
+          summary.append(card);
+        });
+        results.append(summary);
+
+        addElement(results, "p", data.disclaimer, "tool-disclosure");
+
+        if (data.violations.length) {
+          addElement(results, "h2", "Automated findings");
+          const list = document.createElement("div");
+          list.className = "tool-findings-list";
+          data.violations.forEach((finding) => {
+            const card = document.createElement("article");
+            card.className = "tool-finding-card";
+            addElement(card, "span", `${finding.impact || "unknown"} impact`, "tool-criteria");
+            addElement(card, "h3", finding.title);
+            addElement(card, "p", finding.description);
+            if (finding.wcag.length) addElement(card, "p", finding.wcag.join(", "), "tool-criteria");
+            finding.nodes.forEach((node) => {
+              const nodeBlock = document.createElement("details");
+              addElement(nodeBlock, "summary", node.target || "Affected element");
+              addElement(nodeBlock, "code", node.html);
+              if (node.failureSummary) addElement(nodeBlock, "p", node.failureSummary);
+              card.append(nodeBlock);
+            });
+            list.append(card);
+          });
+          results.append(list);
+        } else {
+          addElement(results, "h2", "No automated violations detected");
+          addElement(results, "p", "This is not a conformance pass. Keyboard, screen-reader, visual, and manual WCAG checks are still required.");
+        }
+
+        if (data.incomplete.length) {
+          addElement(results, "h2", "Items needing manual review");
+          const list = document.createElement("ul");
+          data.incomplete.forEach((item) => {
+            const li = document.createElement("li");
+            addElement(li, "strong", item.title);
+            addElement(li, "span", ` — ${item.nodeCount} affected element${item.nodeCount === 1 ? "" : "s"}`);
+            list.append(li);
+          });
+          results.append(list);
+        }
+
+        const requestLink = document.createElement("a");
+        requestLink.className = "btn";
+        requestLink.href = "contact.html";
+        requestLink.textContent = "Request a Manual Accessibility Review";
+        results.append(requestLink);
+      } catch (error) {
+        showStatus(error.message, "is-error");
+      } finally {
+        submit.disabled = false;
+        submit.textContent = "Run Free Accessibility Scan";
+      }
+    });
+  </script>
+</body>
+</html>
