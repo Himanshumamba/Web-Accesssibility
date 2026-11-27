@@ -1111,11 +1111,9 @@ p {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: #6924df;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  background: #6924df url('/favicon.svg') center / 42px 42px no-repeat;
+  color: transparent;
+  overflow: hidden;
 }
 
 .homepage .brand-text {
@@ -1252,6 +1250,39 @@ p {
   gap: 0.75rem;
 }
 
+.homepage .hero-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.1rem auto 0;
+  text-align: left;
+}
+
+.homepage .hero-person img {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #6924df;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.homepage .hero-person div {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage .hero-person strong {
+  color: #171827;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.homepage .hero-person span {
+  color: #747485;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .homepage .btn {
   min-height: 48px;
   padding: 0.8rem 1.35rem;
@@ -1292,35 +1323,51 @@ p {
   box-sizing: border-box;
   max-width: none;
   margin: 0;
-  padding: 2.35rem clamp(1.25rem, 5vw, 4rem);
+  padding: 2rem clamp(1.25rem, 5vw, 4rem);
   border-radius: 0;
   background: #5c21db;
 }
 
 .homepage .trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   max-width: 1120px;
   margin: 0 auto;
   padding: 0;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .homepage .trust-item {
-  padding: 0.5rem;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  display: flex;
+  min-height: 96px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .homepage .trust-item-link {
   color: #fff;
   text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.homepage .trust-item-link:hover .trust-label {
+.homepage .trust-item-link:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.homepage .trust-item-link:hover .trust-label span {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
+
 
 .homepage .trust-number,
 .homepage .trust-label {
@@ -2031,6 +2078,10 @@ p {
   .homepage .client-trust-intro > p:not(.eyebrow) {
     max-width: none;
   }
+
+  .homepage .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -2063,8 +2114,12 @@ p {
   }
 
   .homepage .trust-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.1rem 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .homepage .trust-item {
+    min-height: 82px;
   }
 
   .homepage .home-tool-promo {
@@ -2183,11 +2238,9 @@ p {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: #6924df;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  background: #6924df url('/favicon.svg') center / 42px 42px no-repeat;
+  color: transparent;
+  overflow: hidden;
 }
 
 .site-page .brand-text {
