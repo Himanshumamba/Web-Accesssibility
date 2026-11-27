@@ -1312,6 +1312,16 @@ p {
   box-shadow: none;
 }
 
+.homepage .trust-item-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.homepage .trust-item-link:hover .trust-label {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .homepage .trust-number,
 .homepage .trust-label {
   color: #fff;
