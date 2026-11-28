@@ -434,9 +434,9 @@
   {
     "id": "keyboard-navigation-accessibility-checklist-2026-06-04",
     "slug": "keyboard-navigation-accessibility-checklist",
-    "title": "Keyboard Navigation Accessibility Checklist",
+    "title": "Keyboard Accessibility Checklist: WCAG 2.2 Test & Fix Guide",
     "date": "2026-06-04",
-    "excerpt": "A keyboard navigation accessibility checklist for testing menus, links, buttons, forms, modals, focus order, focus indicators, and escape behavior.",
+    "excerpt": "Test keyboard navigation, focus order, visible focus, menus, forms, and modal dialogs with this practical WCAG 2.2 checklist.",
     "readTime": "11 min read",
     "tags": [
       "Keyboard Accessibility",
@@ -519,7 +519,7 @@
         "type": "h2",
         "text": "Next Steps"
       },
-      "Unplug your mouse for five minutes and try completing your main user journey—from homepage to contact form or checkout. If you hit a dead end, read <a href=\"how-to-test-website-accessibility-manually.html\">how to test website accessibility manually</a> or book a <a href=\"../wcag-accessibility-audit.html\">manual WCAG accessibility audit</a>."
+      "Unplug your mouse for five minutes and try completing your main user journey—from homepage to contact form or checkout. If you hit a dead end, read <a href=\"blog/how-to-test-website-accessibility-manually.html\">how to test website accessibility manually</a> or book a <a href=\"wcag-accessibility-audit.html\">manual WCAG accessibility audit</a>."
     ]
   },
   {
